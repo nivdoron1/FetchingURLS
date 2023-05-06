@@ -8,6 +8,7 @@ public class UrlAdder {
     private final int MaximumAmont;
     private List<HtmlBuilder> UrlNames = new ArrayList<>();
 
+    //constructor
     public UrlAdder(Source source) throws IOException {
         this.source=source;
         this.depth = this.getSource().getDepthFactor();
@@ -20,25 +21,27 @@ public class UrlAdder {
         return source;
     }
 
+    //add the url to the list of the existing url and return true if the url already is not exist in the file else false
     private boolean AddURL(String url){
         int size=urls.size();
         urls.add(url);
         return urls.size() != size;
     }
 
+    // check if we can execute the current url
     private boolean canExecuteFile(String url){
         return !this.source.isCrossLevelUniqness() || AddURL(url);
     }
 
-    private void createUrls(String url) throws IOException {
-        HtmlBuilder builder = new HtmlBuilder(url);
-        UrlExtracor extractor = new UrlExtracor(builder.getHtml(), MaximumAmont);
+    //add to the urlNames all the extractor files.
+    private void createUrls(HtmlBuilder builder) throws IOException {
+        UrlExtracor extractor = new UrlExtracor(builder.getHtml(), this.MaximumAmont);
         UrlNames.addAll(extractor.getUrlList());
     }
 
     private void createFile(int depth) throws IOException {
         HtmlBuilder builder = UrlNames.remove(0);
-        createUrls(builder.getUrl());
+        createUrls(builder); // add the urls to the list
         if (canExecuteFile(builder.getUrl())) {
             builder.CreateFile(depth);
         }

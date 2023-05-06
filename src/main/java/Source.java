@@ -1,4 +1,3 @@
-import java.net.MalformedURLException;
 
 public class Source {
     private final String Url;
@@ -6,6 +5,7 @@ public class Source {
     private final int DepthFactor;
     private final boolean CrossLevelUniqness;
 
+    //constructor
     public Source(String Url,int MaxAmount,int DepthFactor,boolean CrossLevelUniqness) {
         this.Url=Url;
         this.MaxAmount=MaxAmount;

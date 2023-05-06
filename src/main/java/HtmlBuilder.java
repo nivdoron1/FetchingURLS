@@ -10,8 +10,9 @@ import java.util.regex.Pattern;
 
 public class HtmlBuilder {
     private final String url;
-    private Document html;
+    private final Document html;
 
+    // constructor
     public HtmlBuilder(String url) throws IOException {
         this.url=url;
         this.html = fetchHtml();
@@ -21,19 +22,17 @@ public class HtmlBuilder {
         return url;
     }
 
-    public void setUrl(String url) {
-        url = url;
-    }
-
     public Document getHtml() {
         return html;
     }
 
+    //read the html file
     private Document fetchHtml() throws IOException {
         Document document = null;
         document = Jsoup.connect(getUrl()).get();
         return document;
     }
+    //create a new file in the depth directory
     public void CreateFile(int depth)throws IOException {
         File dir = new File(String.valueOf(depth));
         if(!dir.exists()){
