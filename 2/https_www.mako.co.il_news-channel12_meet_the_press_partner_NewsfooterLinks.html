@@ -1,0 +1,800 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="he">
+  <script>
+
+	function getReferrer(url){
+		var params = url.split('?')[1];
+		params=params?"&":"?";
+		const ref = document.referrer;
+		return params + "referrer=" + (ref ? encodeURIComponent(ref) : "empty");
+		
+	}
+		
+	function getStatsParams(altUrl){
+		var params = '';
+		if (location.search && altUrl.indexOf('mako.')!=-1) {
+		    var parts = location.search.substring(1).split('&');	
+		    for (var i = 0; i < parts.length; i++) {
+		        var nv = parts[i].split('=');
+		        if (nv[0] && (nv[0] == 'sCh' || nv[0] == 'pId' || nv[0].toLowerCase() == 'partner' || nv[0].indexOf('utm') == 0)) {
+		              params += '&' + nv[0] +'='+ nv[1];
+		          }
+		    }
+		    if (params !== ''){
+		    	params = (altUrl.indexOf('?') !== altUrl.indexOf('&') ? '&' : '?') + params.substring(1);
+		    }
+		}
+		return params;
+	}
+		var agent = navigator.userAgent.toLowerCase();
+		var myUrl = window.location.href.toLowerCase();
+		var isSmartPhone = (agent.indexOf('ipad') == -1 && (agent.indexOf('iphone') != -1 || agent.indexOf('android') != -1 ) )
+		if(isSmartPhone){			
+			//var isTvbeeDomain = location.host.indexOf("tvbee.co.il") != -1;
+			var isSateliteDomain = location.host.indexOf("tvbee.co.il") != -1 || location.host.indexOf("www.n12")!= -1 || location.host.indexOf("tech12.co.il") != -1;
+			var altUrl="";
+			if((myUrl.indexOf(".mako") !== -1  || isSateliteDomain) && myUrl.indexOf("rdr=1") === -1 && myUrl.indexOf("partner=switch") === -1)
+			{
+					var mobileHostPrefix = isSateliteDomain ? 'm.' : 'mobile.';
+					var isValidUrl = new RegExp("^(http|https)\://.*$").test(altUrl);
+					if(altUrl.length && isValidUrl && (myUrl.toLowerCase().indexOf(altUrl.toLowerCase()) == -1)){
+						var url=altUrl + getStatsParams(altUrl);
+						window.location=url+getReferrer(url);						
+					}else{
+						if(myUrl.indexOf("/mako-vod-help")===-1){					
+							window.location = window.location.href.replace(location.host.split('.')[0]+'.', mobileHostPrefix)+getReferrer(window.location.href);
+						}												
+					}
+			}
+		}
+		</script>
+  <meta name="apple-itunes-app" content="app-id=340173260, app-argument=mako://hp?utm_source=makoMobile&amp;utm_medium=SmartAppBanner&amp;utm_campaign=makoMobilePromo&amp;firstinter=false&amp;secondinter=false">
+  <meta name="google-play-app" content="app-id=com.goldtouch.mako, app-argument=mako://hp?utm_source=makoMobile&amp;utm_medium=SmartAppBanner&amp;utm_campaign=makoMobilePromo&amp;firstinter=false&amp;secondinter=false">
+  <link rel="canonical" href="https://www.mako.co.il/news-channel12/meet_the_press">
+  <link rel="alternate" media="handheld" href="https://mobile.mako.co.il/news-channel12/meet_the_press">
+  <link rel="apple-touch-icon" href="//rcs.mako.co.il/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="//rcs.mako.co.il/images/N12favicon/favicon.ico">
+  <link rel="alternate" href="android-app://com.channel2.mobile.ui/news12/?link=/news-channel12/meet_the_press?utm_source=Google&amp;utm_medium=OrganicSearchResults&amp;utm_campaign=AppIndexing&amp;firstinter=false&amp;secondinter=false">
+  <link rel="alternate" href="ios-app://333211486/news12?link=/news-channel12/meet_the_press?utm_source=Google&amp;utm_medium=OrganicSearchResults&amp;utm_campaign=AppIndexing&amp;firstinter=false&amp;secondinter=false">
+  <link rel="alternate" href="ios-app://340173260/mako/openArticle?url=/news-channel12/meet_the_press?utm_source=Google&amp;utm_medium=OrganicSearchResults&amp;utm_campaign=AppIndexing&amp;firstinter=false&amp;secondinter=false">
+  <link rel="alternate" href="android-app://com.goldtouch.mako/mako/openArticle?url=/news-channel12/meet_the_press?utm_source=Google&amp;utm_medium=OrganicSearchResults&amp;utm_campaign=AppIndexing&amp;firstinter=false&amp;secondinter=false">
+  <script type="application/ld+json">
+			{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "@id": "https://www.mako.co.il/news-channel12/meet_the_press"
+}</script>
+  <script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "NewsMediaOrganization",
+ "name": "N12",
+ "url": "https://www.n12.co.il/",
+ "sameAs":  [
+  "http://www.n12.co.il/",
+  "https://www.facebook.com/N12News/",
+  "https://www.instagram.com/n12news/",
+  "https://twitter.com/NewsChannelIL",
+  "https://he.wikipedia.org/wiki/N12_-_%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA"
+ ],
+ "logo": "https://rcs.mako.co.il/images/news/logo-x2.png"
+}
+</script>
+  <meta name="description" content="בכל שבת ב-19:00 מארחת רינה מצליח את האישיות שעשתה את החדשות של השבוע האחרון או תעשה את החדשות של השבוע הקרוב לראיון נרחב ומעמיק שמספק יותר מכותרת אחת">
+  <title>ארכיון "פגוש את העיתונות" עם רינה מצליח | N12</title>
+  <meta property="og:title" content="ארכיון &quot;פגוש את העיתונות&quot; עם רינה מצליח | N12">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.mako.co.il/news-channel12/meet_the_press">
+  <meta property="og:image" content="https://img.mako.co.il/2020/02/17/SHAREIMG.png">
+  <meta property="og:site_name" content="N12">
+  <meta property="fb:app_id" content="225736910835244">
+  <meta property="og:description" content="בכל שבת ב-19:00 מארחת רינה מצליח את האישיות שעשתה את החדשות של השבוע האחרון או תעשה את החדשות של השבוע הקרוב לראיון נרחב ומעמיק שמספק יותר מכותרת אחת">
+  <meta property="fb:pages" content="100462013796">
+  <meta name="external_title" content="">
+  <script type="text/javascript">
+		var adsArea  = 'MAKOAREA=Subvertical';
+		var contentType = 'Subvertical';
+		var contentUsername = '';
+		function MAKO_SETTINGS() { 
+            return {
+                            'url' : "https://www.mako.co.il/news-channel12/meet_the_press",
+                            'type' : "article"
+            }
+		}
+	</script>
+  <link rel="image_src" href="https://img.mako.co.il/2020/02/17/SHAREIMG.png"><!-- Menuitem:  / nEditorsAdmin / nRenderPortletCacheTag /   --> <!-- google plus 1 -->
+  <script>
+	var vcmidOfContent = '5445fcf6e2cfc610VgnVCM100000700a10acRCRD';
+	var currentChannelId = '5445fcf6e2cfc610VgnVCM100000700a10acRCRD';
+	var mainChannelId = '31750a2610f26110VgnVCM1000005201000aRCRD';
+	var parentsChannels='5445fcf6e2cfc610VgnVCM100000700a10acRCRD,e30cc13e751fc610VgnVCM200000650a10acRCRD,31750a2610f26110VgnVCM1000005201000aRCRD';
+	var isCM8 =  true;
+	var OB_ContextKeyValue = 'n12';
+	var OB_Platform = 'desktop';
+</script>
+  <link href="https://rcs.mako.co.il/css/news/weather/cssBundle.css" rel="stylesheet">
+  <link href="https://rcs.mako.co.il/css/news/themes/header.css" rel="stylesheet">
+  <script src="https://rcs.mako.co.il/js/p13n_mako_v7.js"></script>
+  <script src="https://rcs.mako.co.il/js/bannend.js"></script>
+  <script src="https://rcs.mako.co.il/js/news/preBundle.js"></script>
+  <script>
+		var staticResourcesUriPrefix = 'https://rcs.mako.co.il';
+		var imagesUriPrefix = 'https://img.mako.co.il';
+	</script>
+ </head>
+ <body class="v-2020 news">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v5.0"></script><!-- Google Tag Manager -->
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-T87PQS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T87PQS');</script>
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WH7Q78" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WH7Q78');</script>
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MJ2NPR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MJ2NPR');</script>
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PHR3MZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PHR3MZ');</script><!-- End Google Tag Manager -->
+  <script>(window.upManager || []).push("76410001");</script><!-- GPT script begin -->
+  <script>var makoReferrer = 'mako';if(document.referrer.length == 0){	makoReferrer = 'empty';	}else{var ref = document.referrer.split('?');	if (ref[0].indexOf("mako.co.il") ==-1)makoReferrer = 'other';}</script>
+  <script src="//www.mako.co.il/Collab/cm8/360Advert.js"></script>
+  <style>#Fullscreen_Wrapper iframe{width:100%;height:100%;position:fixed;left:0}</style>
+  <div id="Fullscreen_Wrapper" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;visibility:visible;z-index:2147483638;"></div>
+  <script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
+  <script>
+var gclidVal = 'FALSE';
+try{gclidVal =(localStorage.getItem('mako_gclid') || location.search.indexOf('gclid=') > -1) ? 'TRUE' : 'FALSE';}catch(err){}
+var agent = navigator.userAgent.toLowerCase();
+var isNoOzenNeeded = (agent.indexOf('ipad') != -1 || agent.indexOf('iphone') != -1 || agent.indexOf('android') != -1 )
+if (isNoOzenNeeded && window.DFP){DFP.ozenReady=true;}
+
+var CM8MakoHN = window.houseNumbers ? ("&makoHN="+houseNumbers) : "";	
+isCM8 = isCM8 && location.href.toLowerCase().indexOf('&partner=inner')==-1 && location.href.toLowerCase().indexOf('&partner=m_inner')==-1;	
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	function addCustomCriteria(name, val){
+		 (val &&  val != '' && val != 'null') ? googletag.pubads().setTargeting(name, val) : '';
+}
+	
+if (isCM8){
+	var googleAds = [];
+    googletag.cmd.push(function (){
+    // permutive code
+    if (0===window.googletag.pubads().getTargeting("permutive").length){try{var g=window.localStorage.getItem("_pdfps");window.googletag.pubads().setTargeting("permutive",g?JSON.parse(g):[])}catch(e){}}
+    
+    var fullscreen = googletag.defineSlot('/242748299/mako/news/channel12/FULLSCREEN', [[970,250],[970,540]],'Fullscreen_Wrapper').setTargeting("FORMAT","FULLSCREEN").addService(googletag.pubads());
+    
+    // end permutive code
+   
+    
+   	googleAds[0]=googletag.defineSlot('/242748299/mako/news/channel12/PREMIUM', [[970,540],[970,330],[5,5],[3,3],[970,250]],'CM8ShowAd_MEGA_PLASMA_970X330').addService(googletag.pubads()).setTargeting("FORMAT", ["PLASMA1_970","MEGA_PLASMA","ELVIS_MEGAPLASMA","ELVIS_PLASMA","Billboard970"]).setCollapseEmptyDiv(true,true);
+    
+   	
+    googleAds[1]=googletag.defineSlot('/242748299/mako/news/channel12/PLASMA1_750', [[750,140],[5,5]],'CM8ShowAd_PLASMA1_750X140').addService(googletag.pubads()).setTargeting("FORMAT", ["PLASMA1_750"]).setCollapseEmptyDiv(true,true);
+      
+    googleAds[2]=googletag.defineSlot('/242748299/mako/news/channel12/OZEN',[[160,600],[120,600],[240,400]],'mako_main_glideDiv').addService(googletag.pubads()).setTargeting("FORMAT","OZEN");
+	googleAds[3] = googletag.defineSlot('/242748299/mako/news/channel12/JAMBO1_728',[728,90], 'CM8ShowAd_JAMBO1_728X90').addService(googletag.pubads()).setTargeting("FORMAT", "JAMBO1_728").setCollapseEmptyDiv(true,true);
+    googleAds[4] = googletag.defineSlot('/242748299/mako/news/channel12/JAMBO1_970',[970,90], 'CM8ShowAd_JAMBO1_970X90').addService(googletag.pubads()).setTargeting("FORMAT", "JAMBO1_970").setCollapseEmptyDiv(true,true);
+	googleAds[5] = googletag.defineSlot('/242748299/mako/news/channel12/CORNER_PEEL',[1,1], 'CM8ShowAd_CORNER_PEEL_1X1').addService(googletag.pubads()).setTargeting("FORMAT", "CORNER_PEEL").setCollapseEmptyDiv(true,true);
+       
+    googleAds[6] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER1_300',[300,250], 'CM8ShowAd_MONSTER1_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER1_300").setCollapseEmptyDiv(true,true);
+    
+    googleAds[7] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER2_300',[300,250], 'CM8ShowAd_MONSTER2_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER2_300");
+    
+    googleAds[8] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER3_300',[300,250], 'CM8ShowAd_MONSTER3_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER3_300");
+	
+    googleAds[9] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER1_250',[250,250], 'CM8ShowAd_MONSTER1_250X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER1_250");
+    
+    googleAds[10] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER2_250',[250,250], 'CM8ShowAd_MONSTER2_250X250').addService(googletag.pubads()).setTargeting("FORMAT","MONSTER2_250");
+    
+    googleAds[11] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER3_250',[250,250], 'CM8ShowAd_MONSTER3_250X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER3_250");
+    
+    googleAds[12] = googletag.defineSlot('/242748299/mako/news/channel12/POSTER',[300,600], 'CM8ShowAd_POSTER_300X600').addService(googletag.pubads()).setTargeting("FORMAT", "POSTER");
+    
+    googleAds[13] = googletag.defineSlot('/242748299/mako/news/channel12/POSTER2',[300,600], 'CM8ShowAd_POSTER2_300X600').addService(googletag.pubads()).setTargeting("FORMAT", "POSTER2");
+    
+    googleAds[14] = googletag.defineSlot('/242748299/mako/news/channel12/POSTER3',[300,600], 'CM8ShowAd_POSTER3_300X600').addService(googletag.pubads()).setTargeting("FORMAT", "POSTER3");
+	
+	googleAds[15]=googletag.defineSlot('/242748299/mako/news/channel12/INNER_OZEN',[120,600],'CM8ShowAd_OZEN1_120X600').addService(googletag.pubads()).setTargeting("FORMAT","OZEN_INNER").setCollapseEmptyDiv(true,true);
+    
+	googleAds[16]=googletag.defineSlot('/242748299/mako/news/channel12/COAST2COAST1_970',[970,90],'CM8ShowAd_COAST2COAST1_970X90').addService(googletag.pubads()).setTargeting("FORMAT","COAST2COAST1_970");
+        
+    googleAds[17]=googletag.defineSlot('/242748299/mako/news/channel12/COAST2COAST1_728',[728,90],'CM8ShowAd_COAST2COAST1_728X90').addService(googletag.pubads()).setTargeting("FORMAT","COAST2COAST1_728");
+    
+    googleAds[18]=googletag.defineSlot('/242748299/mako/news/channel12/STANDARD1',[234,60],'CM8ShowAd_STANDARD1_234X60').addService(googletag.pubads()).setTargeting("FORMAT","STANDARD1");
+   
+    googleAds[19]=googletag.defineSlot('/242748299/mako/news/channel12/CUBE1',[276,174],'CM8ShowAd_CUBE1_276X174').addService(googletag.pubads()).setTargeting("FORMAT","CUBE1");   
+   
+	googleAds[20] = googletag.defineSlot('/242748299/mako/news/channel12/ARTICLE1_250X250',[250,250], 'CM8ShowAd_ARTICLE1_250X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE1_250X250").setCollapseEmptyDiv(true,true);
+	
+    googleAds[21] = googletag.defineSlot('/242748299/mako/news/channel12/ARTICLE1_300X250',[300,250],'CM8ShowAd_ARTICLE1_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE1_300X250").setCollapseEmptyDiv(true,true);   
+    
+    googleAds[22] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER4_300',[300,250], 'CM8ShowAd_MONSTER4_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER4_300");
+    googleAds[23] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER5_300',[300,250], 'CM8ShowAd_MONSTER5_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER5_300");
+    googleAds[24] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER6_300',[300,250], 'CM8ShowAd_MONSTER6_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER6_300");
+    googleAds[25] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER7_300',[300,250], 'CM8ShowAd_MONSTER7_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER7_300");
+    googleAds[26] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER8_300',[300,250], 'CM8ShowAd_MONSTER8_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER8_300");
+    googleAds[27] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER9_300',[300,250], 'CM8ShowAd_MONSTER9_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER9_300");
+    googleAds[28] = googletag.defineSlot('/242748299/mako/news/channel12/MONSTER10_300',[300,250], 'CM8ShowAd_MONSTER10_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER10_300");
+    googleAds[29] = googletag.defineSlot('/242748299/mako/news/channel12/ARTICLE2_300X250',[300,250],'CM8ShowAd_ARTICLE2_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE2_300X250").setCollapseEmptyDiv(true,true);
+    googleAds[30] = googletag.defineSlot('/242748299/mako/news/channel12/ARTICLE3_300X250',[300,250],'CM8ShowAd_ARTICLE3_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE3_300X250").setCollapseEmptyDiv(true,true); 
+    googleAds[31] = googletag.defineSlot('/242748299/mako/news/channel12/ARTICLE4_300X250',[300,250],'CM8ShowAd_ARTICLE4_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE4_300X250").setCollapseEmptyDiv(true,true);
+    googleAds[32] = googletag.defineSlot('/242748299/mako/news/channel12/ARTICLE5_300X250',[300,250],'CM8ShowAd_ARTICLE5_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE5_300X250").setCollapseEmptyDiv(true,true); 
+    googleAds[33] = googletag.defineSlot('/242748299/mako/news/channel12/ARTICLE6_300X250',[300,250],'CM8ShowAd_ARTICLE6_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE6_300X250").setCollapseEmptyDiv(true,true);   
+    
+    googleAds[34]=googletag.defineSlot('/242748299/mako/news/channel12/MONSTER_300',[300,250], 'CM8ShowAd_MONSTER_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER_300").setCollapseEmptyDiv(true,true);
+    googleAds[35]=googletag.defineSlot('/242748299/mako/news/channel12/DOUBLESTANDARD',[468,60],'CM8ShowAd_DOUBLESTANDARD_468X60').addService(googletag.pubads()).setTargeting("FORMAT","DOUBLESTANDARD").setCollapseEmptyDiv(true,true);
+    
+    
+    //googleAds[29] = googletag.defineSlot('/242748299/mako/news/channel12/PREMIUM', [[6,6],[3,3]],'CM8ShowAd_BILLBOARD_970X400').addService(googletag.pubads()).setTargeting("FORMAT", "Billboard970").setCollapseEmptyDiv(true,true);
+    
+    if(window.contentType=='articleins'){
+    	if(document.querySelector('link[rel="video_src"]')!=null){
+    		addCustomCriteria("video","true");
+    	}
+    }
+    
+    window.DFP && googletag.defineOutOfPageSlot('/242748299/mako/news/channel12/TOPLAYER','DFP_TOPLAYER').addService(googletag.pubads()).setTargeting("FORMAT", "TOPLAYER");
+      
+       addCustomCriteria("makoHN", window.houseNumbers);
+       //addCustomCriteria("MAKOAREA", '');
+       addCustomCriteria("MAKOPAGE", '5445fcf6e2cfc610VgnVCM100000700a10acRCRD');
+       addCustomCriteria("mako_referrer", makoReferrer);
+       addCustomCriteria("CONTENTTYPE", window.contentType);
+       addCustomCriteria("LEVEL4", 'meetthepress');
+       addCustomCriteria("LEVEL5", 'null');
+       addCustomCriteria("LEVEL6", 'null');
+       addCustomCriteria("LEVEL7", 'null');  
+       addCustomCriteria("GCLID", gclidVal);
+	   // for test use
+       if (location.hostname.match('int|adm')) {
+       	   addCustomCriteria("TEST", "WINT"); 
+       }
+	   //googletag.pubads().collapseEmptyDivs(true);
+	   //if (DFP && DFP.isHP){
+	   //   googletag.pubads().enableSingleRequest();
+       //}
+       googletag.pubads().addEventListener('slotRenderEnded', function(event) {		
+            DFP && DFP.renderAdEnded && DFP.renderAdEnded(event); 
+            if (event.slot.getSlotElementId() === 'Fullscreen_Wrapper' && event.isEmpty == false){
+                document.querySelector('#Fullscreen_Wrapper').style.display = 'block';
+            }
+	    });
+        googletag.enableServices();       
+    });
+    googletag.cmd.push(function (){
+        googletag.display('Fullscreen_Wrapper');
+    });
+}    
+</script>
+  <div id="DFP_TOPLAYER" style="height:0px"></div>
+  <script>googletag.cmd.push(function() { googletag.display('DFP_TOPLAYER'); });</script>
+  <script>
+        !function(n,e,o,r,i){if(!e){e=e||{},window.permutive=e,e.q=[],e.config=i||{},e.config.projectId=o,e.config.apiKey=r,e.config.environment=e.config.environment||"production";for(var t=["addon","identify","track","trigger","query","segment","segments","ready","on","once","user","consent"],c=0;c<t.length;c++){var f=t[c];e[f]=function(n){return function(){var o=Array.prototype.slice.call(arguments,0);e.q.push({functionName:n,arguments:o})}}(f)}}}(document,window.permutive,"e40fe333-ed16-40e2-902d-2810c99b8c80","34892ffd-594e-409e-a5b1-d4caa1655e1a",{});
+        window.addEventListener('DOMContentLoaded', function(){
+            function category() {
+                try {
+                    return location.pathname.replace(/(?=\?)(.[^?]*$)/, '').replace(/(?=A)(.[^A]*$)/, '');
+                }
+                catch (e) {
+                    return null
+                }
+            }
+            function desc() {
+                try {
+                    return document.querySelector("meta[name='description']").getAttribute('content');
+                }
+                catch (e) {
+                    return null
+                }
+            }
+            function pdate() {
+                try {
+                    return document.querySelector("meta[property='article:published_time']").getAttribute('content').slice(0, -2) +":"+document.querySelector("meta[property='article:published_time']").getAttribute('content').slice(-2);
+                }
+                catch (e) {
+                    return null
+                }
+            }
+            function author() {
+                try {
+                    return document.querySelector("span[itemprop='author']").getAttribute('content');
+                }
+                catch (e) {
+                    return null
+                }
+            }
+            function tags() {
+                try {
+                    var nodes = document.querySelectorAll('meta[property="article:tag"]');
+                    var keywords = [];
+                    for (var i = 0; i < nodes.length; ++i) {
+                        keywords[i] = nodes[i].content;
+                    }
+                    return keywords;
+                } catch (e) {
+                    return null;
+                };
+            }
+                permutive.addon('web', { page: {
+                        "publisher": "keshet",
+                        "category": category(),
+                        "description": desc(),
+                        "dayofweek": new Date().toLocaleDateString('en-us', {weekday: 'long'}),
+                        "article":{
+                            "publishingdate": pdate(),
+                            "author": author(),
+                            "editortags": tags()
+                        }}})});
+                        var ptag = document.createElement('script'); 
+                        ptag.src = "https://cdn.permutive.com/e40fe333-ed16-40e2-902d-2810c99b8c80-web.js?d=" + new Date().toISOString().substring(0, 10); 
+                        var f = document.getElementsByTagName('script')[0]; 
+                        f.parentNode.insertBefore(ptag, f); 
+    </script>
+  <script async src="//mrb.upapi.net/code?w=5632346594213888&amp;uponit=true"></script>
+  <header class="toolbar">
+   <div class="inner">
+    <a class="logo" href="/news?partner=Newsheaderlogo"></a>
+    <ul class="weather-slider" data-feed="/AjaxPage?jspName=sideBarJsonResponse.jsp&amp;type=weather"></ul><span class="date"></span> <a class="s-logo" href="/news?partner=Newsheaderlogo"></a>
+   </div>
+  </header>
+  <nav class="menu responsive v-2020">
+   <ul>
+    <li>
+     <ul>
+      <li class="logo"><a href="/news?partner=NewsNavBar"></a></li>
+      <li><a href="https://www.mako.co.il/news-dailynews?partner=NewsNavBar">כל החדשות</a></li>
+      <li><a href="https://www.mako.co.il/news-politics?partner=NewsNavBar">פוליטי</a></li>
+      <li><a href="https://www.mako.co.il/news-military?partner=NewsNavBar">ביטחוני</a></li>
+      <li><a href="https://www.mako.co.il/news-law?partner=NewsNavBar">פלילי</a></li>
+      <li><a href="https://www.mako.co.il/news-world?partner=NewsNavBar">בעולם</a></li>
+      <li><a href="https://www.mako.co.il/news-money?partner=NewsNavBar">כלכלה</a></li>
+      <li><a href="https://www.mako.co.il/news-specials/data_n12?partner=NewsNavBar">DATA12</a></li>
+      <li><a href="https://www.mako.co.il/news-sport?partner=NewsNavBar">ספורט</a></li>
+      <li><a href="https://www.mako.co.il/news-n12_magazine?partner=NewsNavBar">המגזין</a></li>
+      <li><a href="https://www.mako.co.il/news-entertainment?partner=NewsNavBar">תרבות</a></li>
+      <li><a href="https://www.mako.co.il/news-israel?partner=NewsNavBar">פנים</a></li>
+      <li><a href="https://www.mako.co.il/news-education?partner=NewsNavBar">חינוך</a></li>
+      <li><a href="https://www.mako.co.il/news-podcast_n12?partner=NewsNavBar">הפודקאסטים</a></li>
+      <li><a href="https://www.mako.co.il/news-world/ukraine_russia_war?partner=NewsNavBar">אוקראינה</a></li>
+      <li><a href="https://www.mako.co.il/news-money/consumer?partner=NewsNavBar">צרכנות</a></li>
+      <li><a href="https://www.mako.co.il/news-money/real_estate?partner=NewsNavBar">עיצוב ונדל"ן</a></li>
+      <li><a href="https://www.mako.co.il/news-columns?partner=NewsNavBar">פרשנות</a></li>
+      <li><a href="https://www.mako.co.il/news-lifestyle?partner=NewsNavBar">בריאות</a></li>
+      <li><a href="https://www.mako.co.il/news-science?partner=NewsNavBar">מדע וסביבה</a></li>
+      <li><a href="https://www.tech12.co.il/?partner=NewsNavBar" target="_blank">tech12</a></li>
+      <li><a href="https://www.mako.co.il/news-digital?partner=NewsNavBar">דיגיטל</a></li>
+      <li><a href="https://www.mako.co.il/news-tip12?partner=NewsNavBar">TIP12</a></li>
+      <li><a href="https://stories.sc/mako/channel12jobs/?makoOpenChromeTabs=1&amp;partner=NewsNavBar">דרושים חדשות 12</a></li>
+      <li><a href="https://www.mako.co.il/news-ha_tachtit?partner=NewsNavBar">התחתית</a></li>
+      <li><a href="https://www.mako.co.il/news-business?partner=NewsNavBar">Business</a></li>
+      <li><a href="https://mako.devdino.com/brain12/download.html?partner=NewsNavBar" target="_blank">BRAIN12</a></li>
+      <li><a href="https://www.mako.co.il/mako-vod?partner=NewsNavBar">12+</a></li>
+     </ul></li>
+    <li><a href="https://www.mako.co.il/news-channel12?partner=NewsNavBar">תוכניות</a></li>
+    <li><a href="https://www.mako.co.il?partner=NewsNavBar" target="_blank">mako</a></li>
+    <li class="more"><span class="open"></span>
+     <ul>
+      <li><a href="https://www.mako.co.il/news-dailynews?partner=NewsNavBar">כל החדשות</a></li>
+      <li><a href="https://www.mako.co.il/news-politics?partner=NewsNavBar">פוליטי</a></li>
+      <li><a href="https://www.mako.co.il/news-military?partner=NewsNavBar">ביטחוני</a></li>
+      <li><a href="https://www.mako.co.il/news-law?partner=NewsNavBar">פלילי</a></li>
+      <li><a href="https://www.mako.co.il/news-world?partner=NewsNavBar">בעולם</a></li>
+      <li><a href="https://www.mako.co.il/news-money?partner=NewsNavBar">כלכלה</a></li>
+      <li><a href="https://www.mako.co.il/news-specials/data_n12?partner=NewsNavBar">DATA12</a></li>
+      <li><a href="https://www.mako.co.il/news-sport?partner=NewsNavBar">ספורט</a></li>
+      <li><a href="https://www.mako.co.il/news-n12_magazine?partner=NewsNavBar">המגזין</a></li>
+      <li><a href="https://www.mako.co.il/news-entertainment?partner=NewsNavBar">תרבות</a></li>
+      <li><a href="https://www.mako.co.il/news-israel?partner=NewsNavBar">פנים</a></li>
+      <li><a href="https://www.mako.co.il/news-education?partner=NewsNavBar">חינוך</a></li>
+      <li><a href="https://www.mako.co.il/news-podcast_n12?partner=NewsNavBar">הפודקאסטים</a></li>
+      <li><a href="https://www.mako.co.il/news-world/ukraine_russia_war?partner=NewsNavBar">אוקראינה</a></li>
+      <li><a href="https://www.mako.co.il/news-money/consumer?partner=NewsNavBar">צרכנות</a></li>
+      <li><a href="https://www.mako.co.il/news-money/real_estate?partner=NewsNavBar">עיצוב ונדל"ן</a></li>
+      <li><a href="https://www.mako.co.il/news-columns?partner=NewsNavBar">פרשנות</a></li>
+      <li><a href="https://www.mako.co.il/news-lifestyle?partner=NewsNavBar">בריאות</a></li>
+      <li><a href="https://www.mako.co.il/news-science?partner=NewsNavBar">מדע וסביבה</a></li>
+      <li><a href="https://www.tech12.co.il/?partner=NewsNavBar" target="_blank">tech12</a></li>
+      <li><a href="https://www.mako.co.il/news-digital?partner=NewsNavBar">דיגיטל</a></li>
+      <li><a href="https://www.mako.co.il/news-tip12?partner=NewsNavBar">TIP12</a></li>
+      <li><a href="https://stories.sc/mako/channel12jobs/?makoOpenChromeTabs=1&amp;partner=NewsNavBar">דרושים חדשות 12</a></li>
+      <li><a href="https://www.mako.co.il/news-ha_tachtit?partner=NewsNavBar">התחתית</a></li>
+      <li><a href="https://www.mako.co.il/news-business?partner=NewsNavBar">Business</a></li>
+      <li><a href="https://mako.devdino.com/brain12/download.html?partner=NewsNavBar" target="_blank">BRAIN12</a></li>
+      <li><a href="https://www.mako.co.il/mako-vod?partner=NewsNavBar">12+</a></li>
+     </ul></li>
+    <li class="special" data-text="מיוחד"><span class="open"></span>
+     <ul>
+      <li><a href="https://www.mako.co.il/news-business/duns_100?partner=NewsNavBar">duns 100</a></li>
+      <li><a href="https://www.mako.co.il/news-law_guide?partner=NewsNavBar">חוק ומשפט</a></li>
+      <li><a href="https://www.mako.co.il/news-med12?partner=NewsNavBar">MED12</a></li>
+      <li><a href="https://www.drushim.co.il/?utm_source=N12top&amp;partner=NewsNavBar" target="_blank">דרושים IL</a></li>
+      <li><a href="https://www.adolam.co.il/?utm_source=N12&amp;utm_medium=menu&amp;utm_campaign=Adolam&amp;partner=NewsNavBar">מודעות אבל</a></li>
+      <li><a href="https://www.mako.co.il/news-special_projects/conferences?partner=NewsNavBar">ועידות קשת 12</a></li>
+      <li><a href="https://www.mako.co.il/news-med12/talking_about_mutations?partner=NewsNavBar">סרטן הריאה</a></li>
+      <li><a href="https://www.mako.co.il/news-med12/lung_ambition?partner=NewsNavBar">לאנג אמבישן</a></li>
+     </ul></li>
+    <li class="search-bar">
+     <form action="/newssearch" autocomplete="off">
+      <input type="search" name="searchstring_input" placeholder="חיפוש ב - N12"> <input type="hidden" value="5445fcf6e2cfc610VgnVCM100000700a10acRCRD" name="vgnextoid" id="vgnextoid"> <input type="hidden" name="pageNum" value="1"> <input type="hidden" name="app" value="thenews"> <input type="hidden" name="fmt" value="json"> <button>
+       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewbox="0 0 25 24">
+        <path fill="#333538" fill-rule="nonzero" stroke="#333538" stroke-width=".95" d="M6.282 5.782c2.344-2.343 6.179-2.307 8.566.081 2.04 2.04 2.363 5.135.954 7.455l4.907 4.908-1.06 1.06-4.791-4.79-.091.089c-2.355 2.184-6.07 2.097-8.404-.237-2.388-2.387-2.424-6.222-.08-8.566zm.824.824c-1.897 1.897-1.868 5.001.065 6.934 1.933 1.933 5.037 1.962 6.934.065 1.897-1.897 1.868-5.001-.065-6.934-1.933-1.933-5.037-1.962-6.934-.065z" opacity=".8" />
+       </svg></button>
+     </form></li>
+   </ul>
+  </nav>
+  <div id="mako_main_glideDiv" class="not-for-print">
+   <script>
+		if(window.DFP && !DFP.ozenReady){
+			if(DFP.isStandard || (typeof DFP.isNeo !=="undefined" && !DFP.isNeo && !DFP.isHP))
+				googletag.cmd.push(function() { googletag.display('mako_main_glideDiv'); });
+			else
+				DFP.savedDisplay.push('mako_main_glideDiv');
+			DFP.ozenReady=true;
+		}
+		</script>
+   <div class="ad b160X600 cm8">
+    <div id="CM8ShowAd_OZEN_160X600" data-title="OZEN_160X600">
+     <script>			
+				window.DFP && DFP.showBanner('OZEN','160X600');				
+			</script>
+    </div>
+   </div>
+  </div>
+  <div class="ad b970X90XJAMBO large-mid-ad cm8">
+   <div id="CM8ShowAd_JAMBO1_970X90" data-title="JAMBO1_970X90">
+    <script>			
+				window.DFP && DFP.showBanner('JAMBO1','970X90');				
+			</script>
+   </div>
+  </div>
+  <div class="ad b970X330 cm8">
+   <div id="CM8ShowAd_MEGA_PLASMA_970X330" data-title="MEGA_PLASMA_970X330">
+    <script>			
+				window.DFP && DFP.showBanner('MEGA_PLASMA','970X330');				
+			</script>
+   </div>
+  </div>
+  <main>
+   <script src="//rcs.mako.co.il/js/scripts/jquery-1.10.2.min.js"></script>
+   <script src="//rcs.mako.co.il/js/neo/jquery-ui.min.js"></script>
+   <script src="//rcs.mako.co.il/combined/neoGenericBundle.js"></script>
+   <script src="https://rcs.mako.co.il/js/news/lobby/jsBundle.js"></script>
+   <link rel="stylesheet" href="https://rcs.mako.co.il/css/newsVideoGallery.css">
+   <script>
+				   if (!$.debounce || !$.throttle) {
+						(function (b, c) { var a; $.throttle = a = function (e, f, j, i) { var h, d = 0; if (typeof f !== "boolean") { i = j; j = f; f = c } function g() { var o = this, m = +new Date() - d, n = arguments; function l() { d = +new Date(); j.apply(o, n) } function k() { h = c } if (i && !h) { l() } h && clearTimeout(h); if (i === c && m > e) { l() } else { if (f !== true) { h = setTimeout(i ? k : l, i === c ? e - m : e) } } } if ($.guid) { g.guid = j.guid = j.guid || $.guid++ } return g }; $.debounce = function (d, e, f) { return f === c ? a(d, e, false) : a(d, f, e !== false) } })(window);
+					}
+					if(!$.interpolate){
+ 						 $.interpolate = function(b, c) {
+							return b.replace(/{([^{}]*)}/g, function(e, d) {
+								var f = c[d];
+								return typeof f === "string" || typeof f === "number" ? f : e;
+							});
+						};
+					}
+
+
+			var defaults = defaults || {};
+					$(function(){
+
+						$('.list').on('DOMNodeInserted', function(e) {
+							if ( $(e.target).hasClass('.btns') ) {
+								console.log('BTN INSERTED....')
+							   $('li.btns').html('<button class="up not-for-print show" style="right: 148.5px;display: block;background: white;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><path fill="#00AEEF" fill-rule="evenodd" d="M0 0h50v50H0V0zm27.97 17.828L25.143 15 11 29.142l2.828 2.829 11.314-11.314L36.456 31.97l2.828-2.829-11.313-11.314z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" class="hover"><g fill="#00AEEF" fill-rule="evenodd"><path fill-rule="nonzero" d="M2 2v46h46V2H2zM0 0h50v50H0V0z"></path><path d="M27.97 17.828l11.314 11.314-2.828 2.829-11.314-11.314L13.828 31.97 11 29.142 25.142 15l2.829 2.828z"></path></g></svg></button>');
+							}
+						});
+
+						/***********search complete start *************/
+
+$.widget('mako.vodSearchify', {
+
+    options: {
+        max: 60,
+        id: 'query',
+        //dataURL: '/autocomplete/vodjson.txt',
+        dataURL:'/autocomplete/vodAutocompletion.ashx',
+        count: 0,
+        total: 0,
+        dataType: 'json',
+        //showFooter: true,
+        type: 'clip'
+    },
+
+    _create: function () {
+        $.extend(this.options, this.element.data('search'));
+
+    },
+
+    _init: function () {
+        var _self = this;
+
+        var $elm = _self.element,
+            $form = $elm.find(' > form'),
+            $submit = $form.find('> input[type="submit"]'),
+            $clear = $form.find(" > b"), // clear button
+            $input = $form.find(' input[type=text]'),
+            index = $elm.find('[data-search]').index($elm),
+            $list = $('.ui-autocomplete-wrapper:eq(' + index + ')');
+
+        /** autocomplete settings **/
+        $form.on('keyup', 'input[type=text]', function () {
+            var _val = $input.val();
+            $clear['fade' + (_val ? 'In' : 'Out')]();
+            //$submit[(_val.length > 1 ? 'add' : 'remove') + 'Class']('on');
+        });
+
+        $input.autocomplete({
+            minLength: 2,
+            appendTo: '.ui-autocomplete-wrapper:eq(' + index + ')',
+            source: function (request, response) {
+                var _data = {
+                    query: request.term,
+                    type: _self.option('type'),
+                    max: _self.option('max'),
+                    id: _self.option('id')
+                };
+
+                $.ajax({
+                    type: 'get',
+                    url: _self.option('dataURL'),
+                    dataType: _self.option('dataType'),
+                    data: _data,
+                    success: function (res) {
+                        if (res) {
+                            _self.option('count', res.data.length);
+                            _self.option('total', res.total);
+
+                            response($.map(res.suggestions, function (item) {
+                                return {
+                                    label: item.replace(/&#39;/g, "'").replace(/&#34;/g, "\""),
+                                    url: res.data.shift()
+                                }
+                            }));
+                        }
+                        else {
+                            $input.autocomplete('close');
+                        }
+                    } // success
+                }); // $.ajax
+            },
+            select: function (event, ui) {
+                $input.val(ui.item.label);
+                if (ui.item.url) {
+                    location.href = ui.item.url;
+                } else {
+                    $submit.trigger('click');
+                }
+            },
+            open: function (event, ui) {
+                var count = _self.option('count'),
+                    total = _self.option('total');
+
+                var acData = $(this).data('autocomplete');
+                acData.menu.element.find('a').each(function () {
+                    var $me = $(this);
+                    var keywords = acData.term.split(' ').join('|');
+                    $me.html($me.text().replace(new RegExp("(" + keywords + ")", "gi"), '<b>$1</b>'));
+                });
+                //*
+                //if (_self.option('showFooter')) {
+                var results = (count == total ? count + " תוצאות" : count + " תוצאות מתוך " + total);
+                $list.children('ul').append('<li><label>'+results+'</label></li>');
+               // }
+                //*/
+            },
+            close: function (event, ui) {
+                //$elm.find('.nav-button').hide();
+            }
+        });
+        /** autocomplete settings end **/
+
+        /********attach events handlers****/
+
+        $submit.on('click', function (ev) {
+            ev.preventDefault();
+           if ($input.val().length > 1){
+                //$submit.removeClass('on').get(0).disabled=true;
+                $form.trigger('submit')
+                };
+            return false;
+        });
+
+        $clear.on('click', function () {
+            $clear.fadeOut();
+            $input.autocomplete('close').val('').focus();
+        });
+        /*
+        if ($elm.is('#VODSuggestions')) {
+            $elm.on('click', '.ui-menu-close', function(ev) {
+                ev.preventDefault();
+                $input.autocomplete('close');
+                return false;
+            });
+            //customScroll();
+            $elm.find('.ui-autocomplete-wrapper').append('<div class="nav-button ui-menu-close"><button/><span/></div>');
+        }
+        */
+    },
+
+
+    _customScroll: function () {
+        Lazy.css('rcs@/css/jquery.jscrollpane.css').js(['rcs@/js/scripts/jquery.jscrollpane.min.js', 'rcs@/js/scripts/jquery.mousewheel.pack.js'], function () {
+            $jsp = $('.ui-autocomplete').wrap('<div class="scroll-pane"></div');
+            $('.scroll-pane').jScrollPane().data("jsp");
+        });
+    }
+});
+
+//$('#vid-searchbar li[data-search]').vodSearchify();
+defaults.$searchbar = $('#vid-searchbar li[data-search]').vodSearchify();
+
+/***********search complete *************/
+					})
+
+
+				 </script>
+   <style type="text/css">
+
+.vign-breadcrumbsContainer {
+  border: none;
+  margin: 0;
+  padding: 3px 9px;
+}
+.vign-breadcrumbsList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.vign-breadcrumbsList .vign-last {
+  background: none;
+}
+</style>
+   <table border="0" cellpadding="0" cellspacing="0" class="mako_main_panel_table">
+    <tbody>
+     <tr>
+      <td class="mako_main_portlet_group_container_td single-col">
+       <div class="mako_main_portlet_container_no_spacing">
+        <script>var BannerRenderInterval = !document.querySelector('meta[name=shatap]') && '4.04';</script>
+       </div>
+       <div class="mako_main_portlet_container">
+        <ul id="vid-searchbar">
+         <li><a><b></b></a>
+          <ul>
+           <li data-search="">
+            <form action="/Search" autocomplete="off">
+             <input type="text" name="searchstring_input" placeholder="במה תרצה לצפות?"> <input type="hidden" value="3d385dd2dd5d4110VgnVCM100000290c10acRCRD" name="vgnextoid" id="vgnextoid"> <input type="hidden" value="" name="partnerURL" id="partnerURL"> <input type="hidden" value="regular" name="formType" id="formType"> <input type="submit"> <b></b>
+             <div class="ui-autocomplete-wrapper"></div>
+            </form></li>
+          </ul></li>
+        </ul>
+        <div class="vid-nav">
+         <ul></ul>
+        </div>
+        <div class="vid-nav-sub">
+         <b></b>
+         <ul></ul><a></a>
+        </div>
+        <div class="vid-gallery gallery-container-wrapper">
+         <div class="vid-gallery itemsWrap">
+          <div id="vid-wrpr" class="limit">
+           <b></b>
+           <ul>
+            <li class="video ready" data-widget="player" data-vidparams="{&quot;isDashable&quot;:true}" data-vidsetup="{&quot;isGallery&quot;: true,&quot;autoplay&quot;:true,&quot;cancelAutoplayWithoutPreroll&quot;:false}"></li>
+           </ul>
+           <h5></h5>
+           <p></p><span class="openBtn"></span> <i tabindex="1"></i>
+          </div>
+          <ul></ul>
+         </div>
+        </div>
+        <script>
+  Lazy
+    .css(['rcs@/css/newLobbyBundleV2.css','rcs@/css/neoVideoGrid.css'])
+    .js('rcs@/js/neoVideoGridGallery.js', function(){
+       window.buildvidgal({
+         elm:'.vid-gallery>ul',
+         chsrv:'/AjaxPage?jspName=videoGalleryChannelPageResponse.jsp',
+         vdsrv:'/AjaxPage?jspName=videoGalleryVideoPageResponse.jsp',
+         gal:'e30cc13e751fc610VgnVCM200000650a10acRCRD',
+         sub:'5445fcf6e2cfc610VgnVCM100000700a10acRCRD',page:1,pid:'1340502557'
+        })
+      })
+</script>
+        <noscript>
+         <a href="/news-channel12?subChannelId=85804cecccf96810VgnVCM100000700a10acRCRD">04-2023</a> <a href="/news-channel12?subChannelId=7b41351d23006810VgnVCM100000700a10acRCRD">03-2023</a> <a href="/news-channel12?subChannelId=383eb9e4d2075810VgnVCM200000650a10acRCRD">02-2023</a> <a href="/news-channel12?subChannelId=3a99a2cce80d4810VgnVCM200000650a10acRCRD">01-2023</a> <a href="/news-channel12?subChannelId=8e8890a2ce034810VgnVCM100000700a10acRCRD">12-2022</a> <a href="/news-channel12?subChannelId=d64e464f52693810VgnVCM200000650a10acRCRD">11-2022</a> <a href="/news-channel12?subChannelId=89f6b1e3f66f2810VgnVCM200000650a10acRCRD">10-2022</a> <a href="/news-channel12?subChannelId=3406dba1fdb52810VgnVCM200000650a10acRCRD">09-2022</a> <a href="/news-channel12?subChannelId=e2fb212716cb1810VgnVCM200000650a10acRCRD">08-2022</a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD">07-2022</a> <a href="/news-channel12?subChannelId=4a0df12873280810VgnVCM200000650a10acRCRD">06-2022</a> <a href="/news-channel12?subChannelId=565954300a2ef710VgnVCM200000650a10acRCRD">05-2022</a> <a href="/news-channel12?subChannelId=85804cecccf96810VgnVCM100000700a10acRCRD&amp;vcmid=b5618a3015ec7810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 29.04.2023</a> <a href="/news-channel12?subChannelId=85804cecccf96810VgnVCM100000700a10acRCRD&amp;vcmid=8e7bc55a14aa7810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 22.04.2023</a> <a href="/news-channel12?subChannelId=85804cecccf96810VgnVCM100000700a10acRCRD&amp;vcmid=319cb3bdc4687810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 15.04.2023</a> <a href="/news-channel12?subChannelId=85804cecccf96810VgnVCM100000700a10acRCRD&amp;vcmid=3592e5c9c3267810VgnVCM100000700a10acRCRD">משדר 18:00 עם ירון אברהם - 08.04.2023</a> <a href="/news-channel12?subChannelId=85804cecccf96810VgnVCM100000700a10acRCRD&amp;vcmid=e0ad5d5e22e37810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 01.04.2023</a> <a href="/news-channel12?subChannelId=7b41351d23006810VgnVCM100000700a10acRCRD&amp;vcmid=987b5e1011527810VgnVCM200000650a10acRCRD">פגוש את העיתונות - 27.03.2023</a> <a href="/news-channel12?subChannelId=7b41351d23006810VgnVCM100000700a10acRCRD&amp;vcmid=063794b231a17810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 25.03.2023</a> <a href="/news-channel12?subChannelId=7b41351d23006810VgnVCM100000700a10acRCRD&amp;vcmid=fa85cf83136f6810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 18.03.2023</a> <a href="/news-channel12?subChannelId=7b41351d23006810VgnVCM100000700a10acRCRD&amp;vcmid=5537f160032d6810VgnVCM200000650a10acRCRD">פגוש את העיתונות - 11.03.2023</a> <a href="/news-channel12?subChannelId=7b41351d23006810VgnVCM100000700a10acRCRD&amp;vcmid=931deb9eecea6810VgnVCM100000700a10acRCRD">פגוש את העיתונות - 4.3.2023</a> <a href="/news-channel12?subChannelId=383eb9e4d2075810VgnVCM200000650a10acRCRD&amp;vcmid=0db3aa6171a86810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 25.02.2023</a> <a href="/news-channel12?subChannelId=383eb9e4d2075810VgnVCM200000650a10acRCRD&amp;vcmid=0395e6e4cf566810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 18.02.2023</a> <a href="/news-channel12?subChannelId=3179a2cce80d4810VgnVCM200000650a10acRCRD&amp;vcmid=f2bf2a4d12246810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 11.02.2023</a> <a href="/news-channel12?subChannelId=383eb9e4d2075810VgnVCM200000650a10acRCRD&amp;vcmid=dbf76ad73fd16810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 04.02.2023</a> <a href="/news-channel12?subChannelId=3a99a2cce80d4810VgnVCM200000650a10acRCRD&amp;vcmid=50bd091a3f9f5810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 28.01.2023</a> <a href="/news-channel12?subChannelId=3a99a2cce80d4810VgnVCM200000650a10acRCRD&amp;vcmid=fa1daed96d5d5810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 21.01.2023</a> <a href="/news-channel12?subChannelId=3a99a2cce80d4810VgnVCM200000650a10acRCRD&amp;vcmid=38b027dfed1b5810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 14.01.2023</a> <a href="/news-channel12?subChannelId=3a99a2cce80d4810VgnVCM200000650a10acRCRD&amp;vcmid=14b25c251dd85810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם יאיר ובן - 07.01.2023</a> <a href="/news-channel12?subChannelId=8e8890a2ce034810VgnVCM100000700a10acRCRD&amp;vcmid=74987dbf0a965810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם יאיר ובן - 31.12.2022</a> <a href="/news-channel12?subChannelId=8e8890a2ce034810VgnVCM100000700a10acRCRD&amp;vcmid=3c5f81892a545810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 24.12.2022</a> <a href="/news-channel12?subChannelId=8e8890a2ce034810VgnVCM100000700a10acRCRD&amp;vcmid=f294a1206a125810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 17.12.2022</a> <a href="/news-channel12?subChannelId=8e8890a2ce034810VgnVCM100000700a10acRCRD&amp;vcmid=dafba23e18df4810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 10.12.2022 </a> <a href="/news-channel12?subChannelId=8e8890a2ce034810VgnVCM100000700a10acRCRD&amp;vcmid=82fb685d699d4810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 03.12.2022</a> <a href="/news-channel12?subChannelId=d64e464f52693810VgnVCM200000650a10acRCRD&amp;vcmid=422fc280b65b4810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 26.11.2022</a> <a href="/news-channel12?subChannelId=d64e464f52693810VgnVCM200000650a10acRCRD&amp;vcmid=2173c1da18194810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 19.11.2022</a> <a href="/news-channel12?subChannelId=d64e464f52693810VgnVCM200000650a10acRCRD&amp;vcmid=afa9e1db24d64810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 12.11.2022</a> <a href="/news-channel12?subChannelId=d64e464f52693810VgnVCM200000650a10acRCRD&amp;vcmid=58239d6b47944810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 05.11.2022</a> <a href="/news-channel12?subChannelId=89f6b1e3f66f2810VgnVCM200000650a10acRCRD&amp;vcmid=121682dfe0524810VgnVCM200000650a10acRCRD">פגוש את העיתונות - 29.10.2022</a> <a href="/news-channel12?subChannelId=89f6b1e3f66f2810VgnVCM200000650a10acRCRD&amp;vcmid=c36e391f41104810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 22.10.2022</a> <a href="/news-channel12?subChannelId=89f6b1e3f66f2810VgnVCM200000650a10acRCRD&amp;vcmid=904b2f548dcd3810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 15.10.2022</a> <a href="/news-channel12?subChannelId=89f6b1e3f66f2810VgnVCM200000650a10acRCRD&amp;vcmid=b4489188809b3810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עמית ובן - 08.10.2022</a> <a href="/news-channel12?subChannelId=89f6b1e3f66f2810VgnVCM200000650a10acRCRD&amp;vcmid=a200a07d11593810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם בן כספית ועמית סגל - 01.</a> <a href="/news-channel12?subChannelId=3406dba1fdb52810VgnVCM200000650a10acRCRD&amp;vcmid=b036188d1e073810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 24.09.22</a> <a href="/news-channel12?subChannelId=3406dba1fdb52810VgnVCM200000650a10acRCRD&amp;vcmid=45a7c5bc38c43810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית ובן - 17.09.2022</a> <a href="/news-channel12?subChannelId=3406dba1fdb52810VgnVCM200000650a10acRCRD&amp;vcmid=4dd5c5bc38c43810VgnVCM100000700a10acRCRD">משדר עם עמית סגל ובן כספית - 17.09.2022</a> <a href="/news-channel12?subChannelId=3406dba1fdb52810VgnVCM200000650a10acRCRD&amp;vcmid=05bef0f66b823810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם עמית סגל ובן כספית -10.0</a> <a href="/news-channel12?subChannelId=3406dba1fdb52810VgnVCM200000650a10acRCRD&amp;vcmid=c988ab57d7403810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם ירון אברהם - 03.09.2022</a> <a href="/news-channel12?subChannelId=3406dba1fdb52810VgnVCM200000650a10acRCRD&amp;vcmid=45144d5294403810VgnVCM100000700a10acRCRD">משדר עם ירון אברהם - 03.09.2022</a> <a href="/news-channel12?subChannelId=e2fb212716cb1810VgnVCM200000650a10acRCRD&amp;vcmid=b60b5657c60e2810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם ירון אברהם - 27.08.2022</a> <a href="/news-channel12?subChannelId=e2fb212716cb1810VgnVCM200000650a10acRCRD&amp;vcmid=245a3813e30e2810VgnVCM100000700a10acRCRD">משדר עם ירון אברהם - 27.08.2022</a> <a href="/news-channel12?subChannelId=e2fb212716cb1810VgnVCM200000650a10acRCRD&amp;vcmid=20954bd1b7cb2810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם עודד בן עמי - 20.08.2022</a> <a href="/news-channel12?subChannelId=e2fb212716cb1810VgnVCM200000650a10acRCRD&amp;vcmid=b25ff1d5a3cb2810VgnVCM200000650a10acRCRD">משדר עם עם עודד בן עמי - 20.08.2022</a> <a href="/news-channel12?subChannelId=e2fb212716cb1810VgnVCM200000650a10acRCRD&amp;vcmid=ff21e549e4892810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם ירון אברהם - 13.08.2022</a> <a href="/news-channel12?subChannelId=e2fb212716cb1810VgnVCM200000650a10acRCRD&amp;vcmid=05ebb95471892810VgnVCM200000650a10acRCRD">משדר עם ירון אברהם - 13.08.2022</a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=40a0fe74f4052810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 30.07.2022 </a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=f71201df13052810VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 30.07.2022 </a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=f86521dc8cf42810VgnVCM100000700a10acRCRD">סדר עולמי עם ערד ניר - 30.07.2022 </a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=ec2fdd4482c22810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 23.07.2022</a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=78bb86c661c22810VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 23.07.2022</a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=8574b4efc1802810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 16.07.2022</a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=567dedecde702810VgnVCM100000700a10acRCRD">משדר עם רינה מצליח - 16.07.2022</a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=f8966458cf3e1810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם רינה מצליח - 09.07.2022</a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=13eb7e74804e1810VgnVCM100000700a10acRCRD">משדר עם רינה מצליח - 09.07.2022</a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=8a586ad6520c1810VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 02.07.2022</a> <a href="/news-channel12?subChannelId=e31982ef7cc11810VgnVCM100000700a10acRCRD&amp;vcmid=9c644ace110c1810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם רינה מצליח - 02.07.2022 </a> <a href="/news-channel12?subChannelId=4a0df12873280810VgnVCM200000650a10acRCRD&amp;vcmid=851849a6efb91810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 25.06.2022</a> <a href="/news-channel12?subChannelId=4a0df12873280810VgnVCM200000650a10acRCRD&amp;vcmid=b25855b6dcb91810VgnVCM100000700a10acRCRD">משדר עם רינה מצליח - 25.06.2022</a> <a href="/news-channel12?subChannelId=4a0df12873280810VgnVCM200000650a10acRCRD&amp;vcmid=da291ee84f771810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם רינה מצליח - 18.06.2022</a> <a href="/news-channel12?subChannelId=4a0df12873280810VgnVCM200000650a10acRCRD&amp;vcmid=31e3a8a7b9771810VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 18.06.2022</a> <a href="/news-channel12?subChannelId=4a0df12873280810VgnVCM200000650a10acRCRD&amp;vcmid=864d257bbd351810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם רינה מצליח - 11.06.2022</a> <a href="/news-channel12?subChannelId=4a0df12873280810VgnVCM200000650a10acRCRD&amp;vcmid=59d355ab5b351810VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 11.06.2022</a> <a href="/news-channel12?subChannelId=565954300a2ef710VgnVCM200000650a10acRCRD&amp;vcmid=604633a7adb01810VgnVCM200000650a10acRCRD">משדר עם דפנה ליאל - 28.05.2022 </a> <a href="/news-channel12?subChannelId=565954300a2ef710VgnVCM200000650a10acRCRD&amp;vcmid=42b533a7adb01810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם דפנה ליאל - 28.05.2022 </a> <a href="/news-channel12?subChannelId=565954300a2ef710VgnVCM200000650a10acRCRD&amp;vcmid=e1009527cb7e0810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 21.05.2022 </a> <a href="/news-channel12?subChannelId=565954300a2ef710VgnVCM200000650a10acRCRD&amp;vcmid=758f78bca97e0810VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 21.05.2022 </a> <a href="/news-channel12?subChannelId=565954300a2ef710VgnVCM200000650a10acRCRD&amp;vcmid=82699ab21b3c0810VgnVCM200000650a10acRCRD">פגוש את העיתונות עם רינה מצליח - 14.05.2022</a> <a href="/news-channel12?subChannelId=565954300a2ef710VgnVCM200000650a10acRCRD&amp;vcmid=f2843c24473c0810VgnVCM100000700a10acRCRD">משדר עם רינה מצליח - 14.05.2022</a> <a href="/news-channel12?subChannelId=565954300a2ef710VgnVCM200000650a10acRCRD&amp;vcmid=17b8571f0bf90810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 07.05.202</a> <a href="/news-channel12?subChannelId=565954300a2ef710VgnVCM200000650a10acRCRD&amp;vcmid=69a86daa97f90810VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 07.05.2022 </a> <a href="/news-channel12?subChannelId=4cffdadf5384f710VgnVCM200000650a10acRCRD&amp;vcmid=f0779c8a0bb70810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 30.04.202</a> <a href="/news-channel12?subChannelId=4cffdadf5384f710VgnVCM200000650a10acRCRD&amp;vcmid=17e4b458e6b70810VgnVCM100000700a10acRCRD">משדר עם רינה מצליח - 30.04.2022</a> <a href="/news-channel12?subChannelId=4cffdadf5384f710VgnVCM200000650a10acRCRD&amp;vcmid=e13d3d9b3a750810VgnVCM100000700a10acRCRD">משדר עם רינה מצליח - 23.04.2022 </a> <a href="/news-channel12?subChannelId=4cffdadf5384f710VgnVCM200000650a10acRCRD&amp;vcmid=efc53a1559750810VgnVCM200000650a10acRCRD"> פגוש את העיתונות עם רינה מצליח - 23.04.2022</a> <a href="/news-channel12?subChannelId=4cffdadf5384f710VgnVCM200000650a10acRCRD&amp;vcmid=8395f866e7f00810VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 09.04.2022</a> <a href="/news-channel12?subChannelId=4cffdadf5384f710VgnVCM200000650a10acRCRD&amp;vcmid=c516041a73f00810VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 09.04.2022</a> <a href="/news-channel12?subChannelId=4cffdadf5384f710VgnVCM200000650a10acRCRD&amp;vcmid=50836bbce6bef710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 02.04.2022</a> <a href="/news-channel12?subChannelId=4cffdadf5384f710VgnVCM200000650a10acRCRD&amp;vcmid=8c3ea04133bef710VgnVCM200000650a10acRCRD">משדר מיוחד עם רינה מצליח - 02.04.2022</a> <a href="/news-channel12?subChannelId=fe0c3bbc3a8ae710VgnVCM100000700a10acRCRD&amp;vcmid=7872284c467cf710VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 26.03.2022 </a> <a href="/news-channel12?subChannelId=fe0c3bbc3a8ae710VgnVCM100000700a10acRCRD&amp;vcmid=70192563767cf710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 26.03.202</a> <a href="/news-channel12?subChannelId=fe0c3bbc3a8ae710VgnVCM100000700a10acRCRD&amp;vcmid=d809f3ad353af710VgnVCM200000650a10acRCRD">פגוש את העיתונות עם דפנה ליאל - 19.03.2022</a> <a href="/news-channel12?subChannelId=fe0c3bbc3a8ae710VgnVCM100000700a10acRCRD&amp;vcmid=12df168af23af710VgnVCM200000650a10acRCRD">משדר מיוחד עם דפנה ליאל - 19.03.2022</a> <a href="/news-channel12?subChannelId=fe0c3bbc3a8ae710VgnVCM100000700a10acRCRD&amp;vcmid=94948af491f7f710VgnVCM200000650a10acRCRD">פגוש את העיתונות עם דפנה ליאל - 12.03.2022</a> <a href="/news-channel12?subChannelId=fe0c3bbc3a8ae710VgnVCM100000700a10acRCRD&amp;vcmid=37a9f27411f7f710VgnVCM100000700a10acRCRD">משדר מיוחד עם דפנה ליאל - 12.03.2022</a> <a href="/news-channel12?subChannelId=351ac9ab3781e710VgnVCM100000700a10acRCRD&amp;vcmid=cf6c781df673f710VgnVCM200000650a10acRCRD">משדר מיוחד עם רינה מצליח - 26.02.2022</a> <a href="/news-channel12?subChannelId=351ac9ab3781e710VgnVCM100000700a10acRCRD&amp;vcmid=363d0c591531f710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 19.02.2022 </a> <a href="/news-channel12?subChannelId=351ac9ab3781e710VgnVCM100000700a10acRCRD&amp;vcmid=cc7f3f902231f710VgnVCM100000700a10acRCRD">משדר עם רינה מצליח - 19.02.2022</a> <a href="/news-channel12?subChannelId=351ac9ab3781e710VgnVCM100000700a10acRCRD&amp;vcmid=8feedf0bf2fee710VgnVCM200000650a10acRCRD">פגוש את העיתונות עם רינה מצליח - 12.02.2022</a> <a href="/news-channel12?subChannelId=351ac9ab3781e710VgnVCM100000700a10acRCRD&amp;vcmid=d434ff51c0fee710VgnVCM100000700a10acRCRD">משדר עם רינה מצליח - 12.02.2022 </a> <a href="/news-channel12?subChannelId=351ac9ab3781e710VgnVCM100000700a10acRCRD&amp;vcmid=cf70ecfde0bce710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 5.02.2022 </a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=ca290e65627ae710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 29.01.2022</a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=92b594e69e6ae710VgnVCM100000700a10acRCRD">משדר עם רינה מצליח - 29.01.2022</a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=b1aba0df2b38e710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 22.01.202</a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=158ecb88f238e710VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 22.01.2022</a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=ea3a27dab0f5e710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 15.1.2022</a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=23af2a5a1ee5e710VgnVCM100000700a10acRCRD">משדר 18:00 עם רינה מצליח - 15.01.2022</a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=44c81f1e60b3e710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם דפנה ליאל - 08.01.2022 </a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=98beba3b2da3e710VgnVCM200000650a10acRCRD">משרד עם דפנה ליאל - 08.01.2022 </a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=99a0e15c2f61e710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 01.01.2022</a> <a href="/news-channel12?subChannelId=dddcc9b4db87d710VgnVCM200000650a10acRCRD&amp;vcmid=24bb45245d61e710VgnVCM200000650a10acRCRD">משדר עם רינה מצליח - 01.01.2022</a> <a href="/news-channel12?subChannelId=039b499a229dc710VgnVCM100000700a10acRCRD&amp;vcmid=37875400ce2fd710VgnVCM100000700a10acRCRD">פגוש את העיתונות עם רינה מצליח - 25.12.2021</a>
+        </noscript>
+       </div><!-- Mako chrome (default) portlet chrome for neo video grid gallery erez portlet - end --></td>
+     </tr>
+    </tbody>
+   </table>
+  </main>
+  <div id="root" data-status="0" data-side-chat="side-chat" data-disabled="1"></div>
+  <div id="side-chat"></div>
+  <footer>
+   <div class="wrapper">
+    <div class="icons">
+     <a class="news12_logo" href="/news?partner=NewsfooterLinks"><img src="https://rcs.mako.co.il/images/svg/news/logo-n-12-footer.svg" alt="N12 חדשות"></a> <a class="twitter" href="https://twitter.com/N12News" target="_blank"></a> <a class="instagram" href="https://www.instagram.com/n12news/" target="_blank"></a> <a class="facebook" href="https://www.facebook.com/N12News/" target="_blank"></a>
+    </div>
+    <ul class="flex-container" style="clear:both;">
+     <li><span>חדשות</span>
+      <ul class="all_helpfullinks">
+       <li><a href="https://www.mako.co.il/news-military?partner=NewsfooterLinks">ביטחוני</a></li>
+       <li><a href="/news-politics?partner=NewsfooterLinks">פוליטי</a></li>
+       <li><a href="/news-law?partner=NewsfooterLinks">פלילי</a></li>
+       <li><a href="https://www.mako.co.il/news-israel?partner=NewsfooterLinks">פנים</a></li>
+       <li><a href="/news-world?partner=NewsfooterLinks">בעולם</a></li>
+       <li><a href="/news-education?partner=NewsfooterLinks">חינוך</a></li>
+       <li><a href="/news-columns?partner=NewsfooterLinks">פרשנות</a></li>
+       <li><a href="/news-money?partner=NewsfooterLinks">כלכלה</a></li>
+       <li><a href="/news-sport?partner=NewsfooterLinks">ספורט</a></li>
+       <li><a href="/news-entertainment?partner=NewsfooterLinks">תרבות</a></li>
+       <li><a href="/news-lifestyle?partner=NewsfooterLinks">בריאות</a></li>
+       <li><a href="/news-digital?partner=NewsfooterLinks">דיגיטל</a></li>
+       <li><a href="https://www.mako.co.il/news-podcast_n12/one_a_day?partner=NewsfooterLinks">אחד ביום</a></li>
+       <li><a href="https://www.mako.co.il/news-tip12?partner=NewsfooterLinks">TIP12</a></li>
+       <li><a href="https://www.mako.co.il/news-science?partner=NewsfooterLinks">מדע וסביבה</a></li>
+       <li><a href="https://www.mako.co.il/news-money/consumer?partner=NewsfooterLinks">צרכנות</a></li>
+       <li><a href="https://www.mako.co.il/news-money/real_estate?partner=NewsfooterLinks">נדל"ן</a></li>
+       <li><a href="https://www.mako.co.il/news-weather?partner=NewsfooterLinks">תחזית מזג האוויר</a></li>
+       <li><a href="https://makospecial.co.il/Women_violence?makoOpenChromeTabs=1&amp;partner=NewsfooterLinks" target="_blank">אלימות נגד נשים</a></li>
+       <li><a href="https://specialprojects.mako.co.il/Road_Accidents?makoOpenChromeTabs=1&amp;partner=NewsfooterLinks" target="_blank">תאונות דרכים בישראל</a></li>
+      </ul></li>
+     <li><span>תוכניות חדשות 12</span>
+      <ul class="all_helpfullinks">
+       <li><a href="/news-channel12/world_order?partner=NewsfooterLinks">סדר עולמי</a></li>
+       <li><a href="/news-channel12/economy_newcast?partner=NewsfooterLinks">תוכנית חיסכון</a></li>
+       <li><a href="/news-channel12/six-newscast?partner=NewsfooterLinks">שש עם</a></li>
+       <li><a href="/news-channel12/friday_newscast?partner=NewsfooterLinks">אולפן שישי</a></li>
+       <li><a href="/news-channel12/meet_the_press?partner=NewsfooterLinks">פגוש את העיתונות</a></li>
+       <li><a href="/news-channel12/channel_12_newscast?partner=NewsfooterLinks">המהדורה המרכזית</a></li>
+       <li><a href="/news-channel12/rafi_reshef?partner=NewsfooterLinks">חמש עם רפי רשף</a></li>
+       <li><a href="/news-channel12/first_edition?partner=NewsfooterLinks">מהדורה ראשונה</a></li>
+       <li><a href="/news-channel12/weekend_newscast?partner=NewsfooterLinks">חדשות סוף השבוע</a></li>
+       <li><a href="/news-channel12/three?partner=NewsfooterLinks">שלוש</a></li>
+       <li><a href="/news-channel12/shishi_five?partner=NewsfooterLinks">שישי בחמש</a></li>
+      </ul></li>
+     <li><span>הגדרות</span>
+      <ul class="all_helpfullinks settings">
+       <li><a href="https://www.mako.co.il/help-terms-of-use/Article-d37908dd1674c11006.htm?partner=NewsfooterLinks" target="_blank">תנאי שימוש</a></li>
+       <li><a href="https://www.mako.co.il/help-terms-of-use/Article-d37908dd1674c11006.htm?partner=NewsfooterLinks" target="_blank">מדיניות פרטיות</a></li>
+       <li><a href="https://cweb.co.il/n12contact/?partner=NewsfooterLinks" target="_blank">צור קשר</a></li>
+       <li><a href="mailto:mail@ch2news.co.il?partner=NewsfooterLinks" target="_blank">המייל האדום</a></li>
+       <li><a href="/news-israel/2020_q1/Article-2cc76c5fee85071026.htm?partner=NewsfooterLinks" target="_blank">אודות</a></li>
+       <li><a href="https://www.mako-publishers.com/n12?partner=NewsfooterLinks" target="_blank">פרסמו אצלנו</a></li>
+       <li><a href="https://www.mako.co.il/help-5bb6bf4ccf39c110/Article-b7ff18a9de86471026.htm?partner=NewsfooterLinks">הסדרי נגישות</a></li>
+      </ul></li>
+     <li class="last">
+      <div class="footer_logos">
+       <a class="acum_logo" href="https://acum.org.il/?partner=NewsFooterLinks" target="_blank"><img src="https://rcs.mako.co.il/images/news/acumlogo-svg-2x.png" style="width:30px;height:33px"></a> <a class="mako_logo" href="https://www.mako.co.il/?partner=NewsFooterLinks"><img src="https://rcs.mako.co.il/images/news/mako-logo.png"></a>
+      </div></li>
+    </ul>
+   </div>
+  </footer>
+  <script src="https://rcs.mako.co.il/precache/js/polyfill.js"></script>
+ </body>
+</html>

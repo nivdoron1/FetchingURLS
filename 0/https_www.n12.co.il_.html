@@ -1,0 +1,1842 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="he">
+  <link rel="alternate" type="application/rss+xml" title="החדשות - Mako" href="https://rcs.mako.co.il/rss/31750a2610f26110VgnVCM1000005201000aRCRD.xml">
+  <script>
+
+	function getReferrer(url){
+		var params = url.split('?')[1];
+		params=params?"&":"?";
+		const ref = document.referrer;
+		return params + "referrer=" + (ref ? encodeURIComponent(ref) : "empty");
+		
+	}
+		
+	function getStatsParams(altUrl){
+		var params = '';
+		if (location.search && altUrl.indexOf('mako.')!=-1) {
+		    var parts = location.search.substring(1).split('&');	
+		    for (var i = 0; i < parts.length; i++) {
+		        var nv = parts[i].split('=');
+		        if (nv[0] && (nv[0] == 'sCh' || nv[0] == 'pId' || nv[0].toLowerCase() == 'partner' || nv[0].indexOf('utm') == 0)) {
+		              params += '&' + nv[0] +'='+ nv[1];
+		          }
+		    }
+		    if (params !== ''){
+		    	params = (altUrl.indexOf('?') !== altUrl.indexOf('&') ? '&' : '?') + params.substring(1);
+		    }
+		}
+		return params;
+	}
+		var agent = navigator.userAgent.toLowerCase();
+		var myUrl = window.location.href.toLowerCase();
+		var isSmartPhone = (agent.indexOf('ipad') == -1 && (agent.indexOf('iphone') != -1 || agent.indexOf('android') != -1 ) )
+		if(isSmartPhone){			
+			//var isTvbeeDomain = location.host.indexOf("tvbee.co.il") != -1;
+			var isSateliteDomain = location.host.indexOf("tvbee.co.il") != -1 || location.host.indexOf("www.n12")!= -1 || location.host.indexOf("tech12.co.il") != -1;
+			var altUrl="";
+			if((myUrl.indexOf(".mako") !== -1  || isSateliteDomain) && myUrl.indexOf("rdr=1") === -1 && myUrl.indexOf("partner=switch") === -1)
+			{
+					var mobileHostPrefix = isSateliteDomain ? 'm.' : 'mobile.';
+					var isValidUrl = new RegExp("^(http|https)\://.*$").test(altUrl);
+					if(altUrl.length && isValidUrl && (myUrl.toLowerCase().indexOf(altUrl.toLowerCase()) == -1)){
+						var url=altUrl + getStatsParams(altUrl);
+						window.location=url+getReferrer(url);						
+					}else{
+						if(myUrl.indexOf("/mako-vod-help")===-1){					
+							window.location = window.location.href.replace(location.host.split('.')[0]+'.', mobileHostPrefix)+getReferrer(window.location.href);
+						}												
+					}
+			}
+		}
+		</script>
+  <meta name="apple-itunes-app" content="app-id=340173260, app-argument=mako://hp?utm_source=makoMobile&amp;utm_medium=SmartAppBanner&amp;utm_campaign=makoMobilePromo&amp;firstinter=false&amp;secondinter=false">
+  <meta name="google-play-app" content="app-id=com.goldtouch.mako, app-argument=mako://hp?utm_source=makoMobile&amp;utm_medium=SmartAppBanner&amp;utm_campaign=makoMobilePromo&amp;firstinter=false&amp;secondinter=false">
+  <link rel="canonical" href="https://www.n12.co.il">
+  <link rel="alternate" media="handheld" href="https://m.n12.co.il">
+  <link rel="apple-touch-icon" href="//rcs.mako.co.il/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="//rcs.mako.co.il/images/N12favicon/favicon.ico">
+  <link rel="alternate" href="android-app://com.channel2.mobile.ui/news12/?link=/news?utm_source=Google&amp;utm_medium=OrganicSearchResults&amp;utm_campaign=AppIndexing&amp;firstinter=false&amp;secondinter=false">
+  <link rel="alternate" href="ios-app://333211486/news12?link=/news?utm_source=Google&amp;utm_medium=OrganicSearchResults&amp;utm_campaign=AppIndexing&amp;firstinter=false&amp;secondinter=false">
+  <script type="application/ld+json">
+			{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "@id": "https://www.n12.co.il"
+}</script>
+  <script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "NewsMediaOrganization",
+ "name": "N12",
+ "url": "https://www.n12.co.il/",
+ "sameAs":  [
+  "http://www.n12.co.il/",
+  "https://www.facebook.com/N12News/",
+  "https://www.instagram.com/n12news/",
+  "https://twitter.com/NewsChannelIL",
+  "https://he.wikipedia.org/wiki/N12_-_%D7%94%D7%97%D7%93%D7%A9%D7%95%D7%AA"
+ ],
+ "logo": "https://rcs.mako.co.il/images/news/logo-x2.png"
+}
+</script>
+  <meta name="description" content="חדשות מבית חדשות 12: מבזקים, פרשנויות וחדשות היום בשלל נושאים: פוליטי, ביטחוני, כלכלי, ספורט ותרבות התעדכנו היום מהכתבים בשטח בצ'אט הכתבים רק באתר החדשות N12.">
+  <title>חדשות | N12 אתר החדשות של ישראל</title>
+  <meta property="og:title" content="חדשות | N12 אתר החדשות של ישראל">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://img.mako.co.il/2020/02/17/SHAREIMG.png">
+  <meta property="og:site_name" content="N12">
+  <meta property="fb:app_id" content="225736910835244">
+  <meta property="og:description" content="חדשות מבית חדשות 12: מבזקים, פרשנויות וחדשות היום בשלל נושאים: פוליטי, ביטחוני, כלכלי, ספורט ותרבות התעדכנו היום מהכתבים בשטח בצ'אט הכתבים רק באתר החדשות N12.">
+  <meta property="fb:pages" content="100462013796">
+  <meta name="external_title" content="">
+  <script type="text/javascript">
+		var adsArea  = 'MAKOAREA=Lobby';
+		var contentType = 'Lobby';
+		var contentUsername = '';
+		function MAKO_SETTINGS() { 
+            return {
+                            'url' : "https://www.n12.co.il",
+                            'type' : "article"
+            }
+		}
+	</script>
+  <link rel="image_src" href="https://img.mako.co.il/2020/02/17/SHAREIMG.png"><!-- Menuitem:  / nNews /   --> <!-- google plus 1 -->
+  <script>
+	var vcmidOfContent = '31750a2610f26110VgnVCM1000005201000aRCRD';
+	var currentChannelId = '31750a2610f26110VgnVCM1000005201000aRCRD';
+	var mainChannelId = '31750a2610f26110VgnVCM1000005201000aRCRD';
+	var parentsChannels='31750a2610f26110VgnVCM1000005201000aRCRD';
+	var isCM8 =  true;
+	var OB_ContextKeyValue = 'n12';
+	var OB_Platform = 'desktop';
+</script>
+  <link href="https://rcs.mako.co.il/css/news/hp/cssBundle.css" rel="stylesheet">
+  <link href="https://rcs.mako.co.il/css/news/themes/header.css" rel="stylesheet">
+  <script src="https://rcs.mako.co.il/js/p13n_mako_v7.js"></script>
+  <script src="https://rcs.mako.co.il/js/bannend.js"></script>
+  <script src="https://rcs.mako.co.il/js/news/preBundle.js"></script>
+  <script>
+		var staticResourcesUriPrefix = 'https://rcs.mako.co.il';
+		var imagesUriPrefix = 'https://img.mako.co.il';
+		if(navigator.platform.indexOf('Mac') > -1){
+			document.querySelector("html").classList.add("Mac");
+		}
+	</script>
+ </head>
+ <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v5.0"></script><!-- Google Tag Manager -->
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-T87PQS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T87PQS');</script>
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WH7Q78" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WH7Q78');</script>
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MJ2NPR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MJ2NPR');</script>
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PHR3MZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PHR3MZ');</script><!-- End Google Tag Manager -->
+  <script>(window.upManager || []).push("76410001");</script><!-- GPT script begin -->
+  <script>var makoReferrer = 'mako';if(document.referrer.length == 0){	makoReferrer = 'empty';	}else{var ref = document.referrer.split('?');	if (ref[0].indexOf("mako.co.il") ==-1)makoReferrer = 'other';}</script>
+  <script src="//www.mako.co.il/Collab/cm8/360Advert.js"></script>
+  <style>#Fullscreen_Wrapper iframe{width:100%;height:100%;position:fixed;left:0}</style>
+  <div id="Fullscreen_Wrapper" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;visibility:visible;z-index:2147483638;"></div>
+  <script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
+  <script>
+var gclidVal = 'FALSE';
+try{gclidVal =(localStorage.getItem('mako_gclid') || location.search.indexOf('gclid=') > -1) ? 'TRUE' : 'FALSE';}catch(err){}
+var agent = navigator.userAgent.toLowerCase();
+var isNoOzenNeeded = (agent.indexOf('ipad') != -1 || agent.indexOf('iphone') != -1 || agent.indexOf('android') != -1 )
+if (isNoOzenNeeded && window.DFP){DFP.ozenReady=true;}
+
+var CM8MakoHN = window.houseNumbers ? ("&makoHN="+houseNumbers) : "";	
+isCM8 = isCM8 && location.href.toLowerCase().indexOf('&partner=inner')==-1 && location.href.toLowerCase().indexOf('&partner=m_inner')==-1;	
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	function addCustomCriteria(name, val){
+		 (val &&  val != '' && val != 'null') ? googletag.pubads().setTargeting(name, val) : '';
+}
+	
+if (isCM8){
+	var googleAds = [];
+    googletag.cmd.push(function (){
+    // permutive code
+    if (0===window.googletag.pubads().getTargeting("permutive").length){try{var g=window.localStorage.getItem("_pdfps");window.googletag.pubads().setTargeting("permutive",g?JSON.parse(g):[])}catch(e){}}
+    
+    var fullscreen = googletag.defineSlot('/242748299/mako/news/FULLSCREEN', [[970,250],[970,540]],'Fullscreen_Wrapper').setTargeting("FORMAT","FULLSCREEN").addService(googletag.pubads());
+    
+    // end permutive code
+   
+    
+   	googleAds[0]=googletag.defineSlot('/242748299/mako/news/PREMIUM', [[970,540],[970,330],[5,5],[3,3],[970,250]],'CM8ShowAd_MEGA_PLASMA_970X330').addService(googletag.pubads()).setTargeting("FORMAT", ["PLASMA1_970","MEGA_PLASMA","ELVIS_MEGAPLASMA","ELVIS_PLASMA","Billboard970"]).setCollapseEmptyDiv(true,true);
+    
+   	
+    googleAds[1]=googletag.defineSlot('/242748299/mako/news/PLASMA1_750', [[750,140],[5,5]],'CM8ShowAd_PLASMA1_750X140').addService(googletag.pubads()).setTargeting("FORMAT", ["PLASMA1_750"]).setCollapseEmptyDiv(true,true);
+      
+    googleAds[2]=googletag.defineSlot('/242748299/mako/news/OZEN',[[160,600],[120,600],[240,400]],'mako_main_glideDiv').addService(googletag.pubads()).setTargeting("FORMAT","OZEN");
+	googleAds[3] = googletag.defineSlot('/242748299/mako/news/JAMBO1_728',[728,90], 'CM8ShowAd_JAMBO1_728X90').addService(googletag.pubads()).setTargeting("FORMAT", "JAMBO1_728").setCollapseEmptyDiv(true,true);
+    googleAds[4] = googletag.defineSlot('/242748299/mako/news/JAMBO1_970',[970,90], 'CM8ShowAd_JAMBO1_970X90').addService(googletag.pubads()).setTargeting("FORMAT", "JAMBO1_970").setCollapseEmptyDiv(true,true);
+	googleAds[5] = googletag.defineSlot('/242748299/mako/news/CORNER_PEEL',[1,1], 'CM8ShowAd_CORNER_PEEL_1X1').addService(googletag.pubads()).setTargeting("FORMAT", "CORNER_PEEL").setCollapseEmptyDiv(true,true);
+       
+    googleAds[6] = googletag.defineSlot('/242748299/mako/news/MONSTER1_300',[300,250], 'CM8ShowAd_MONSTER1_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER1_300").setCollapseEmptyDiv(true,true);
+    
+    googleAds[7] = googletag.defineSlot('/242748299/mako/news/MONSTER2_300',[300,250], 'CM8ShowAd_MONSTER2_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER2_300");
+    
+    googleAds[8] = googletag.defineSlot('/242748299/mako/news/MONSTER3_300',[300,250], 'CM8ShowAd_MONSTER3_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER3_300");
+	
+    googleAds[9] = googletag.defineSlot('/242748299/mako/news/MONSTER1_250',[250,250], 'CM8ShowAd_MONSTER1_250X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER1_250");
+    
+    googleAds[10] = googletag.defineSlot('/242748299/mako/news/MONSTER2_250',[250,250], 'CM8ShowAd_MONSTER2_250X250').addService(googletag.pubads()).setTargeting("FORMAT","MONSTER2_250");
+    
+    googleAds[11] = googletag.defineSlot('/242748299/mako/news/MONSTER3_250',[250,250], 'CM8ShowAd_MONSTER3_250X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER3_250");
+    
+    googleAds[12] = googletag.defineSlot('/242748299/mako/news/POSTER',[300,600], 'CM8ShowAd_POSTER_300X600').addService(googletag.pubads()).setTargeting("FORMAT", "POSTER");
+    
+    googleAds[13] = googletag.defineSlot('/242748299/mako/news/POSTER2',[300,600], 'CM8ShowAd_POSTER2_300X600').addService(googletag.pubads()).setTargeting("FORMAT", "POSTER2");
+    
+    googleAds[14] = googletag.defineSlot('/242748299/mako/news/POSTER3',[300,600], 'CM8ShowAd_POSTER3_300X600').addService(googletag.pubads()).setTargeting("FORMAT", "POSTER3");
+	
+	googleAds[15]=googletag.defineSlot('/242748299/mako/news/INNER_OZEN',[120,600],'CM8ShowAd_OZEN1_120X600').addService(googletag.pubads()).setTargeting("FORMAT","OZEN_INNER").setCollapseEmptyDiv(true,true);
+    
+	googleAds[16]=googletag.defineSlot('/242748299/mako/news/COAST2COAST1_970',[970,90],'CM8ShowAd_COAST2COAST1_970X90').addService(googletag.pubads()).setTargeting("FORMAT","COAST2COAST1_970");
+        
+    googleAds[17]=googletag.defineSlot('/242748299/mako/news/COAST2COAST1_728',[728,90],'CM8ShowAd_COAST2COAST1_728X90').addService(googletag.pubads()).setTargeting("FORMAT","COAST2COAST1_728");
+    
+    googleAds[18]=googletag.defineSlot('/242748299/mako/news/STANDARD1',[234,60],'CM8ShowAd_STANDARD1_234X60').addService(googletag.pubads()).setTargeting("FORMAT","STANDARD1");
+   
+    googleAds[19]=googletag.defineSlot('/242748299/mako/news/CUBE1',[276,174],'CM8ShowAd_CUBE1_276X174').addService(googletag.pubads()).setTargeting("FORMAT","CUBE1");   
+   
+	googleAds[20] = googletag.defineSlot('/242748299/mako/news/ARTICLE1_250X250',[250,250], 'CM8ShowAd_ARTICLE1_250X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE1_250X250").setCollapseEmptyDiv(true,true);
+	
+    googleAds[21] = googletag.defineSlot('/242748299/mako/news/ARTICLE1_300X250',[300,250],'CM8ShowAd_ARTICLE1_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE1_300X250").setCollapseEmptyDiv(true,true);   
+    
+    googleAds[22] = googletag.defineSlot('/242748299/mako/news/MONSTER4_300',[300,250], 'CM8ShowAd_MONSTER4_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER4_300");
+    googleAds[23] = googletag.defineSlot('/242748299/mako/news/MONSTER5_300',[300,250], 'CM8ShowAd_MONSTER5_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER5_300");
+    googleAds[24] = googletag.defineSlot('/242748299/mako/news/MONSTER6_300',[300,250], 'CM8ShowAd_MONSTER6_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER6_300");
+    googleAds[25] = googletag.defineSlot('/242748299/mako/news/MONSTER7_300',[300,250], 'CM8ShowAd_MONSTER7_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER7_300");
+    googleAds[26] = googletag.defineSlot('/242748299/mako/news/MONSTER8_300',[300,250], 'CM8ShowAd_MONSTER8_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER8_300");
+    googleAds[27] = googletag.defineSlot('/242748299/mako/news/MONSTER9_300',[300,250], 'CM8ShowAd_MONSTER9_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER9_300");
+    googleAds[28] = googletag.defineSlot('/242748299/mako/news/MONSTER10_300',[300,250], 'CM8ShowAd_MONSTER10_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER10_300");
+    googleAds[29] = googletag.defineSlot('/242748299/mako/news/ARTICLE2_300X250',[300,250],'CM8ShowAd_ARTICLE2_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE2_300X250").setCollapseEmptyDiv(true,true);
+    googleAds[30] = googletag.defineSlot('/242748299/mako/news/ARTICLE3_300X250',[300,250],'CM8ShowAd_ARTICLE3_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE3_300X250").setCollapseEmptyDiv(true,true); 
+    googleAds[31] = googletag.defineSlot('/242748299/mako/news/ARTICLE4_300X250',[300,250],'CM8ShowAd_ARTICLE4_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE4_300X250").setCollapseEmptyDiv(true,true);
+    googleAds[32] = googletag.defineSlot('/242748299/mako/news/ARTICLE5_300X250',[300,250],'CM8ShowAd_ARTICLE5_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE5_300X250").setCollapseEmptyDiv(true,true); 
+    googleAds[33] = googletag.defineSlot('/242748299/mako/news/ARTICLE6_300X250',[300,250],'CM8ShowAd_ARTICLE6_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "ARTICLE6_300X250").setCollapseEmptyDiv(true,true);   
+    
+    googleAds[34]=googletag.defineSlot('/242748299/mako/news/MONSTER_300',[300,250], 'CM8ShowAd_MONSTER_300X250').addService(googletag.pubads()).setTargeting("FORMAT", "MONSTER_300").setCollapseEmptyDiv(true,true);
+    googleAds[35]=googletag.defineSlot('/242748299/mako/news/DOUBLESTANDARD',[468,60],'CM8ShowAd_DOUBLESTANDARD_468X60').addService(googletag.pubads()).setTargeting("FORMAT","DOUBLESTANDARD").setCollapseEmptyDiv(true,true);
+    
+    
+    //googleAds[29] = googletag.defineSlot('/242748299/mako/news/PREMIUM', [[6,6],[3,3]],'CM8ShowAd_BILLBOARD_970X400').addService(googletag.pubads()).setTargeting("FORMAT", "Billboard970").setCollapseEmptyDiv(true,true);
+    
+    if(window.contentType=='articleins'){
+    	if(document.querySelector('link[rel="video_src"]')!=null){
+    		addCustomCriteria("video","true");
+    	}
+    }
+    
+    window.DFP && googletag.defineOutOfPageSlot('/242748299/mako/news/TOPLAYER','DFP_TOPLAYER').addService(googletag.pubads()).setTargeting("FORMAT", "TOPLAYER");
+      
+       addCustomCriteria("makoHN", window.houseNumbers);
+       //addCustomCriteria("MAKOAREA", '');
+       addCustomCriteria("MAKOPAGE", '31750a2610f26110VgnVCM1000005201000aRCRD');
+       addCustomCriteria("mako_referrer", makoReferrer);
+       addCustomCriteria("CONTENTTYPE", window.contentType);
+       addCustomCriteria("LEVEL4", 'null');
+       addCustomCriteria("LEVEL5", 'null');
+       addCustomCriteria("LEVEL6", 'null');
+       addCustomCriteria("LEVEL7", 'null');  
+       addCustomCriteria("GCLID", gclidVal);
+	   // for test use
+       if (location.hostname.match('int|adm')) {
+       	   addCustomCriteria("TEST", "WINT"); 
+       }
+	   //googletag.pubads().collapseEmptyDivs(true);
+	   //if (DFP && DFP.isHP){
+	   //   googletag.pubads().enableSingleRequest();
+       //}
+       googletag.pubads().addEventListener('slotRenderEnded', function(event) {		
+            DFP && DFP.renderAdEnded && DFP.renderAdEnded(event); 
+            if (event.slot.getSlotElementId() === 'Fullscreen_Wrapper' && event.isEmpty == false){
+                document.querySelector('#Fullscreen_Wrapper').style.display = 'block';
+            }
+	    });
+        googletag.enableServices();       
+    });
+    googletag.cmd.push(function (){
+        googletag.display('Fullscreen_Wrapper');
+    });
+}    
+</script>
+  <div id="DFP_TOPLAYER" style="height:0px"></div>
+  <script>googletag.cmd.push(function() { googletag.display('DFP_TOPLAYER'); });</script>
+  <script>
+        !function(n,e,o,r,i){if(!e){e=e||{},window.permutive=e,e.q=[],e.config=i||{},e.config.projectId=o,e.config.apiKey=r,e.config.environment=e.config.environment||"production";for(var t=["addon","identify","track","trigger","query","segment","segments","ready","on","once","user","consent"],c=0;c<t.length;c++){var f=t[c];e[f]=function(n){return function(){var o=Array.prototype.slice.call(arguments,0);e.q.push({functionName:n,arguments:o})}}(f)}}}(document,window.permutive,"e40fe333-ed16-40e2-902d-2810c99b8c80","34892ffd-594e-409e-a5b1-d4caa1655e1a",{});
+        window.addEventListener('DOMContentLoaded', function(){
+            function category() {
+                try {
+                    return location.pathname.replace(/(?=\?)(.[^?]*$)/, '').replace(/(?=A)(.[^A]*$)/, '');
+                }
+                catch (e) {
+                    return null
+                }
+            }
+            function desc() {
+                try {
+                    return document.querySelector("meta[name='description']").getAttribute('content');
+                }
+                catch (e) {
+                    return null
+                }
+            }
+            function pdate() {
+                try {
+                    return document.querySelector("meta[property='article:published_time']").getAttribute('content').slice(0, -2) +":"+document.querySelector("meta[property='article:published_time']").getAttribute('content').slice(-2);
+                }
+                catch (e) {
+                    return null
+                }
+            }
+            function author() {
+                try {
+                    return document.querySelector("span[itemprop='author']").getAttribute('content');
+                }
+                catch (e) {
+                    return null
+                }
+            }
+            function tags() {
+                try {
+                    var nodes = document.querySelectorAll('meta[property="article:tag"]');
+                    var keywords = [];
+                    for (var i = 0; i < nodes.length; ++i) {
+                        keywords[i] = nodes[i].content;
+                    }
+                    return keywords;
+                } catch (e) {
+                    return null;
+                };
+            }
+                permutive.addon('web', { page: {
+                        "publisher": "keshet",
+                        "category": category(),
+                        "description": desc(),
+                        "dayofweek": new Date().toLocaleDateString('en-us', {weekday: 'long'}),
+                        "article":{
+                            "publishingdate": pdate(),
+                            "author": author(),
+                            "editortags": tags()
+                        }}})});
+                        var ptag = document.createElement('script'); 
+                        ptag.src = "https://cdn.permutive.com/e40fe333-ed16-40e2-902d-2810c99b8c80-web.js?d=" + new Date().toISOString().substring(0, 10); 
+                        var f = document.getElementsByTagName('script')[0]; 
+                        f.parentNode.insertBefore(ptag, f); 
+    </script>
+  <script async src="//mrb.upapi.net/code?w=5632346594213888&amp;uponit=true"></script>
+  <header class="toolbar">
+   <div class="inner">
+    <a class="logo" href="/news?partner=Newsheaderlogo"></a>
+    <ul class="weather-slider" data-feed="/AjaxPage?jspName=sideBarJsonResponse.jsp&amp;type=weather"></ul><span class="date"></span> <a class="s-logo" href="/news?partner=Newsheaderlogo"></a>
+   </div>
+  </header>
+  <nav class="menu responsive v-2020">
+   <ul>
+    <li>
+     <ul>
+      <li class="logo"><a href="/news?partner=NewsNavBar"></a></li>
+      <li><a href="https://www.mako.co.il/news-dailynews?partner=NewsNavBar">כל החדשות</a></li>
+      <li><a href="https://www.mako.co.il/news-politics?partner=NewsNavBar">פוליטי</a></li>
+      <li><a href="https://www.mako.co.il/news-military?partner=NewsNavBar">ביטחוני</a></li>
+      <li><a href="https://www.mako.co.il/news-law?partner=NewsNavBar">פלילי</a></li>
+      <li><a href="https://www.mako.co.il/news-world?partner=NewsNavBar">בעולם</a></li>
+      <li><a href="https://www.mako.co.il/news-money?partner=NewsNavBar">כלכלה</a></li>
+      <li><a href="https://www.mako.co.il/news-specials/data_n12?partner=NewsNavBar">DATA12</a></li>
+      <li><a href="https://www.mako.co.il/news-sport?partner=NewsNavBar">ספורט</a></li>
+      <li><a href="https://www.mako.co.il/news-n12_magazine?partner=NewsNavBar">המגזין</a></li>
+      <li><a href="https://www.mako.co.il/news-entertainment?partner=NewsNavBar">תרבות</a></li>
+      <li><a href="https://www.mako.co.il/news-israel?partner=NewsNavBar">פנים</a></li>
+      <li><a href="https://www.mako.co.il/news-education?partner=NewsNavBar">חינוך</a></li>
+      <li><a href="https://www.mako.co.il/news-podcast_n12?partner=NewsNavBar">הפודקאסטים</a></li>
+      <li><a href="https://www.mako.co.il/news-world/ukraine_russia_war?partner=NewsNavBar">אוקראינה</a></li>
+      <li><a href="https://www.mako.co.il/news-money/consumer?partner=NewsNavBar">צרכנות</a></li>
+      <li><a href="https://www.mako.co.il/news-money/real_estate?partner=NewsNavBar">עיצוב ונדל"ן</a></li>
+      <li><a href="https://www.mako.co.il/news-columns?partner=NewsNavBar">פרשנות</a></li>
+      <li><a href="https://www.mako.co.il/news-lifestyle?partner=NewsNavBar">בריאות</a></li>
+      <li><a href="https://www.mako.co.il/news-science?partner=NewsNavBar">מדע וסביבה</a></li>
+      <li><a href="https://www.tech12.co.il/?partner=NewsNavBar" target="_blank">tech12</a></li>
+      <li><a href="https://www.mako.co.il/news-digital?partner=NewsNavBar">דיגיטל</a></li>
+      <li><a href="https://www.mako.co.il/news-tip12?partner=NewsNavBar">TIP12</a></li>
+      <li><a href="https://stories.sc/mako/channel12jobs/?makoOpenChromeTabs=1&amp;partner=NewsNavBar">דרושים חדשות 12</a></li>
+      <li><a href="https://www.mako.co.il/news-ha_tachtit?partner=NewsNavBar">התחתית</a></li>
+      <li><a href="https://www.mako.co.il/news-business?partner=NewsNavBar">Business</a></li>
+      <li><a href="https://mako.devdino.com/brain12/download.html?partner=NewsNavBar" target="_blank">BRAIN12</a></li>
+      <li><a href="https://www.mako.co.il/mako-vod?partner=NewsNavBar">12+</a></li>
+     </ul></li>
+    <li><a href="https://www.mako.co.il/news-channel12?partner=NewsNavBar">תוכניות</a></li>
+    <li><a href="https://www.mako.co.il?partner=NewsNavBar" target="_blank">mako</a></li>
+    <li class="more"><span class="open"></span>
+     <ul>
+      <li><a href="https://www.mako.co.il/news-dailynews?partner=NewsNavBar">כל החדשות</a></li>
+      <li><a href="https://www.mako.co.il/news-politics?partner=NewsNavBar">פוליטי</a></li>
+      <li><a href="https://www.mako.co.il/news-military?partner=NewsNavBar">ביטחוני</a></li>
+      <li><a href="https://www.mako.co.il/news-law?partner=NewsNavBar">פלילי</a></li>
+      <li><a href="https://www.mako.co.il/news-world?partner=NewsNavBar">בעולם</a></li>
+      <li><a href="https://www.mako.co.il/news-money?partner=NewsNavBar">כלכלה</a></li>
+      <li><a href="https://www.mako.co.il/news-specials/data_n12?partner=NewsNavBar">DATA12</a></li>
+      <li><a href="https://www.mako.co.il/news-sport?partner=NewsNavBar">ספורט</a></li>
+      <li><a href="https://www.mako.co.il/news-n12_magazine?partner=NewsNavBar">המגזין</a></li>
+      <li><a href="https://www.mako.co.il/news-entertainment?partner=NewsNavBar">תרבות</a></li>
+      <li><a href="https://www.mako.co.il/news-israel?partner=NewsNavBar">פנים</a></li>
+      <li><a href="https://www.mako.co.il/news-education?partner=NewsNavBar">חינוך</a></li>
+      <li><a href="https://www.mako.co.il/news-podcast_n12?partner=NewsNavBar">הפודקאסטים</a></li>
+      <li><a href="https://www.mako.co.il/news-world/ukraine_russia_war?partner=NewsNavBar">אוקראינה</a></li>
+      <li><a href="https://www.mako.co.il/news-money/consumer?partner=NewsNavBar">צרכנות</a></li>
+      <li><a href="https://www.mako.co.il/news-money/real_estate?partner=NewsNavBar">עיצוב ונדל"ן</a></li>
+      <li><a href="https://www.mako.co.il/news-columns?partner=NewsNavBar">פרשנות</a></li>
+      <li><a href="https://www.mako.co.il/news-lifestyle?partner=NewsNavBar">בריאות</a></li>
+      <li><a href="https://www.mako.co.il/news-science?partner=NewsNavBar">מדע וסביבה</a></li>
+      <li><a href="https://www.tech12.co.il/?partner=NewsNavBar" target="_blank">tech12</a></li>
+      <li><a href="https://www.mako.co.il/news-digital?partner=NewsNavBar">דיגיטל</a></li>
+      <li><a href="https://www.mako.co.il/news-tip12?partner=NewsNavBar">TIP12</a></li>
+      <li><a href="https://stories.sc/mako/channel12jobs/?makoOpenChromeTabs=1&amp;partner=NewsNavBar">דרושים חדשות 12</a></li>
+      <li><a href="https://www.mako.co.il/news-ha_tachtit?partner=NewsNavBar">התחתית</a></li>
+      <li><a href="https://www.mako.co.il/news-business?partner=NewsNavBar">Business</a></li>
+      <li><a href="https://mako.devdino.com/brain12/download.html?partner=NewsNavBar" target="_blank">BRAIN12</a></li>
+      <li><a href="https://www.mako.co.il/mako-vod?partner=NewsNavBar">12+</a></li>
+     </ul></li>
+    <li class="special" data-text="מיוחד"><span class="open"></span>
+     <ul>
+      <li><a href="https://www.mako.co.il/news-business/duns_100?partner=NewsNavBar">duns 100</a></li>
+      <li><a href="https://www.mako.co.il/news-law_guide?partner=NewsNavBar">חוק ומשפט</a></li>
+      <li><a href="https://www.mako.co.il/news-med12?partner=NewsNavBar">MED12</a></li>
+      <li><a href="https://www.drushim.co.il/?utm_source=N12top&amp;partner=NewsNavBar" target="_blank">דרושים IL</a></li>
+      <li><a href="https://www.adolam.co.il/?utm_source=N12&amp;utm_medium=menu&amp;utm_campaign=Adolam&amp;partner=NewsNavBar">מודעות אבל</a></li>
+      <li><a href="https://www.mako.co.il/news-special_projects/conferences?partner=NewsNavBar">ועידות קשת 12</a></li>
+      <li><a href="https://www.mako.co.il/news-med12/talking_about_mutations?partner=NewsNavBar">סרטן הריאה</a></li>
+      <li><a href="https://www.mako.co.il/news-med12/lung_ambition?partner=NewsNavBar">לאנג אמבישן</a></li>
+     </ul></li>
+    <li class="search-bar">
+     <form action="/newssearch" autocomplete="off">
+      <input type="search" name="searchstring_input" placeholder="חיפוש ב - N12"> <input type="hidden" value="31750a2610f26110VgnVCM1000005201000aRCRD" name="vgnextoid" id="vgnextoid"> <input type="hidden" name="pageNum" value="1"> <input type="hidden" name="app" value="thenews"> <input type="hidden" name="fmt" value="json"> <button>
+       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewbox="0 0 25 24">
+        <path fill="#333538" fill-rule="nonzero" stroke="#333538" stroke-width=".95" d="M6.282 5.782c2.344-2.343 6.179-2.307 8.566.081 2.04 2.04 2.363 5.135.954 7.455l4.907 4.908-1.06 1.06-4.791-4.79-.091.089c-2.355 2.184-6.07 2.097-8.404-.237-2.388-2.387-2.424-6.222-.08-8.566zm.824.824c-1.897 1.897-1.868 5.001.065 6.934 1.933 1.933 5.037 1.962 6.934.065 1.897-1.897 1.868-5.001-.065-6.934-1.933-1.933-5.037-1.962-6.934-.065z" opacity=".8" />
+       </svg></button>
+     </form></li>
+   </ul>
+  </nav>
+  <div id="mako_main_glideDiv" class="not-for-print">
+   <script>
+		if(window.DFP && !DFP.ozenReady){
+			if(DFP.isStandard || (typeof DFP.isNeo !=="undefined" && !DFP.isNeo && !DFP.isHP))
+				googletag.cmd.push(function() { googletag.display('mako_main_glideDiv'); });
+			else
+				DFP.savedDisplay.push('mako_main_glideDiv');
+			DFP.ozenReady=true;
+		}
+		</script>
+   <div class="ad b160X600 cm8">
+    <div id="CM8ShowAd_OZEN_160X600" data-title="OZEN_160X600">
+     <script>			
+				window.DFP && DFP.showBanner('OZEN','160X600');				
+			</script>
+    </div>
+   </div>
+  </div>
+  <main>
+   <div class="ad b970X90XJAMBO large-mid-ad cm8">
+    <div id="CM8ShowAd_JAMBO1_970X90" data-title="JAMBO1_970X90">
+     <script>			
+				window.DFP && DFP.showBanner('JAMBO1','970X90');				
+			</script>
+    </div>
+   </div>
+   <div class="ad b970X330 cm8">
+    <div id="CM8ShowAd_MEGA_PLASMA_970X330" data-title="MEGA_PLASMA_970X330">
+     <script>			
+				window.DFP && DFP.showBanner('MEGA_PLASMA','970X330');				
+			</script>
+    </div>
+   </div>
+   <script src="https://rcs.mako.co.il/js/ABTest.js"></script>
+   <script>ABTest.init(4);</script>
+   <section id="part1" section-main>
+    <ul class="grid-ordering main1 " box-title="רכיב ראשי חדשות">
+     <li data-teaser-vcmid="d13fd25de4c6f610VgnVCM200000650a10acRCRD" data-item-vcmid="9c657ae3611f7810VgnVCM100000700a10acRCRD" data-image-type="i" class="theme-black">
+      <figure>
+       <a href="/news-politics/2023_q2/Article-9c657ae3611f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/in_dre_autoOrient.mxf_1_autoOrient_i.jpg" alt="מפגינים בתל אביב (צילום: N12)" title="מפגינים בתל אביב (צילום: N12)" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-politics/2023_q2/Article-9c657ae3611f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">כ-110 אלף במחאה בקפלן, גנץ במסר לקואליציה בהפגנה בנתניה</a> </strong> <span><a href="/news-politics/2023_q2/Article-9c657ae3611f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="subtitle">יו"ר המחנה הממלכתי: "בלי התקדמות בבית הנשיא - נעשה הערכה מחדש"</a></span> <small><span>אביבית מיסניקוב</span> | <span>21:48</span></small></p></li>
+     <li data-teaser-vcmid="1bdf2d5ad3804710VgnVCM100000700a10acRCRD" data-item-vcmid="351d4b5e5c1f7810VgnVCM200000650a10acRCRD" data-image-type="i" class=" play-sign">
+      <figure>
+       <a href="/news-law/2023_q2/Article-351d4b5e5c1f781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/ibud_hezi_2_autoOrient_i.jpg" alt="הצעיר שנרצח בגלבוע" title="הצעיר שנרצח בגלבוע" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-law/2023_q2/Article-351d4b5e5c1f781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">עימותים אחרי הרצח, תיעוד לפני הירי: "הוציא עליו אקדח"</a> </strong> <span><a href="/news-law/2023_q2/Article-351d4b5e5c1f781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="subtitle">תקרית קשה בגלבוע - סכסוך על שימוש בכביש הסתיים בבן 19 שנהרג</a></span> <small><span>פוראת נסאר</span> | <span>21:46</span></small></p></li>
+     <li data-teaser-vcmid="53abba48f84c6710VgnVCM200000650a10acRCRD" data-item-vcmid="40f11a636e1f7810VgnVCM100000700a10acRCRD" data-image-type="i" class=" play-sign">
+      <figure>
+       <a href="/news-politics/2023_q2/Article-40f11a636e1f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/04/MANSOOR-ABAS-YARIV-LEVIN_re_autoOrient_i.jpg" alt="מנסור עבס יריב לוין (צילום: פלאש 90)" title="מנסור עבס יריב לוין (צילום: פלאש 90)" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-politics/2023_q2/Article-40f11a636e1f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">אחרי הפרסום בחדשות 12, עבאס מאשר: "שוחחתי עם יריב לוין"</a> </strong> <span><a href="/news-politics/2023_q2/Article-40f11a636e1f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="subtitle">יו"ר רע"ם על השתתפות הערבים במחאה: "לא רוצה שנוכחותנו תכשיל אותה"</a></span> <small><span>עמית סגל</span> | <span>21:36</span></small></p></li>
+     <li data-teaser-vcmid="1b3c5652a435f710VgnVCM100000700a10acRCRD" data-item-vcmid="b8c83c1b072f7810VgnVCM100000700a10acRCRD" data-image-type="i">
+      <figure>
+       <a href="/news-law/2023_q2/Article-b8c83c1b072f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/photo1683397992_autoOrient_i.jpg" alt="חשד לרצח בעכו: גבר נורה מוות בחניון (צילום: תיעוד מבצעי מד&quot;א)" title="חשד לרצח בעכו: גבר נורה מוות בחניון (צילום: תיעוד מבצעי מד&quot;א)" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-law/2023_q2/Article-b8c83c1b072f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">חשד לרצח שני תוך שעות: גבר נורה למוות בחניון בעכו</a> </strong> <span><a href="/news-law/2023_q2/Article-b8c83c1b072f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="subtitle">פונה במצב אנוש ומת בדרך לביה"ח: "שכב בסמוך לרכבים"</a></span> <small><span>אדר גיציס</span> | <span>22:09</span></small></p></li>
+     <li data-teaser-vcmid="e423d55b7f640810VgnVCM100000700a10acRCRD" data-item-vcmid="14181a636e1f7810VgnVCM100000700a10acRCRD" data-image-type="i">
+      <figure>
+       <a href="/news-world/2023_q2/Article-14181a636e1f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/gaz4_autoOrient_i.jpg" alt="המו&quot;מ המשטרתי עם האב" title="המו&quot;מ המשטרתי עם האב" loading="lazy"> </a>
+       <figcaption>
+        דרמה ברומניה
+       </figcaption>
+      </figure>
+      <p><strong> <a href="/news-world/2023_q2/Article-14181a636e1f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">אב איים לפוצץ את הבית עם בתו - הסיוע הישראלי מנע אסון</a> </strong> <span><a href="/news-world/2023_q2/Article-14181a636e1f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="subtitle">במשטרה הרומנית הודו לצוות שהוזנק מהארץ: "עצת זהב שהובילה לסוף טוב"</a></span> <small><span>משה נוסבאום</span> | <span>19:41</span></small></p></li>
+     <li data-teaser-vcmid="aa4819f5edade610VgnVCM100000700a10acRCRD" data-item-vcmid="525365af0ade7810VgnVCM100000700a10acRCRD" data-image-type="i" class="regular">
+      <figure>
+       <a href="/news-politics/2023_q2/Article-525365af0ade781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/05/in_almog_liberman_re_autoOrient.mxf_2_re_autoOrient_i.jpg" alt="אביגדור ליברמן (צילום: החדשות 12)" title="אביגדור ליברמן (צילום: החדשות 12)" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-politics/2023_q2/Article-525365af0ade781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">ליברמן: "הסיבה שהנייה וראשי חמאס עדיין חיים היא נתניהו"</a> </strong> <small><span>N12</span> | <span>20:17</span></small></p></li>
+     <li data-test-id="182260" data-test-running="false" data-teaser-vcmid="f0803130e27c0810VgnVCM200000650a10acRCRD" data-item-vcmid="0428876a0a1e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+      <figure>
+       <a href="/news-money/real_estate/Article-0428876a0a1e781026.htm?sCh=31750a2610f26110&amp;pId=173113802_441313" data-type="image"> <img src="https://img.mako.co.il/2023/05/03/FF_DUBAI_autoOrient_i.jpg" alt="אולגה ויעקב, קנו 6 דירות בדובאי" title="אולגה ויעקב, קנו 6 דירות בדובאי" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-money/real_estate/Article-0428876a0a1e781026.htm?sCh=31750a2610f26110&amp;pId=173113802_441313" data-type="title">"במיליון שקל אפשר להשיג דירה חדשה עם חדר כושר ושומר"</a> </strong> <small><span>איילת ברון</span> | <span>20:14</span></small></p></li>
+     <li data-teaser-vcmid="07e21ec54f22f710VgnVCM200000650a10acRCRD" data-item-vcmid="21efde2a012f7810VgnVCM200000650a10acRCRD" data-image-type="i">
+      <figure>
+       <a href="/news-sport/israel_soccer-2023_q2/Article-21efde2a012f781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/kiryat_shmona.jfif" alt="קהת יציל את קריית שמונה? (מאור אלקסלסי) (צילום: ספורט 5)" title="קהת יציל את קריית שמונה? (מאור אלקסלסי) (צילום: ספורט 5)" loading="lazy"> </a>
+       <figcaption>
+        בתום דרמה בבלומפילד
+       </figcaption>
+      </figure>
+      <p><strong> <a href="/news-sport/israel_soccer-2023_q2/Article-21efde2a012f781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">הפועל ק"ש יורדת ללאומית - 11 עונות אחרי שזכתה באליפות</a> </strong> <small><span>בן גולדפריינד</span> | <span>20:49</span></small></p></li>
+     <li data-teaser-vcmid="dc35568488efe710VgnVCM200000650a10acRCRD" data-item-vcmid="8717aac17a1f7810VgnVCM100000700a10acRCRD" data-image-type="i">
+      <figure>
+       <a href="/news-israel/2023_q2/Article-8717aac17a1f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/in_charles2_re_autoOrient.mxf_2_re_autoOrient_i.jpg" alt="צ'ארלס חובש את הכתר על ראשו (צילום: רויטרס)" title="צ'ארלס חובש את הכתר על ראשו (צילום: רויטרס)" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-israel/2023_q2/Article-8717aac17a1f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">צ'ארלס הוכתר למלך, התנאי של היועמ"שית להסדר עם נתניהו</a> </strong> <small><span>N12</span> | <span>20:02</span></small></p></li>
+     <li data-teaser-vcmid="4b53a44d8953f710VgnVCM200000650a10acRCRD" data-item-vcmid="dcd539e0251f7810VgnVCM200000650a10acRCRD" data-image-type="i">
+      <figure>
+       <a href="/news-world/2023_q2/Article-dcd539e0251f781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/LUI2_autoOrient_i.jpg" alt="הנסיך לואי מוויילס מפהק (צילום: רויטרס)" title="הנסיך לואי מוויילס מפהק (צילום: רויטרס)" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-world/2023_q2/Article-dcd539e0251f781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">הפיהוק בכנסייה, הלחישה בכרכרה: הנסיך לואי גנב את ההצגה</a> </strong> <small><span>N12</span> | <span>17:41</span></small></p></li>
+    </ul>
+    <div id="root" data-status="0" data-side-chat="side-chat"></div>
+    <div id="side-chat"></div>
+    <script>mako.utils.getScript("/config/chatloader.js");</script>
+   </section>
+   <section class="genericitem full">
+    <a href="https://story.mako.co.il/mymemory?makoOpenChromeTabs=1" target="_blank"> <img src="https://img.mako.co.il/2023/04/24/975x228.jpg" width="985" height="228" loading="lazy"> </a>
+   </section>
+   <section class="ordering weeked-mag ">
+    <header>
+     <strong>המגזין</strong>
+    </header>
+    <ul box-title="המגזין">
+     <li data-teaser-vcmid="01406790ae674710VgnVCM200000650a10acRCRD" data-item-vcmid="7666915cd50e7810VgnVCM100000700a10acRCRD" data-image-type="i" data-image-src="https://img.mako.co.il/2023/05/04/BBBENGVIRRR_autoOrient_i.jpg)">
+      <figure>
+       <a class="item-1 item_rows_2" href="/news-politics/2023_q2/Article-7666915cd50e781027.htm?sCh=31750a2610f26110&amp;pId=1714791232" target="_blank"> <img src="https://img.mako.co.il/2023/05/04/BBBENGVIRRR_autoOrient_i.jpg" alt="נתניהו ובן גביר (צילום: פלאש 90)" title="נתניהו ובן גביר (צילום: פלאש 90)" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">דפנה ליאל</h3><span class="item-title">סדק ראשון בחומה: ההחלטה שתקבע את גורל החקיקה</span>
+        </figcaption></a>
+      </figure></li>
+     <li data-teaser-vcmid="b82f6790ae674710VgnVCM200000650a10acRCRD" data-item-vcmid="fca4e8e23d5e7810VgnVCM100000700a10acRCRD" data-image-type="g" data-image-src="https://img.mako.co.il/2023/05/04/ADAM4_autoOrient_g.jpg)">
+      <figure>
+       <a class="item-2 item_rows_3" href="/news-entertainment/2023_q2/Article-fca4e8e23d5e781027.htm?sCh=31750a2610f26110&amp;pId=1714791232" target="_blank"> <img src="https://img.mako.co.il/2023/05/04/ADAM4_autoOrient_g.jpg" alt="אדם גבאי (צילום: דניאל קמינסקי)" title="אדם גבאי (צילום: דניאל קמינסקי)" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">"הייתי נצמד לקיר, מתבייש ומשקר"</h3><span class="item-title">אדם גבאי כבר לא מסתתר - וחושף את הסוד המשפחתי להצלחה</span>
+        </figcaption></a>
+      </figure></li>
+     <li data-teaser-vcmid="2fec6790ae674710VgnVCM200000650a10acRCRD" data-item-vcmid="be282cbb6a3e7810VgnVCM200000650a10acRCRD" data-image-type="g" data-image-src="https://img.mako.co.il/2023/05/03/FF_HAMAS_re_autoOrient_g_re.png)">
+      <figure>
+       <a class="item-3 item_rows_3" href="/news-military/2023_q2/Article-be282cbb6a3e781026.htm?sCh=31750a2610f26110&amp;pId=1714791232" target="_blank"> <img src="https://img.mako.co.il/2023/05/03/FF_HAMAS_re_autoOrient_g_re.png" alt="מפעל ההסתה של חמאס (צילום: פלאש 90)" title="מפעל ההסתה של חמאס (צילום: פלאש 90)" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">הסתה בשלט רחוק: ראשי ארגון הטרור מבעירים את השטח</h3><span class="item-title">"שטיפת מוח" מחמאס בדרך להסלמה: כך עובדת מכונת ההסתה</span>
+        </figcaption></a>
+      </figure></li>
+     <li data-teaser-vcmid="96016790ae674710VgnVCM200000650a10acRCRD" data-item-vcmid="c5d5842ef23e7810VgnVCM200000650a10acRCRD" data-image-type="i" data-image-src="https://img.mako.co.il/2023/05/03/BABY1_autoOrient_i.jpg)">
+      <figure>
+       <a class="item-4 item_rows_3" href="/news-law/2023_q2/Article-c5d5842ef23e781026.htm?sCh=31750a2610f26110&amp;pId=1714791232" target="_blank"> <img src="https://img.mako.co.il/2023/05/03/BABY1_autoOrient_i.jpg" alt="גילוי עריות, אונס (צילום: N12)" title="גילוי עריות, אונס (צילום: N12)" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">"הוא מסתכל עליי ואני משתתקת"</h3><span class="item-title">האשימה את אביה באונס, ילדה לו תינוקת - והסיוט לא נגמר</span>
+        </figcaption></a>
+      </figure></li>
+     <li data-teaser-vcmid="85ceab1db3300810VgnVCM200000650a10acRCRD" data-item-vcmid="e3c0b45aa37d7810VgnVCM200000650a10acRCRD" data-image-type="g" data-image-src="https://img.mako.co.il/2023/05/02/YOGEV_FF_autoOrient_i.jpg)">
+      <figure>
+       <a class="item-5 item_rows_3" href="/news-politics/2023_q2/Article-e3c0b45aa37d781026.htm?sCh=31750a2610f26110&amp;pId=1714791232" target="_blank"> <img src="https://img.mako.co.il/2023/05/02/YOGEV_FF_autoOrient_i.jpg" alt="דורון נשר (צילום: N12)" title="דורון נשר (צילום: N12)" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">"אני נמצא בדרך חזרה להיות אני"</h3><span class="item-title">החזרה לבמה אחרי האירוע המוחי וההפגנות: דורון נשר נחשף</span>
+        </figcaption></a>
+      </figure></li>
+     <li data-teaser-vcmid="25ff6790ae674710VgnVCM200000650a10acRCRD" data-item-vcmid="0428876a0a1e7810VgnVCM200000650a10acRCRD" data-image-type="i" data-image-src="https://img.mako.co.il/2023/05/04/OLGA_YAKKOV_autoOrient_g.jpg)">
+      <figure>
+       <a class="item-6 item_rows_3" href="/news-money/real_estate/Article-0428876a0a1e781026.htm?sCh=31750a2610f26110&amp;pId=1714791232" target="_blank"> <img src="https://img.mako.co.il/2023/05/04/OLGA_YAKKOV_autoOrient_g.jpg" alt="אולגה ויעקב, קנו 6 דירות בדובאי" title="אולגה ויעקב, קנו 6 דירות בדובאי" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">החופשה בדובאי שהסתיימה ב-6 בתים</h3><span class="item-title">הישראלים שחוגגים על נדל"ן בחו"ל: "הגענו והתחלנו לקנות"</span>
+        </figcaption></a>
+      </figure></li>
+    </ul>
+   </section>
+   <section class="generic-ordering genericOrderingThreeColumns theme-lightgray">
+    <header>
+     <strong>עכשיו במדורים</strong>
+    </header>
+    <ul box-title="עכשיו במדורים">
+     <li data-componentname="genericOrderingThreeColumns" data-teaser-vcmid="f7fcd4b4e0f22810VgnVCM100000700a10acRCRD" data-item-vcmid="67d046950e0f7810VgnVCM100000700a10acRCRD"><a href="/news-sport/basketball-2023_q2/Article-67d046950e0f781027.htm?sCh=31750a2610f26110&amp;pId=1714755246" data-type="image">
+       <p><mark>ספורט</mark> <strong data-type="title">קשים להשגה: המלחמה של אוהדי מכבי ת"א</strong> <small><span>מערכת אתר ערוץ הספורט</span> | <span>15:58</span></small></p><img src="https://img.mako.co.il/2023/05/06/sportFive_1287970_B.jpg" alt="(GETTY) (צילום: ספורט 5)" title="(GETTY) (צילום: ספורט 5)" loading="lazy"> </a></li>
+     <li data-componentname="genericOrderingThreeColumns" data-teaser-vcmid="e4963cf56b5b6810VgnVCM200000650a10acRCRD" data-item-vcmid="ff85fbcc7b1e7810VgnVCM100000700a10acRCRD"><a href="/news-entertainment/2023_q2/Article-ff85fbcc7b1e781027.htm?sCh=31750a2610f26110&amp;pId=1714755246" data-type="image">
+       <p><mark>תרבות</mark> <strong data-type="title">השמות האמיתיים של הכוכבים הגדולים</strong> <small><span>דור חייק</span> | <span>10:32</span></small></p><img src="https://img.mako.co.il/2022/09/28/rihanna-2022-show2_autoOrient_b.jpg" alt="ריהאנה (צילום:  Jeff Kravitz/Getty Images for HBO)" title="ריהאנה (צילום:  Jeff Kravitz/Getty Images for HBO)" loading="lazy"> </a></li>
+     <li data-componentname="genericOrderingThreeColumns" data-teaser-vcmid="1fe3f3bfa1168710VgnVCM200000650a10acRCRD" data-item-vcmid="f8589200704c7810VgnVCM100000700a10acRCRD"><a href="/news-science/2023_q2/Article-f8589200704c781027.htm?sCh=31750a2610f26110&amp;pId=1714755246" data-type="image">
+       <p><mark>מדע וסביבה</mark> <strong data-type="title">אחד האזורים היפים שנשאר מתחת לרדאר</strong> <small><span>אילן ארנון</span> | <span>12:12</span></small></p><img src="https://img.mako.co.il/2023/04/30/hofes_300423_itir_3_autoOrient_b.jpg" alt="חוות הר סיני  (צילום: אילן ארנון)" title="חוות הר סיני  (צילום: אילן ארנון)" loading="lazy"> </a></li>
+     <li data-componentname="genericOrderingThreeColumns" data-teaser-vcmid="bebef3bfa1168710VgnVCM200000650a10acRCRD" data-item-vcmid="cc3fea8f16ce7810VgnVCM100000700a10acRCRD"><a href="/news-entertainment/2023_q2/Article-cc3fea8f16ce781027.htm?sCh=31750a2610f26110&amp;pId=1714755246" data-type="image">
+       <p><mark>תרבות</mark> <strong data-type="title">"אימא שלי לא אהבה את זה, אבל ככה הרגשתי"</strong> <small><span>N12</span> | <span>08:51</span></small></p><img src="https://img.mako.co.il/2023/05/05/galit_ilanit6_17_050523_vod_autoOrient_b.jpg" alt="הזמרת אודיה (צילום: גלית ואילנית, קשת 12)" title="הזמרת אודיה (צילום: גלית ואילנית, קשת 12)" loading="lazy"> </a></li>
+     <li data-componentname="genericOrderingThreeColumns" data-test-id="182224" data-test-running="false" data-teaser-vcmid="544e1975cb30d710VgnVCM200000650a10acRCRD" data-item-vcmid="432fa0871dfe7810VgnVCM200000650a10acRCRD"><a href="/news-sport/israel_soccer-2023_q2/Article-432fa0871dfe781026.htm?sCh=31750a2610f26110&amp;pId=1714755246_441224" data-type="image">
+       <p><mark>ספורט</mark> <strong data-type="title">"נרצח אתכם": כתובות נאצה מחוץ לאצטדיון</strong> <small><span>מערכת אתר ערוץ הספורט</span> | <span>10:24</span></small></p><img src="https://img.mako.co.il/2023/05/06/sportFive_1287948_B.jpg" alt="sportFive1287948 (צילום: ספורט 5)" title="sportFive1287948 (צילום: ספורט 5)" loading="lazy"> </a></li>
+     <li data-componentname="genericOrderingThreeColumns" data-teaser-vcmid="739df3bfa1168710VgnVCM200000650a10acRCRD" data-item-vcmid="726206773"><a href="https://mako.devdino.com/brain12/download.html?sCh=31750a2610f26110&amp;pId=1714755246" data-type="image">
+       <p><mark>BRAIN12</mark> <strong data-type="title">כבר פתרתם את האתגר היומי של BRAIN12?</strong> <small></small></p><img src="https://img.mako.co.il/2023/03/26/brain12_i_04_autoOrient_b.jpg" alt="בריין 12" title="בריין 12" loading="lazy"> </a></li>
+    </ul>
+   </section>
+   <section class="mako-slider-wrapper init center-slider" section-main>
+    <header class="slider-header">
+     <strong> <a href="0864697f763ea610VgnVCM100000700a10acRCRD">וידאו</a> </strong>
+    </header>
+    <ul slider="videoSlider" class="" inview>
+     <li id="item_0">
+      <figure class="teaser-wrapper">
+       <img class="news-slider-img" src="https://img.mako.co.il/2019/07/27/984965_I.jpg" alt="פספסתם? חדשות סוף השבוע - 6.5.23" loading="lazy">
+       <figure class="video-content-wrapper">
+        <div class="video-container" id="vHolder-003432e70df02310VgnVCM100000290b320aRCRD" live="true" data-slider-player-params="{&quot;container&quot;:&quot;vHolder-003432e70df02310VgnVCM100000290b320aRCRD&quot;,&quot;isLive&quot;:true,&quot;vcmid&quot;:&quot;003432e70df02310VgnVCM100000290b320aRCRD&quot;,&quot;videoChannelId&quot;:&quot;23a4351d23006810VgnVCM100000700a10acRCRD&quot;,&quot;galleryChannelId&quot;:&quot;003432e70df02310VgnVCM100000290b320aRCRD&quot;,&quot;playAfterLoad&quot;:true,&quot;muted&quot;:true,&quot;hasAds&quot;:false,&quot;autoplay&quot;:true}" vcmid="003432e70df02310VgnVCM100000290b320aRCRD">
+        </div>
+        <figcaption class="video-flach" live="true">
+         <span class="video-flach-play"></span> <span class="video-flach-text"> LIVE</span>
+        </figcaption>
+       </figure>
+       <figcaption class="title">
+        פספסתם? חדשות סוף השבוע - 6.5.23
+       </figcaption>
+       <div class="grad">
+        <div class="play-slider-video"></div>
+       </div>
+      </figure></li>
+     <li id="item_1">
+      <figure class="teaser-wrapper">
+       <img class="news-slider-img" src="https://img.mako.co.il/2023/05/05/20yariv_levin_vtr2_n20230505_v1_0_I.jpg" alt="חידת יריב לוין: האם המרוץ ייעצר בלשכת רה" מ? loading="lazy">
+       <figure class="video-content-wrapper">
+        <div class="video-container" id="vHolder-0453d785d0de7810VgnVCM200000650a10acRCRD" live="false" data-slider-player-params="{&quot;container&quot;:&quot;vHolder-0453d785d0de7810VgnVCM200000650a10acRCRD&quot;,&quot;isLive&quot;:false,&quot;vcmid&quot;:&quot;0453d785d0de7810VgnVCM200000650a10acRCRD&quot;,&quot;videoChannelId&quot;:&quot;a9dd0c43e3a37810VgnVCM200000650a10acRCRD&quot;,&quot;galleryChannelId&quot;:&quot;0453d785d0de7810VgnVCM200000650a10acRCRD&quot;,&quot;playAfterLoad&quot;:true,&quot;muted&quot;:false,&quot;hasAds&quot;:false,&quot;autoplay&quot;:true}" vcmid="0453d785d0de7810VgnVCM200000650a10acRCRD">
+         <video width="100%" height="100%" src="https://media.mako.co.il/FrameCapture/FrameCapture.do?format=16X9&amp;vcmID=0453d785d0de7810VgnVCM200000650a10acRCRD&amp;ts=1683400531&amp;action=trailer&amp;length=12" muted class="video-first"></video>
+        </div>
+        <figcaption class="video-flach" live="false">
+         <span class="video-flach-play"></span> <span class="video-flach-text"> 19:02</span>
+        </figcaption>
+       </figure>
+       <figcaption class="title">
+        חידת יריב לוין: האם המרוץ ייעצר בלשכת רה"מ?
+       </figcaption>
+       <div class="grad">
+        <div class="play-slider-video"></div>
+       </div>
+      </figure></li>
+     <li id="item_2">
+      <figure class="teaser-wrapper">
+       <img class="news-slider-img" src="https://img.mako.co.il/2023/05/04/bengvir_mecha_vtr2_n20230504_v1_0_I.jpg" alt="" מיצג גופות מול ביתו של בן גביר בחברון loading="lazy">
+       <figure class="video-content-wrapper">
+        <div class="video-container" id="vHolder-a074085b405e7810VgnVCM100000700a10acRCRD" live="false" data-slider-player-params="{&quot;container&quot;:&quot;vHolder-a074085b405e7810VgnVCM100000700a10acRCRD&quot;,&quot;isLive&quot;:false,&quot;vcmid&quot;:&quot;a074085b405e7810VgnVCM100000700a10acRCRD&quot;,&quot;videoChannelId&quot;:&quot;31750a2610f26110VgnVCM1000005201000aRCRD&quot;,&quot;galleryChannelId&quot;:&quot;a074085b405e7810VgnVCM100000700a10acRCRD&quot;,&quot;playAfterLoad&quot;:true,&quot;muted&quot;:false,&quot;hasAds&quot;:false,&quot;autoplay&quot;:true}" vcmid="a074085b405e7810VgnVCM100000700a10acRCRD">
+         <video width="100%" height="100%" src="https://media.mako.co.il/FrameCapture/FrameCapture.do?format=16X9&amp;vcmID=a074085b405e7810VgnVCM100000700a10acRCRD&amp;ts=1683400531&amp;action=trailer&amp;length=12" muted class="video-first"></video>
+        </div>
+        <figcaption class="video-flach" live="false">
+         <span class="video-flach-play"></span> <span class="video-flach-text"> 00:27</span>
+        </figcaption>
+       </figure>
+       <figcaption class="title">
+        "מיצג גופות" מול ביתו של בן גביר בחברון
+       </figcaption>
+       <div class="grad">
+        <div class="play-slider-video"></div>
+       </div>
+      </figure></li>
+     <li id="item_3">
+      <figure class="teaser-wrapper">
+       <img class="news-slider-img" src="https://img.mako.co.il/2023/05/04/tfila_vtr2_n20230504_v1_0_I.jpg" alt="תפילת שחרית מול ביתו של סמוטריץ' " loading="lazy">
+       <figure class="video-content-wrapper">
+        <div class="video-container" id="vHolder-d8038bd87e4e7810VgnVCM200000650a10acRCRD" live="false" data-slider-player-params="{&quot;container&quot;:&quot;vHolder-d8038bd87e4e7810VgnVCM200000650a10acRCRD&quot;,&quot;isLive&quot;:false,&quot;vcmid&quot;:&quot;d8038bd87e4e7810VgnVCM200000650a10acRCRD&quot;,&quot;videoChannelId&quot;:&quot;31750a2610f26110VgnVCM1000005201000aRCRD&quot;,&quot;galleryChannelId&quot;:&quot;d8038bd87e4e7810VgnVCM200000650a10acRCRD&quot;,&quot;playAfterLoad&quot;:true,&quot;muted&quot;:false,&quot;hasAds&quot;:false,&quot;autoplay&quot;:true}" vcmid="d8038bd87e4e7810VgnVCM200000650a10acRCRD">
+         <video width="100%" height="100%" src="https://media.mako.co.il/FrameCapture/FrameCapture.do?format=16X9&amp;vcmID=d8038bd87e4e7810VgnVCM200000650a10acRCRD&amp;ts=1683400531&amp;action=trailer&amp;length=12" muted class="video-first"></video>
+        </div>
+        <figcaption class="video-flach" live="false">
+         <span class="video-flach-play"></span> <span class="video-flach-text"> 00:24</span>
+        </figcaption>
+       </figure>
+       <figcaption class="title">
+        תפילת שחרית מול ביתו של סמוטריץ'
+       </figcaption>
+       <div class="grad">
+        <div class="play-slider-video"></div>
+       </div>
+      </figure></li>
+     <li id="item_4">
+      <figure class="teaser-wrapper">
+       <img class="news-slider-img" src="https://img.mako.co.il/2019/11/10/goldin_i.jpg" alt="לאה גולדין: " לא רוצה להיות בלב של אף אחד, רוצה את בני loading="lazy">
+       <figure class="video-content-wrapper">
+        <div class="video-container" id="vHolder-62e3ff06732e7810VgnVCM100000700a10acRCRD" live="false" data-slider-player-params="{&quot;container&quot;:&quot;vHolder-62e3ff06732e7810VgnVCM100000700a10acRCRD&quot;,&quot;isLive&quot;:false,&quot;vcmid&quot;:&quot;62e3ff06732e7810VgnVCM100000700a10acRCRD&quot;,&quot;videoChannelId&quot;:&quot;31750a2610f26110VgnVCM1000005201000aRCRD&quot;,&quot;galleryChannelId&quot;:&quot;62e3ff06732e7810VgnVCM100000700a10acRCRD&quot;,&quot;playAfterLoad&quot;:true,&quot;muted&quot;:false,&quot;hasAds&quot;:false,&quot;autoplay&quot;:true}" vcmid="62e3ff06732e7810VgnVCM100000700a10acRCRD">
+         <video width="100%" height="100%" src="https://media.mako.co.il/FrameCapture/FrameCapture.do?format=16X9&amp;vcmID=62e3ff06732e7810VgnVCM100000700a10acRCRD&amp;ts=1683400531&amp;action=trailer&amp;length=12" muted class="video-first"></video>
+        </div>
+        <figcaption class="video-flach" live="false">
+         <span class="video-flach-play"></span> <span class="video-flach-text"> 05:48</span>
+        </figcaption>
+       </figure>
+       <figcaption class="title">
+        לאה גולדין: "לא רוצה להיות בלב של אף אחד, רוצה את בני"
+       </figcaption>
+       <div class="grad">
+        <div class="play-slider-video"></div>
+       </div>
+      </figure></li>
+     <li id="item_5">
+      <figure class="teaser-wrapper">
+       <img class="news-slider-img" src="https://img.mako.co.il/2023/05/03/almog_vtr2_n20230503_v1_0_I.jpg" alt="הרגע שבו ח" כ אלמוג כהן התפרץ על צעיר שמחה נגדו loading="lazy">
+       <figure class="video-content-wrapper">
+        <div class="video-container" id="vHolder-7e6142cd4a1e7810VgnVCM200000650a10acRCRD" live="false" data-slider-player-params="{&quot;container&quot;:&quot;vHolder-7e6142cd4a1e7810VgnVCM200000650a10acRCRD&quot;,&quot;isLive&quot;:false,&quot;vcmid&quot;:&quot;7e6142cd4a1e7810VgnVCM200000650a10acRCRD&quot;,&quot;videoChannelId&quot;:&quot;31750a2610f26110VgnVCM1000005201000aRCRD&quot;,&quot;galleryChannelId&quot;:&quot;7e6142cd4a1e7810VgnVCM200000650a10acRCRD&quot;,&quot;playAfterLoad&quot;:true,&quot;muted&quot;:false,&quot;hasAds&quot;:false,&quot;autoplay&quot;:true}" vcmid="7e6142cd4a1e7810VgnVCM200000650a10acRCRD">
+         <video width="100%" height="100%" src="https://media.mako.co.il/FrameCapture/FrameCapture.do?format=16X9&amp;vcmID=7e6142cd4a1e7810VgnVCM200000650a10acRCRD&amp;ts=1683400531&amp;action=trailer&amp;length=12" muted class="video-first"></video>
+        </div>
+        <figcaption class="video-flach" live="false">
+         <span class="video-flach-play"></span> <span class="video-flach-text"> 06:48</span>
+        </figcaption>
+       </figure>
+       <figcaption class="title">
+        הרגע שבו ח"כ אלמוג כהן התפרץ על צעיר שמחה נגדו
+       </figcaption>
+       <div class="grad">
+        <div class="play-slider-video"></div>
+       </div>
+      </figure></li>
+     <li id="item_6">
+      <figure class="teaser-wrapper">
+       <img class="news-slider-img" src="https://img.mako.co.il/2023/05/02/parush_vtr2_n20230502_v1_0_I.jpg" alt="" מה זה לא יכול? לך הביתה: השר פרוש במתקפה על רהמ loading="lazy">
+       <figure class="video-content-wrapper">
+        <div class="video-container" id="vHolder-13e7be84d3cd7810VgnVCM200000650a10acRCRD" live="false" data-slider-player-params="{&quot;container&quot;:&quot;vHolder-13e7be84d3cd7810VgnVCM200000650a10acRCRD&quot;,&quot;isLive&quot;:false,&quot;vcmid&quot;:&quot;13e7be84d3cd7810VgnVCM200000650a10acRCRD&quot;,&quot;videoChannelId&quot;:&quot;31750a2610f26110VgnVCM1000005201000aRCRD&quot;,&quot;galleryChannelId&quot;:&quot;13e7be84d3cd7810VgnVCM200000650a10acRCRD&quot;,&quot;playAfterLoad&quot;:true,&quot;muted&quot;:false,&quot;hasAds&quot;:false,&quot;autoplay&quot;:true}" vcmid="13e7be84d3cd7810VgnVCM200000650a10acRCRD">
+         <video width="100%" height="100%" src="https://media.mako.co.il/FrameCapture/FrameCapture.do?format=16X9&amp;vcmID=13e7be84d3cd7810VgnVCM200000650a10acRCRD&amp;ts=1683400531&amp;action=trailer&amp;length=12" muted class="video-first"></video>
+        </div>
+        <figcaption class="video-flach" live="false">
+         <span class="video-flach-play"></span> <span class="video-flach-text"> 03:14</span>
+        </figcaption>
+       </figure>
+       <figcaption class="title">
+        "מה זה לא יכול? לך הביתה": השר פרוש במתקפה על רה"מ
+       </figcaption>
+       <div class="grad">
+        <div class="play-slider-video"></div>
+       </div>
+      </figure></li>
+     <li id="item_7">
+      <figure class="teaser-wrapper">
+       <img class="news-slider-img" src="https://img.mako.co.il/2023/05/02/20super_vtr2_n20230502_v1_0_I.jpg" alt="הארץ הטובה: הסופר בפ" ת שכולו בחינם loading="lazy">
+       <figure class="video-content-wrapper">
+        <div class="video-container" id="vHolder-30dc3a5e2bdd7810VgnVCM100000700a10acRCRD" live="false" data-slider-player-params="{&quot;container&quot;:&quot;vHolder-30dc3a5e2bdd7810VgnVCM100000700a10acRCRD&quot;,&quot;isLive&quot;:false,&quot;vcmid&quot;:&quot;30dc3a5e2bdd7810VgnVCM100000700a10acRCRD&quot;,&quot;videoChannelId&quot;:&quot;97c20c43e3a37810VgnVCM200000650a10acRCRD&quot;,&quot;galleryChannelId&quot;:&quot;30dc3a5e2bdd7810VgnVCM100000700a10acRCRD&quot;,&quot;playAfterLoad&quot;:true,&quot;muted&quot;:false,&quot;hasAds&quot;:false,&quot;autoplay&quot;:true}" vcmid="30dc3a5e2bdd7810VgnVCM100000700a10acRCRD">
+         <video width="100%" height="100%" src="https://media.mako.co.il/FrameCapture/FrameCapture.do?format=16X9&amp;vcmID=30dc3a5e2bdd7810VgnVCM100000700a10acRCRD&amp;ts=1683400531&amp;action=trailer&amp;length=12" muted class="video-first"></video>
+        </div>
+        <figcaption class="video-flach" live="false">
+         <span class="video-flach-play"></span> <span class="video-flach-text"> 10:55</span>
+        </figcaption>
+       </figure>
+       <figcaption class="title">
+        הארץ הטובה: הסופר בפ"ת שכולו בחינם
+       </figcaption>
+       <div class="grad">
+        <div class="play-slider-video"></div>
+       </div>
+      </figure></li>
+     <li id="item_8">
+      <figure class="teaser-wrapper">
+       <img class="news-slider-img" src="https://img.mako.co.il/2023/05/05/dani_vtr2_n20230505_v2_0_I.jpg" alt="תשכחו משביל הנחש: הדרך החדשה להגיע למצדה - בטיפוס" loading="lazy">
+       <figure class="video-content-wrapper">
+        <div class="video-container" id="vHolder-648aed1c16de7810VgnVCM200000650a10acRCRD" live="false" data-slider-player-params="{&quot;container&quot;:&quot;vHolder-648aed1c16de7810VgnVCM200000650a10acRCRD&quot;,&quot;isLive&quot;:false,&quot;vcmid&quot;:&quot;648aed1c16de7810VgnVCM200000650a10acRCRD&quot;,&quot;videoChannelId&quot;:&quot;5ffd0c43e3a37810VgnVCM200000650a10acRCRD&quot;,&quot;galleryChannelId&quot;:&quot;648aed1c16de7810VgnVCM200000650a10acRCRD&quot;,&quot;playAfterLoad&quot;:true,&quot;muted&quot;:false,&quot;hasAds&quot;:false,&quot;autoplay&quot;:true}" vcmid="648aed1c16de7810VgnVCM200000650a10acRCRD">
+         <video width="100%" height="100%" src="https://media.mako.co.il/FrameCapture/FrameCapture.do?format=16X9&amp;vcmID=648aed1c16de7810VgnVCM200000650a10acRCRD&amp;ts=1683400531&amp;action=trailer&amp;length=12" muted class="video-first"></video>
+        </div>
+        <figcaption class="video-flach" live="false">
+         <span class="video-flach-play"></span> <span class="video-flach-text"> 05:45</span>
+        </figcaption>
+       </figure>
+       <figcaption class="title">
+        תשכחו משביל הנחש: הדרך החדשה להגיע למצדה - בטיפוס
+       </figcaption>
+       <div class="grad">
+        <div class="play-slider-video"></div>
+       </div>
+      </figure></li>
+    </ul>
+    <div class="counter"></div>
+   </section>
+   <section class="generic-ordering genericOrderingThreeColumns theme-darkblue">
+    <header>
+     <strong>DATA12</strong> <img class="logo" src="https://rcs.mako.co.il/images/mobile/news12/red-desktop.png"> <a href="https://www.mako.co.il/news-specials/data_n12">עוד ב-DATA12</a>
+    </header>
+    <ul box-title="DATA12">
+     <li data-componentname="genericOrderingThreeColumns" data-teaser-vcmid="8b786679620d5810VgnVCM100000700a10acRCRD" data-item-vcmid="-229056312"><a href="https://specialprojects.mako.co.il/Road_Accidents?makoOpenChromeTabs=1?utm_source=n12&amp;utm_medium=data12_component&amp;utm_campaign=promotion" data-type="image">
+       <p><mark>תמונת מצב</mark> <strong data-type="title">המספרים המדאיגים של הקטל בדרכים</strong> <small></small></p><img src="https://img.mako.co.il/2023/04/09/CAR_B.png" alt=" data תאונות דרכים (צילום: 123rf)" title=" data תאונות דרכים (צילום: 123rf)" loading="lazy"> </a></li>
+     <li data-componentname="genericOrderingThreeColumns" data-teaser-vcmid="e69786f740ee5810VgnVCM200000650a10acRCRD" data-item-vcmid="-1236272031"><a href="https://makospecial.co.il/Women_violence?makoOpenChromeTabs=1?utm_source=n12&amp;utm_medium=data12_component&amp;utm_campaign=promotion" data-type="image">
+       <p><mark>תסתכלו להן בעיניים</mark> <strong data-type="title">12 נשים נרצחו מתחילת השנה - המספרים</strong> <small></small></p><img src="https://img.mako.co.il/2023/04/02/WOMAN_B.png" alt="נרצחות DATA (צילום: 123rf)" title="נרצחות DATA (צילום: 123rf)" loading="lazy"> </a></li>
+     <li data-componentname="genericOrderingThreeColumns" data-teaser-vcmid="9a8bc7cec5406810VgnVCM200000650a10acRCRD" data-item-vcmid="710996158"><a href="https://makospecial.co.il/champions23?makoOpenChromeTabs=1?utm_source=n12&amp;utm_medium=data12_component&amp;utm_campaign=promotion" data-type="image">
+       <p><mark>ליגת האלופות</mark> <strong data-type="title">ארבע האחרונות - זו הקבוצה הכי חזקה</strong> <small></small></p><img src="https://img.mako.co.il/2023/04/02/FOOTBALL_B.png" alt="ליגת האלופות - DATA (צילום: reuters)" title="ליגת האלופות - DATA (צילום: reuters)" loading="lazy"> </a></li>
+    </ul>
+   </section>
+   <section id="part2" section-main>
+    <ul class="grid-ordering main2 " box-title="רכיב ראשי חדשות" style="grid-area:item1">
+     <li data-test-id="182258" data-test-running="false" data-teaser-vcmid="321dbbfc79efe710VgnVCM200000650a10acRCRD" data-item-vcmid="37a63e0e381f7810VgnVCM100000700a10acRCRD" data-image-type="i">
+      <figure>
+       <a href="/news-law/2023_q2/Article-37a63e0e381f781027.htm?sCh=31750a2610f26110&amp;pId=173113802_441309" data-type="image"> <img src="https://img.mako.co.il/2023/05/03/AMBUU_re_autoOrient_i.jpg" alt="אמבולנס אילוסטרציה (צילום: 123RF‏)" title="אמבולנס אילוסטרציה (צילום: 123RF‏)" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-law/2023_q2/Article-37a63e0e381f781027.htm?sCh=31750a2610f26110&amp;pId=173113802_441309" data-type="title">פגע וברח: פגע בבן 5 והותיר אותו פצוע אנוש על הכביש</a> </strong> <small><span>אור רביד</span> | <span>18:30</span></small></p></li>
+     <li data-teaser-vcmid="9d452ac201dd9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="ca803fbaf61f7810VgnVCM200000650a10acRCRD" data-image-type="i">
+      <figure>
+       <a href="/news-diplomatic/2023_q2/Article-ca803fbaf61f781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/CHARLES_BUJII_autoOrient_i.jpg" alt="המלך צ'ארלס והנשיא הרצוג (צילום: רויטרס)" title="המלך צ'ארלס והנשיא הרצוג (צילום: רויטרס)" loading="lazy"> </a>
+       <figcaption>
+        פרסום ראשון
+       </figcaption>
+      </figure>
+      <p><strong> <a href="/news-diplomatic/2023_q2/Article-ca803fbaf61f781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">ביום חגו: המלך צ'ארלס התעניין במחאה ובהידברות על המהפכה</a> </strong> <small><span>דנה ויס</span> | <span>18:07</span></small></p></li>
+     <li data-test-id="182255" data-test-running="false" data-teaser-vcmid="8c634085a7704710VgnVCM100000700a10acRCRD" data-item-vcmid="622bf1e3d31f7810VgnVCM100000700a10acRCRD" data-image-type="i">
+      <figure>
+       <a href="/news-world/2023_q2/Article-622bf1e3d31f781027.htm?sCh=31750a2610f26110&amp;pId=173113802_441301" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/CNN_SAVE_autoOrient_i.jpg" alt="ההומלס שהציל תינוקת שהעגלה שלה הדרדרה לכביש (צילום: CNN)" title="ההומלס שהציל תינוקת שהעגלה שלה הדרדרה לכביש (צילום: CNN)" loading="lazy"> </a>
+       <figcaption>
+        תיעוד דרמטי
+       </figcaption>
+      </figure>
+      <p><strong> <a href="/news-world/2023_q2/Article-622bf1e3d31f781027.htm?sCh=31750a2610f26110&amp;pId=173113802_441301" data-type="title">זינק אל הכביש - והציל את העגלה רגע לפני שהידרדרה</a> </strong> <small><span>N12</span> | <span>17:21</span></small></p></li>
+     <li data-teaser-vcmid="3000ccaf3f71c610VgnVCM200000650a10acRCRD" data-item-vcmid="0750b8a6ee6d7810VgnVCM200000650a10acRCRD" data-image-type="i" class=" play-sign">
+      <figure>
+       <a href="/news-world/2023_q2/Article-0750b8a6ee6d781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2023/05/06/king_hetzi_autoOrient_i.jpg" alt="הכתרת המלך צ'ארלס (צילום: רויטרס)" title="הכתרת המלך צ'ארלס (צילום: רויטרס)" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-world/2023_q2/Article-0750b8a6ee6d781026.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">לקול תשואות: המלך צ'ארלס יצא למרפסת הארמון - ונופף לקהל</a> </strong> <small><span>עמית ולדמן</span> | <span>16:28</span></small></p></li>
+     <li data-teaser-vcmid="803987b1ff22f710VgnVCM200000650a10acRCRD" data-item-vcmid="a75cf66f020f7810VgnVCM100000700a10acRCRD" class="">
+      <blockquote class="small">
+       <span class="subCaption">פרשנות</span> <a href="/news-columns/2023_q2/Article-a75cf66f020f781027.htm?sCh=31750a2610f26110&amp;pId=173113802"> <strong data-type="title">המלך צ'ארלס עשוי להיות המלך החשוב ביותר מכל קודמיו</strong> </a> <small><img src="https://img.mako.co.il/2020/02/12/ELAD_CIRCLE.png"><span>אלעד שמחיוף</span></small>
+      </blockquote></li>
+     <li data-teaser-vcmid="0a243442121dd710VgnVCM100000700a10acRCRD" data-item-vcmid="faee8efd350f7810VgnVCM100000700a10acRCRD" data-image-type="i" class="regular">
+      <figure>
+       <a href="/news-law/2023_q2/Article-faee8efd350f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="image"> <img src="https://img.mako.co.il/2015/11/26/nissimalperon_i.jpg" alt="ניסים אלפרון (צילום: פלאש 90)" title="ניסים אלפרון (צילום: פלאש 90)" loading="lazy"> </a>
+      </figure>
+      <p><strong> <a href="/news-law/2023_q2/Article-faee8efd350f781027.htm?sCh=31750a2610f26110&amp;pId=173113802" data-type="title">העבריין ניסים אלפרון הלך לעולמו בגיל 67 לאחר מאבק בסרטן</a> </strong> <small><span>גיא פלג</span> | <span>12:36</span></small></p></li>
+     <li>
+      <ul class="more-titles " box-title="עוד כותרות">
+       <li data-teaser-vcmid="8362658e1f29f710VgnVCM100000700a10acRCRD" data-item-vcmid="d3f3ab58370e7810VgnVCM100000700a10acRCRD"><strong><span>אבי המהפכה // </span><a data-type="title" href="/news-politics/2023_q2/Article-d3f3ab58370e781027.htm?sCh=31750a2610f26110&amp;pId=173113844">כך הפך לוין ליריב של מערכת המשפט</a></strong></li>
+       <li data-teaser-vcmid="24d9ad86a4430710VgnVCM200000650a10acRCRD" data-item-vcmid="7803cf13c3be7810VgnVCM200000650a10acRCRD"><strong><span>עוד יום - עוד רצח // </span><a data-type="title" href="/news-law/2023_q2/Article-7803cf13c3be781026.htm?sCh=31750a2610f26110&amp;pId=173113844">גבר בשנות ה-30 נורה למוות ליד נצרת</a></strong></li>
+       <li class="play-sign" data-teaser-vcmid="5982ace854430710VgnVCM200000650a10acRCRD" data-item-vcmid="79a060c04f8e7810VgnVCM200000650a10acRCRD"><strong><span>הטיפול החדש למחלה // </span><a data-type="title" href="/news-lifestyle/2023_q2/Article-79a060c04f8e781026.htm?sCh=31750a2610f26110&amp;pId=173113844">תרופה חדשה לאלצהיימר - בדרך לאישור ה-FDA</a></strong></li>
+       <li data-teaser-vcmid="22c67623b4140510VgnVCM2000002a0c10acRCRD" data-item-vcmid="bd58c77d88ae7810VgnVCM100000700a10acRCRD"><strong><span>"לא ייקר את תעריף החשמל" // </span><a data-type="title" href="/news-money/2023_q2/Article-bd58c77d88ae781027.htm?sCh=31750a2610f26110&amp;pId=173113844">בממשלה ידונו בהקמת מתקן לאגירת חשמל כשר</a></strong></li>
+       <li data-teaser-vcmid="1839cf8db5647810VgnVCM200000650a10acRCRD" data-item-vcmid="4d9d3b067e6e7810VgnVCM100000700a10acRCRD"><strong><span>מביטן ועד בן גביר // </span><a data-type="title" href="/news-politics/2023_q2/Article-4d9d3b067e6e781027.htm?sCh=31750a2610f26110&amp;pId=173113844">התמודדויות של ממשלה במשבר פוליטי</a></strong></li>
+      </ul></li>
+    </ul>
+    <section class="ad b300X600 cm8" style="grid-area:item2">
+     <div id="CM8ShowAd_POSTER_300X600" data-title="POSTER_300X600">
+      <script>
+							window.DFP && DFP.showBanner('POSTER','300X600');
+						</script>
+     </div>
+    </section>
+    <section class="news-interpretations " style="grid-area:item3">
+     <div id="news-interpretations-wrapper" box-title="פרשנויות">
+      <div id="news-interpretations-title">
+       <a href="https://www.mako.co.il/news-columns">
+        <div class="title-wrapper-right"></div>
+        <div class="title-wrapper-left">
+         <div class="title-text">
+          פרשנויות
+         </div>
+         <div class="title-underline"></div>
+        </div></a>
+      </div>
+      <div id="news-interpretations-content">
+       <div class="item" data-teaser-vcmid="dcd0cb9f458a7810VgnVCM100000700a10acRCRD" data-item-vcmid="7666915cd50e7810VgnVCM100000700a10acRCRD">
+        <a href="/news-columns/2023_q2/Article-7666915cd50e781027.htm?sCh=31750a2610f26110&amp;pId=1714799902">
+         <div class="item-wrapper-right">
+          <span class="item-text-before"></span> <span class="item-text" data-type="title">הכול הצגה? ההדלפה שיצרה את משבר האמון</span>
+          <div class="item-author">
+           דפנה ליאל
+          </div>
+         </div>
+         <div class="item-wrapper-left">
+          <img src="https://img.mako.co.il/2023/02/16/liel_daphna_column.png" alt="דפנה ליאל" title="דפנה ליאל" data-type="image" loading="lazy">
+         </div></a>
+        <div class="item-pipe"></div>
+       </div>
+       <div class="item" data-teaser-vcmid="19099bb5d5bd7810VgnVCM200000650a10acRCRD" data-item-vcmid="be282cbb6a3e7810VgnVCM200000650a10acRCRD">
+        <a href="/news-n12_magazine/2023_q2/Article-be282cbb6a3e781026.htm?sCh=31750a2610f26110&amp;pId=1714799902">
+         <div class="item-wrapper-right">
+          <span class="item-text-before"></span> <span class="item-text" data-type="title">כך ראשי החמאס מבעירים את השטח - בלחיצת כפתור</span>
+          <div class="item-author">
+           ניר דבורי
+          </div>
+         </div>
+         <div class="item-wrapper-left">
+          <img src="https://img.mako.co.il/2020/02/09/image032.png" alt="ניר דבורי" title="ניר דבורי" data-type="image" loading="lazy">
+         </div></a>
+        <div class="item-pipe"></div>
+       </div>
+       <div class="item" data-teaser-vcmid="aab627fa5c5e7810VgnVCM200000650a10acRCRD" data-item-vcmid="f5750a152d2e7810VgnVCM200000650a10acRCRD">
+        <a href="/news-columns/2023_q2/Article-f5750a152d2e781026.htm?sCh=31750a2610f26110&amp;pId=1714799902">
+         <div class="item-wrapper-right">
+          <span class="item-text-before"></span> <span class="item-text" data-type="title">בקואליציה כתבו את התסריט הזה מראש</span>
+          <div class="item-author">
+           עופר חדד
+          </div>
+         </div>
+         <div class="item-wrapper-left">
+          <img src="https://img.mako.co.il/2022/07/25/OFER.png" alt="עופר חדד" title="עופר חדד" data-type="image" loading="lazy">
+         </div></a>
+        <div class="item-pipe"></div>
+       </div>
+      </div>
+     </div>
+    </section>
+   </section>
+   <section class="ordering podcasts ">
+    <div id="news-podcasts-wrapper" box-title="פודקאסט">
+     <div id="news-podcasts-title">
+      <a href="https://www.mako.co.il/news-podcast_n12">
+       <div class="title-wrapper-right">
+        <img src="https://rcs.mako.co.il/images/mobile/news12/desktop_pod.png">
+       </div>
+       <div class="title-wrapper-left">
+        <div class="title-text">
+         פודקאסט
+         <div class="title-text-left">
+          לכל הפרקים
+         </div>
+        </div>
+        <div class="title-underline" style="background-color:#FFCC02!important"></div>
+       </div></a>
+     </div>
+     <div id="news-podcasts-content">
+      <div class="item" data-teaser-vcmid="e977e6e1e98d7710VgnVCM100000700a10acRCRD" data-item-vcmid="b83dc04e063e7810VgnVCM100000700a10acRCRD">
+       <a href="/news-podcast_n12/one_a_day/Article-b83dc04e063e781027.htm?sCh=31750a2610f26110&amp;pId=2140713551">
+        <div class="item-wrapper-right">
+         <span class="item-text-before"> <span>23:24</span>
+          <figcaption></figcaption></span> <span class="item-text" data-type="title">"אחד ביום": המלך צ'ארלס השלישי</span> <small><span>אלעד שמחיוף</span> | <span>04.05.23</span></small>
+        </div>
+        <div class="item-wrapper-left">
+         <img src="https://img.mako.co.il/2023/05/03/podcasts-222px.png" alt="אחד ביום - הסיפור של המלך צארלס, לקראת ההכתרה בשבת (צילום: רויטרס)" title="אחד ביום - הסיפור של המלך צארלס, לקראת ההכתרה בשבת (צילום: רויטרס)" data-type="image" loading="lazy">
+        </div></a>
+       <div class="item-pipe"></div>
+      </div>
+      <div class="item" data-teaser-vcmid="e417e6e1e98d7710VgnVCM100000700a10acRCRD" data-item-vcmid="14f8f195fe6e7810VgnVCM100000700a10acRCRD">
+       <a href="/nexter-while_you_were_working/Article-14f8f195fe6e781027.htm?sCh=31750a2610f26110&amp;pId=2140713551">
+        <div class="item-wrapper-right">
+         <span class="item-text-before"> <span>32:03</span>
+          <figcaption></figcaption></span> <span class="item-text" data-type="title">פייק ניוז: התחזו לערוץ הכי פופולרי בארה"ב | בזמן שעבדתם</span> <small><span>דרור גלוברמן ודני פלד </span> | <span>05.05.23</span></small>
+        </div>
+        <div class="item-wrapper-left">
+         <img src="https://img.mako.co.il/2023/05/04/d44698fc-ab3b-4e1f-95b0-ce6bb25c0ee95555555.jpg" alt="וולף ניוז (צילום: מתוך הרשתות החברתיות לפי סעיף 27א' לחוק זכויות יוצרים)" title="וולף ניוז (צילום: מתוך הרשתות החברתיות לפי סעיף 27א' לחוק זכויות יוצרים)" data-type="image" loading="lazy">
+        </div></a>
+       <div class="item-pipe"></div>
+      </div>
+      <div class="item" data-teaser-vcmid="3a8827ecca8d7710VgnVCM100000700a10acRCRD" data-item-vcmid="ee21b45f27ae7810VgnVCM100000700a10acRCRD">
+       <a href="/news-podcast_n12/unholy/Article-ee21b45f27ae781027.htm?sCh=31750a2610f26110&amp;pId=2140713551">
+        <div class="item-wrapper-right">
+         <span class="item-text-before"> <span>1:07:14</span>
+          <figcaption></figcaption></span> <span class="item-text" data-type="title">לונדון לובשת חג: הכנות לקראת הכתרת המלך צ'ארלס בבריטניה</span> <small><span>יונית לוי</span> | <span>05.05.23</span></small>
+        </div>
+        <div class="item-wrapper-left">
+         <img src="https://img.mako.co.il/2021/03/25/yonit.png" alt="UNHOLY הפודקאסט של יונית לוי (צילום: N12)" title="UNHOLY הפודקאסט של יונית לוי (צילום: N12)" data-type="image" loading="lazy">
+        </div></a>
+       <div class="item-pipe"></div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="ordering colx3 chatordering">
+    <header>
+     <strong> <a href="https://www.mako.co.il/news-sport">ספורט</a> </strong> <img class="logo" src="https://rcs.mako.co.il/images/mobile/news12/sport-5-component-desktop.png"> <a href="https://www.mako.co.il/news-sport">עוד בספורט</a>
+    </header>
+    <ul class="grid-ordering colx3 chatordering" box-title="ספורט">
+     <li data-type="regularitembigovertextc" data-componentname="chatordering" data-teaser-vcmid="966c3830ca002810VgnVCM100000700a10acRCRD" data-item-vcmid="eac539e0251f7810VgnVCM200000650a10acRCRD" data-image-type="c">
+      <p><small><span>מערכת אתר ערוץ הספורט (צלם: דני מרון)</span> | <span>21:48</span></small><strong><a data-type="title" href="/news-sport/israel_soccer-2023_q2/Article-eac539e0251f781026.htm?sCh=31750a2610f26110&amp;pId=1752253050">הישג אדיר: בני ריינה נשארה בליגת העל</a></strong></p>
+      <figure>
+       <a data-type="image" href="/news-sport/israel_soccer-2023_q2/Article-eac539e0251f781026.htm?sCh=31750a2610f26110&amp;pId=1752253050"> <img src="https://img.mako.co.il/2023/05/06/sportFive_1288090_C.jpg" alt="(צילום: דני מרון) (צילום: ספורט 5)" title="(צילום: דני מרון) (צילום: ספורט 5)" loading="lazy"> </a>
+      </figure></li>
+     <li data-type="regularitemsmall" data-componentname="chatordering" data-teaser-vcmid="afd7092971f21810VgnVCM200000650a10acRCRD" data-item-vcmid="189c5e801d1f7810VgnVCM100000700a10acRCRD" data-image-type="c">
+      <p><strong><a data-type="title" href="/news-sport/basketball-2023_q2/Article-189c5e801d1f781027.htm?sCh=31750a2610f26110&amp;pId=1752253050">בראון וקולסון לא בסגל מכבי ת"א לירושלים</a></strong><small><span>עמרי מנהיים</span> | <span>19:13</span></small></p>
+      <figure>
+       <a data-type="image" href="/news-sport/basketball-2023_q2/Article-189c5e801d1f781027.htm?sCh=31750a2610f26110&amp;pId=1752253050"> <img src="https://img.mako.co.il/2023/05/06/sportFive_1288061_C.jpg" alt="(אלן שיבר) (צילום: ספורט 5)" title="(אלן שיבר) (צילום: ספורט 5)" loading="lazy"> </a>
+      </figure></li>
+     <li data-type="regularitemsmall" data-componentname="chatordering" data-teaser-vcmid="db8199d54aa63810VgnVCM100000700a10acRCRD" data-item-vcmid="7e7e683ef51f7810VgnVCM100000700a10acRCRD" data-image-type="c">
+      <p><strong><a data-type="title" href="/news-sport/israel_soccer-2023_q2/Article-7e7e683ef51f781027.htm?sCh=31750a2610f26110&amp;pId=1752253050">אלפי אוהדי מכבי חיפה הגיעו לאימון הקבוצה</a></strong><small><span>מערכת אתר ערוץ הספורט</span> | <span>18:07</span></small></p>
+      <figure>
+       <a data-type="image" href="/news-sport/israel_soccer-2023_q2/Article-7e7e683ef51f781027.htm?sCh=31750a2610f26110&amp;pId=1752253050"> <img src="https://img.mako.co.il/2023/05/06/sportFive_1288002_C.jpg" alt="(אלן שיבר) (צילום: ספורט 5)" title="(אלן שיבר) (צילום: ספורט 5)" loading="lazy"> </a>
+      </figure></li>
+     <li data-type="regularitemsmall" data-componentname="chatordering" data-teaser-vcmid="e97d219cfbdb4810VgnVCM100000700a10acRCRD" data-item-vcmid="48081a636e1f7810VgnVCM100000700a10acRCRD" data-image-type="c">
+      <p><strong><a data-type="title" href="/news-sport/world_soccer-2023_q2/Article-48081a636e1f781027.htm?sCh=31750a2610f26110&amp;pId=1752253050">"היית צריך לבעוט": למה פפ זעם על הולאנד?</a></strong><small><span>מערכת אתר ערוץ הספורט</span> | <span>22:03</span></small></p>
+      <figure>
+       <a data-type="image" href="/news-sport/world_soccer-2023_q2/Article-48081a636e1f781027.htm?sCh=31750a2610f26110&amp;pId=1752253050"> <img src="https://img.mako.co.il/2023/05/06/sportFive_1288072_C.jpg" alt="לא אהב את ההחלטה. פפ (צילום: ספורט 5)" title="לא אהב את ההחלטה. פפ (צילום: ספורט 5)" loading="lazy"> </a>
+      </figure></li>
+     <li data-type="regularitemsmall" data-componentname="chatordering" data-teaser-vcmid="4b760763b1453810VgnVCM200000650a10acRCRD" data-item-vcmid="24804b5e5c1f7810VgnVCM200000650a10acRCRD" data-image-type="c">
+      <p><strong><a data-type="title" href="/news-sport/basketball-2023_q2/Article-24804b5e5c1f781026.htm?sCh=31750a2610f26110&amp;pId=1752253050">נחת באיסטנבול: ספרופולוס יפגש עם אנדולו</a></strong><small><span>מערכת אתר ערוץ הספורט</span> | <span>19:24</span></small></p>
+      <figure>
+       <a data-type="image" href="/news-sport/basketball-2023_q2/Article-24804b5e5c1f781026.htm?sCh=31750a2610f26110&amp;pId=1752253050"> <img src="https://img.mako.co.il/2023/05/06/sportFive_1288069_C.jpg" alt="sportFive1288069 (צילום: ספורט 5)" title="sportFive1288069 (צילום: ספורט 5)" loading="lazy"> </a>
+      </figure></li>
+     <li data-type="regularitemsmall" data-componentname="chatordering" data-teaser-vcmid="6c8f5bca8e002810VgnVCM100000700a10acRCRD" data-item-vcmid="1417942793" data-image-type="c">
+      <p><strong><a data-type="title" href="https://makospecial.co.il/champions23?makoOpenChromeTabs=1?utm_source=n12&amp;utm_medium=data12_component&amp;utm_campaign=promotion&amp;sCh=31750a2610f26110&amp;pId=173556002&amp;sCh=31750a2610f26110&amp;pId=1752253050">יש פיינל פור: הכל על העולות לחצי גמר האלופות</a></strong><small></small></p>
+      <figure>
+       <a data-type="image" href="https://makospecial.co.il/champions23?makoOpenChromeTabs=1?utm_source=n12&amp;utm_medium=data12_component&amp;utm_campaign=promotion&amp;sCh=31750a2610f26110&amp;pId=173556002&amp;sCh=31750a2610f26110&amp;pId=1752253050"> <img src="https://img.mako.co.il/2023/02/14/alufot_re_autoOrient_i.jpg" alt="ליגת האלופות, כרים בנזמה, מוחמד סלאח, ליאו מסי, אר (עיבוד: AP, רויטרס)" title="ליגת האלופות, כרים בנזמה, מוחמד סלאח, ליאו מסי, אר (עיבוד: AP, רויטרס)" loading="lazy"> </a>
+      </figure></li>
+     <li data-type="regularitemsmall" data-componentname="chatordering" data-teaser-vcmid="5616793950dc3810VgnVCM100000700a10acRCRD" data-item-vcmid="42733437" data-image-type="c">
+      <p><strong><a data-type="title" href="https://www.sport5.co.il/articles.aspx?FolderID=376&amp;docID=436640&amp;sCh=31750a2610f26110&amp;pId=1752253050">עיר שלמה בטירוף: צפו בחגיגות אוהדי נאפולי</a></strong><small></small></p>
+      <figure>
+       <a data-type="image" href="https://www.sport5.co.il/articles.aspx?FolderID=376&amp;docID=436640&amp;sCh=31750a2610f26110&amp;pId=1752253050"> <img src="https://img.mako.co.il/2023/05/05/sportFive_1287738_C.jpg" alt="נאפולי חוגגת אליפות אחרי 33 שנים (GETTY) (צילום: ספורט 5)" title="נאפולי חוגגת אליפות אחרי 33 שנים (GETTY) (צילום: ספורט 5)" loading="lazy"> </a>
+      </figure></li>
+     <div class="side-sport-chat-col">
+      <div id="sport-chat" class="chatordering-dynamic-topic" data-topic="2"></div>
+     </div>
+    </ul>
+   </section>
+   <section id="part3" section-main>
+    <section class="ordering colx3 threecolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-money">כלכלה</a> </strong> <a href="https://www.mako.co.il/news-money">עוד בכלכלה</a>
+     </header>
+     <ul class="grid-ordering colx3 " box-title="כלכלה">
+      <li data-type="regularitembigovertext" data-componentname="threecolumns" data-teaser-vcmid="05b44b4f493ea610VgnVCM100000700a10acRCRD" data-item-vcmid="bd58c77d88ae7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><small><span>קרן מרציאנו</span> | <span>05.05.23</span></small><strong><a data-type="title" href="/news-money/2023_q2/Article-bd58c77d88ae781027.htm?sCh=31750a2610f26110&amp;pId=1082126421">הממשלה תאשר ייצור חשמל כשר, ליברמן: "בדרך למדינת הלכה"</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-money/2023_q2/Article-bd58c77d88ae781027.htm?sCh=31750a2610f26110&amp;pId=1082126421"> <img src="https://img.mako.co.il/2022/02/11/LIBERMAN_KATZ_1102_autoOrient_i.jpg" alt="אביגדור ליברמן, ישראל כץ (עיבוד: פלאש 90)" title="אביגדור ליברמן, ישראל כץ (עיבוד: פלאש 90)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="textitemregular" data-componentname="threecolumns" data-teaser-vcmid="ff068bef522e9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="665f9ca2855e7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-money/2023_q2/Article-665f9ca2855e781027.htm?sCh=31750a2610f26110&amp;pId=1082126421">9 ימי עבודה, 5 ימי חופשה: המודל החדש שמגיע לשוק התעסוקה</a></strong><small><span>שירי דובר, גלובס</span> | <span>05.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="threecolumns" data-teaser-vcmid="7242ba5125150710VgnVCM100000700a10acRCRD" data-item-vcmid="380d05d5f68e7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-money/2023_q2/Article-380d05d5f68e781027.htm?sCh=31750a2610f26110&amp;pId=1082126421">אפל מסכמת רבעון טוב מהצפוי בזכות מכירות האייפונים</a></strong><small><span>רועי קצירי</span> | <span>05.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="threecolumns" data-teaser-vcmid="b6681e72232e9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="a3eced83ea6e7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/news-money/2023_q2/Article-a3eced83ea6e781026.htm?sCh=31750a2610f26110&amp;pId=1082126421">משרד הפנים: הגיל לקבלת דרכון לעשור יופחת</a></strong><small><span>אביבית מיסניקוב</span> | <span>04.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="threecolumns" data-teaser-vcmid="f3c38bef522e9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="34515229227e7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-money/2023_q2/Article-34515229227e781027.htm?sCh=31750a2610f26110&amp;pId=1082126421">בגלל עמר בר-לב: החרדים מאיימים בחרם על מאפיית אנג'ל</a></strong><small><span>רונית מורגנשטרן</span> | <span>04.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="threecolumns" class="play-sign" data-teaser-vcmid="6d81ba5125150710VgnVCM100000700a10acRCRD" data-item-vcmid="b49a9823736e7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/news-money/2023_q2/Article-b49a9823736e781026.htm?sCh=31750a2610f26110&amp;pId=1082126421">ביבס: "נלך למלחמת עולם"; סמוטריץ': "עליי לא מאיימים"</a></strong><small><span>איילת ברון</span> | <span>04.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="threecolumns" data-teaser-vcmid="0f03ba5125150710VgnVCM100000700a10acRCRD" data-item-vcmid="f4eb876a0a1e7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/news-money/2023_q2/Article-f4eb876a0a1e781026.htm?sCh=31750a2610f26110&amp;pId=1082126421">נת"ע לרגב: "יפגע במדינה"; גורם לשעבר במשרד: "כמו פיגוע"</a></strong><small><span>אביבית מיסניקוב</span> | <span>04.05.23</span></small></p></li>
+     </ul>
+    </section>
+    <section class="ordering colx2 twocolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-money/consumer">צרכנות</a> </strong> <a href="https://www.mako.co.il/news-money/consumer">עוד בצרכנות</a>
+     </header>
+     <ul class="grid-ordering colx2 " box-title="צרכנות">
+      <li data-type="regularitembigovertext" data-componentname="twocolumns" data-teaser-vcmid="caeccf0192007710VgnVCM200000650a10acRCRD" data-item-vcmid="591e733b37be7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><small><span>יעל אודם</span> | <span>05.05.23</span></small><strong><a data-type="title" href="/news-money/consumer/Article-591e733b37be781027.htm?sCh=31750a2610f26110&amp;pId=1336275670">טירוף הרול אפס: תלמידים סוחרים בממתק בניגוד לחוק</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-money/consumer/Article-591e733b37be781027.htm?sCh=31750a2610f26110&amp;pId=1336275670"> <img src="https://img.mako.co.il/2023/05/01/photo_5945051920072817262_y_autoOrient_i.jpg" alt="נתפסה הברחת &quot;רול אפס&quot; במכס בנתב&quot;ג (צילום: דוברות רשות המסים)" title="נתפסה הברחת &quot;רול אפס&quot; במכס בנתב&quot;ג (צילום: דוברות רשות המסים)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="d8c4cf0192007710VgnVCM200000650a10acRCRD" data-item-vcmid="634505c3bf3c7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-money/consumer/Article-634505c3bf3c781027.htm?sCh=31750a2610f26110&amp;pId=1336275670">הכי יפה בארץ: הטיול המשפחתי המושלם בישראל</a></strong><small><span>מירב טלמור-קשי</span> | <span>05.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-money/consumer/Article-634505c3bf3c781027.htm?sCh=31750a2610f26110&amp;pId=1336275670"> <img src="https://img.mako.co.il/2019/09/19/49Places_To_See_Israel_Part2_5_i.jpg" alt="מפל הבניאס (צילום: Protasov AN, shutterstock)" title="מפל הבניאס (צילום: Protasov AN, shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="7daecf0192007710VgnVCM200000650a10acRCRD" data-item-vcmid="42ca58ebc52e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-money/consumer/Article-42ca58ebc52e781027.htm?sCh=31750a2610f26110&amp;pId=1336275670">רוצים פינוקים חינם בטיסה? זאת בדיוק הדרך</a></strong><small><span>N12</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-money/consumer/Article-42ca58ebc52e781027.htm?sCh=31750a2610f26110&amp;pId=1336275670"> <img src="https://img.mako.co.il/2023/02/19/shutterstock_2026324526_re_autoOrient_i.jpg" alt="דיילת מטוס אוכל (צילום: Yaroslav Astakhov, shutterstock)" title="דיילת מטוס אוכל (צילום: Yaroslav Astakhov, shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" class="play-sign" data-teaser-vcmid="0272cf0192007710VgnVCM200000650a10acRCRD" data-item-vcmid="4a2274d74d6e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-money/consumer/Article-4a2274d74d6e781026.htm?sCh=31750a2610f26110&amp;pId=1336275670">ביטן מאיים על האוצר: "תורידו את מחירי החלב עד יום שני"</a></strong><small><span>איילת ברון</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-money/consumer/Article-4a2274d74d6e781026.htm?sCh=31750a2610f26110&amp;pId=1336275670"> <img src="https://img.mako.co.il/2023/04/30/F230316YS04_re_autoOrient_i.jpg" alt="יו&quot;ר ועדת הכלכלה דוד ביטן (צילום: יונתן זינדל, פלאש 90)" title="יו&quot;ר ועדת הכלכלה דוד ביטן (צילום: יונתן זינדל, פלאש 90)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ad b300X250 cm8" style="grid-area:item3">
+     <div id="CM8ShowAd_MONSTER1_300X250" data-title="MONSTER1_300X250">
+      <script>
+						window.DFP && DFP.showBanner('MONSTER1','300X250');
+					</script>
+     </div>
+    </section>
+    <section class="ordering colx3 threecolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-entertainment">תרבות</a> </strong> <a href="https://www.mako.co.il/news-entertainment">עוד בתרבות</a>
+     </header>
+     <ul class="grid-ordering colx3 " box-title="תרבות">
+      <li data-type="regularitembigovertext" data-componentname="threecolumns" data-teaser-vcmid="edb0048272ed9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="08562828a60e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><small><span>אורלי מירקין</span> | <span>09:00</span></small><strong><a data-type="title" href="/news-entertainment/2023_q2/Article-08562828a60e781027.htm?sCh=31750a2610f26110&amp;pId=2140703074">"ההיריון הגיע בהפתעה, שבוע אחרי יום ההולדת ה-41"</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-entertainment/2023_q2/Article-08562828a60e781027.htm?sCh=31750a2610f26110&amp;pId=2140703074"> <img src="https://img.mako.co.il/2023/05/03/FF_SHIRI_re_autoOrient_i.jpg" alt="שירי מימון (צילום: N12)" title="שירי מימון (צילום: N12)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="6bbeab566c119710VgnVCM200000650a10acRCRD" data-item-vcmid="fca4e8e23d5e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-entertainment/2023_q2/Article-fca4e8e23d5e781027.htm?sCh=31750a2610f26110&amp;pId=2140703074">אדם גבאי כבר לא מסתתר: "הייתי נצמד לקיר, מתבייש ומשקר"</a></strong><small><span>נועם כהן</span> | <span>05.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-entertainment/2023_q2/Article-fca4e8e23d5e781027.htm?sCh=31750a2610f26110&amp;pId=2140703074"> <img src="https://img.mako.co.il/2023/05/04/ADAM3_autoOrient_i.jpg" alt="אדם גבאי (צילום: דניאל קמינסקי)" title="אדם גבאי (צילום: דניאל קמינסקי)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="bb15c1ec51ed9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="9725fd8a746e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-entertainment/2023_q2/Article-9725fd8a746e781027.htm?sCh=31750a2610f26110&amp;pId=2140703074">בלחץ ה-BDS: בוטלה ההופעה של סם סמית' בישראל</a></strong><small><span>מעיין פרתי</span> | <span>05.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-entertainment/2023_q2/Article-9725fd8a746e781027.htm?sCh=31750a2610f26110&amp;pId=2140703074"> <img src="https://img.mako.co.il/2022/12/21/sam1111_autoOrient_i.jpg" alt="סם סמית" title="סם סמית" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="7bb057de7fefc710VgnVCM200000650a10acRCRD" data-item-vcmid="e3c0b45aa37d7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-entertainment/2023_q2/Article-e3c0b45aa37d781026.htm?sCh=31750a2610f26110&amp;pId=2140703074">"אני מרגיש בריאליטי של קורבן שנלחם על חייו"</a></strong><small><span>יוגב כרמל</span> | <span>08:31</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-entertainment/2023_q2/Article-e3c0b45aa37d781026.htm?sCh=31750a2610f26110&amp;pId=2140703074"> <img src="https://img.mako.co.il/2023/05/02/YOGEV_FF_autoOrient_i.jpg" alt="דורון נשר (צילום: N12)" title="דורון נשר (צילום: N12)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="e103c1ec51ed9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="0d47b10efd6e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-entertainment/2023_q2/Article-0d47b10efd6e781026.htm?sCh=31750a2610f26110&amp;pId=2140703074">ירמי קפלן מבטל: "חייב ניתוח כדי להציל את הגפיים שלי"</a></strong><small><span>נועם כהן</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-entertainment/2023_q2/Article-0d47b10efd6e781026.htm?sCh=31750a2610f26110&amp;pId=2140703074"> <img src="https://img.mako.co.il/2023/02/06/87_autoOrient_i.jpg" alt="מה הלוז - 7.6 - תערוכות - לובשים גאווה - דיזנגוף סנטר - ירמי קפלן (צילום: ניר סלקמן, יח&quot;צ)" title="מה הלוז - 7.6 - תערוכות - לובשים גאווה - דיזנגוף סנטר - ירמי קפלן (צילום: ניר סלקמן, יח&quot;צ)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="84b0bf6ed0283710VgnVCM200000650a10acRCRD" data-item-vcmid="d1370d2cbf5e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-entertainment/2023_q2/Article-d1370d2cbf5e781027.htm?sCh=31750a2610f26110&amp;pId=2140703074">נחשפה סיבת מותו של יהונתן גפן ז"ל: "לקה באירוע לבבי"</a></strong><small><span>נועם כהן</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-entertainment/2023_q2/Article-d1370d2cbf5e781027.htm?sCh=31750a2610f26110&amp;pId=2140703074"> <img src="https://img.mako.co.il/2023/04/19/GEFFEEN_re_autoOrient_i.jpg" alt="יהונתן גפן (צילום: תומר נויברג, פלאש 90)" title="יהונתן גפן (צילום: תומר נויברג, פלאש 90)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="b7de57de7fefc710VgnVCM200000650a10acRCRD" data-item-vcmid="9af28ce1c72e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-entertainment/2023_q2/Article-9af28ce1c72e781026.htm?sCh=31750a2610f26110&amp;pId=2140703074">הריקוד של נועה קירל באירוויזיון סוף סוף נחשף</a></strong><small><span>נועם כהן</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-entertainment/2023_q2/Article-9af28ce1c72e781026.htm?sCh=31750a2610f26110&amp;pId=2140703074"> <img src="https://img.mako.co.il/2023/05/02/NOA_autoOrient_i.jpg" alt="הצצה ראשונה להופעה של נועה קירל (צילום: Chloe Hashemi, EBU)" title="הצצה ראשונה להופעה של נועה קירל (צילום: Chloe Hashemi, EBU)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ordering colx2 twocolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-business">Business</a> </strong> <a href="https://www.mako.co.il/news-business">עוד בBusiness</a>
+     </header>
+     <ul class="grid-ordering colx2 " box-title="Business">
+      <li data-type="regularitembigovertext" data-componentname="twocolumns" data-teaser-vcmid="0161d3ef8c10b710VgnVCM100000700a10acRCRD" data-item-vcmid="47d66af8ad6e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>נטע צ'חנובסקי</span> | <span>04.05.23</span></small><strong><a data-type="title" href="/news-business/meida-success_stories/Article-47d66af8ad6e781026.htm?sCh=31750a2610f26110&amp;pId=789214448">"המחיר שלי כפול מהשוק ואני ממש בסדר עם זה"</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-business/meida-success_stories/Article-47d66af8ad6e781026.htm?sCh=31750a2610f26110&amp;pId=789214448"> <img src="https://img.mako.co.il/2023/05/04/barcohen218777499376_re_autoOrient_i.jpg" alt="בר כהן (צילום: שי הנסב)" title="בר כהן (צילום: שי הנסב)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="894dd3ef8c10b710VgnVCM100000700a10acRCRD" data-item-vcmid="5ce187c6b37e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-business/news/Article-5ce187c6b37e781026.htm?sCh=31750a2610f26110&amp;pId=789214448">שווה 1.5 טריליון דולר: המלחמה על הדשבורד ברכב שלכם</a></strong><small><span>סוכנויות הידיעות</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-business/news/Article-5ce187c6b37e781026.htm?sCh=31750a2610f26110&amp;pId=789214448"> <img src="https://img.mako.co.il/2023/05/04/shutterstock_1099598798_re_autoOrient_i.jpg" alt="מסך מולטימדיה ברכב. אילוסטרציה (צילום: Hadrian, shutterstock)" title="מסך מולטימדיה ברכב. אילוסטרציה (צילום: Hadrian, shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="ba8fd3ef8c10b710VgnVCM100000700a10acRCRD" data-item-vcmid="b9ca6862a8cd7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-business/decision_making/Article-b9ca6862a8cd781027.htm?sCh=31750a2610f26110&amp;pId=789214448">ויתרו על שכר מפנק בהייטק והפכו לעו"ס: "מצאנו משמעות"</a></strong><small><span> נטע צ'חנובסקי</span> | <span>02.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-business/decision_making/Article-b9ca6862a8cd781027.htm?sCh=31750a2610f26110&amp;pId=789214448"> <img src="https://img.mako.co.il/2019/11/27/shutterstock_736740664_i.jpg" alt="מחזיקים ידיים (צילום:  Freedom Studio, shutterstock)" title="מחזיקים ידיים (צילום:  Freedom Studio, shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="advertisingitem" data-componentname="twocolumns" class="sponsor with-bg" data-teaser-vcmid="7850d3ef8c10b710VgnVCM100000700a10acRCRD" data-item-vcmid="f16fcc1263bd7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-business/duns_100-realestate/Article-f16fcc1263bd781027.htm?sCh=31750a2610f26110&amp;pId=789214448">הדירוג נחשף: אלו יזמי ההתחדשות העירונית המובילים ב-2023</a></strong><small>בחסות Duns 100</small></p>
+       <figure>
+        <a data-type="image" href="/news-business/duns_100-realestate/Article-f16fcc1263bd781027.htm?sCh=31750a2610f26110&amp;pId=789214448"> <img src="https://img.mako.co.il/2017/03/14/adlokayata_3_i.jpg" alt="אתר בנייה בתל אביב (צילום: Shutterstock)" title="אתר בנייה בתל אביב (צילום: Shutterstock)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ad b300X250 cm8" style="grid-area:item3">
+     <div id="CM8ShowAd_MONSTER2_300X250" data-title="MONSTER2_300X250">
+      <script>
+						window.DFP && DFP.showBanner('MONSTER2','300X250');
+					</script>
+     </div>
+    </section>
+   </section>
+   <section class="news-iframe-flashItemduns">
+    <iframe src="https://www.duns100.co.il/frame/hp3?mgr=1&amp;comp=2" height="140" width="988" loading="lazy" scrolling="no"></iframe>
+    <script>
+										window.addEventListener("load", function(){
+											var iframe = document.querySelector(".news-iframe-flashItemduns");
+											iframe && (iframe.src = "https://www.duns100.co.il/frame/hp3?mgr=1&comp=2")
+										},false);
+									</script>
+   </section>
+   <section id="part3" section-main>
+    <section class="ordering colx2 twocolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-money/real_estate">נדל''ן</a> </strong> <a href="https://www.mako.co.il/news-money/real_estate">עוד בנדל''ן</a>
+     </header>
+     <ul class="grid-ordering colx2 " box-title="נדל''ן">
+      <li data-type="regularitembigovertext" data-componentname="twocolumns" data-teaser-vcmid="1bfbd77732007710VgnVCM200000650a10acRCRD" data-item-vcmid="0139f45d7aae7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>אריק מירובסקי, גלובס</span> | <span>05.05.23</span></small><strong><a data-type="title" href="/news-money/real_estate/Article-0139f45d7aae781026.htm?sCh=31750a2610f26110&amp;pId=1098726653">חובבי צפון ת"א: העדפות ההייטקיסטים נחשפות</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-money/real_estate/Article-0139f45d7aae781026.htm?sCh=31750a2610f26110&amp;pId=1098726653"> <img src="https://img.mako.co.il/2018/04/08/599125_I.jpg" alt="טמפ' רגילות לעונה (צילום: חדשות 2)" title="טמפ' רגילות לעונה (צילום: חדשות 2)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="1e2fd77732007710VgnVCM200000650a10acRCRD" data-item-vcmid="0428876a0a1e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-money/real_estate/Article-0428876a0a1e781026.htm?sCh=31750a2610f26110&amp;pId=1098726653">החופשה בדובאי שהסתיימה ב-6 דירות</a></strong><small><span>איילת ברון</span> | <span>20:14</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-money/real_estate/Article-0428876a0a1e781026.htm?sCh=31750a2610f26110&amp;pId=1098726653"> <img src="https://img.mako.co.il/2023/05/03/FF_DUBAI_autoOrient_i.jpg" alt="אולגה ויעקב, קנו 6 דירות בדובאי" title="אולגה ויעקב, קנו 6 דירות בדובאי" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="ec03d77732007710VgnVCM200000650a10acRCRD" data-item-vcmid="b2d8a6feb45e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-money/real_estate/Article-b2d8a6feb45e781027.htm?sCh=31750a2610f26110&amp;pId=1098726653">הגרלה נוספת יוצאת לדרך - כמה יעלו הדירות?</a></strong><small><span>יובל ניסני, גלובס</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-money/real_estate/Article-b2d8a6feb45e781027.htm?sCh=31750a2610f26110&amp;pId=1098726653"> <img src="https://img.mako.co.il/2023/04/19/shutterstock_2189251083_autoOrient_i.jpg" alt="בתים בבנייה בראשון לציון (צילום: ShU studio, shutterstock)" title="בתים בבנייה בראשון לציון (צילום: ShU studio, shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" class="play-sign" data-teaser-vcmid="d49a398f8d0a2810VgnVCM100000700a10acRCRD" data-item-vcmid="7858e2b0cc0e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-money/real_estate/Article-7858e2b0cc0e781027.htm?sCh=31750a2610f26110&amp;pId=1098726653">מהוד השרון ועד חיפה: הדירות שלא מצליחים למכור</a></strong><small><span>איתמר מינמר</span> | <span>03.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-money/real_estate/Article-7858e2b0cc0e781027.htm?sCh=31750a2610f26110&amp;pId=1098726653"> <img src="https://img.mako.co.il/2023/05/03/in_dira_re_autoOrient.mxf_1_re_autoOrient_i.jpg" alt="דירה בהוד השרון שלא נמכרת במשך חודשים (צילום: חדשות 12)" title="דירה בהוד השרון שלא נמכרת במשך חודשים (צילום: חדשות 12)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ad b300X250 cm8" style="grid-area:item3">
+     <div id="CM8ShowAd_MONSTER3_300X250" data-title="MONSTER3_300X250">
+      <script>
+						window.DFP && DFP.showBanner('MONSTER3','300X250');
+					</script>
+     </div>
+    </section>
+    <div class="OUTBRAIN" data-src="https://www.n12.co.il/" data-widget-id="HPC_2"></div>
+    <section class="ordering colx3 threecolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-tip12">TIP12</a> </strong> <a href="https://www.mako.co.il/news-tip12">עוד ב-TIP12</a>
+     </header>
+     <ul class="grid-ordering colx3 " box-title="TIP12">
+      <li data-type="regularitembigovertext" data-componentname="threecolumns" data-teaser-vcmid="33cadb42c8458710VgnVCM200000650a10acRCRD" data-item-vcmid="d7eb7d39b56d7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>N12</span> | <span>05.05.23</span></small><strong><a data-type="title" href="/news-tip12/body_and_spirit/Article-d7eb7d39b56d781026.htm?sCh=31750a2610f26110&amp;pId=2140708546">זיעה קרה ומחשבות על אסונות: איך מטפלים בחרדת טיסה?</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-tip12/body_and_spirit/Article-d7eb7d39b56d781026.htm?sCh=31750a2610f26110&amp;pId=2140708546"> <img src="https://img.mako.co.il/2023/04/20/shutterstock_746444713_re_autoOrient_i.jpg" alt="חרדת טיסה נוסע (צילום: Song_about_summer, shutterstock)" title="חרדת טיסה נוסע (צילום: Song_about_summer, shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="ca58db42c8458710VgnVCM200000650a10acRCRD" data-item-vcmid="6ac551571a0e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-tip12/body_and_spirit/Article-6ac551571a0e781026.htm?sCh=31750a2610f26110&amp;pId=2140708546">כשירים לכושר: האימון המומלץ לבני 40 וממה להימנע ב-60?</a></strong><small><span>N12</span> | <span>05.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-tip12/body_and_spirit/Article-6ac551571a0e781026.htm?sCh=31750a2610f26110&amp;pId=2140708546"> <img src="https://img.mako.co.il/2017/01/18/shutterstock_439173466_i.jpg" alt="אישה עושה שכיבות סמיכה (צילום: Jacob Lund, Shutterstock)" title="אישה עושה שכיבות סמיכה (צילום: Jacob Lund, Shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="251c201d82138710VgnVCM200000650a10acRCRD" data-item-vcmid="66cc29548e6d7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-tip12/health/Article-66cc29548e6d781027.htm?sCh=31750a2610f26110&amp;pId=2140708546">מוותרים על פחמימות לטובת ירידה במשקל? חבל</a></strong><small><span>עדי כהנן</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-tip12/health/Article-66cc29548e6d781027.htm?sCh=31750a2610f26110&amp;pId=2140708546"> <img src="https://img.mako.co.il/2016/08/11/shutterstock_397829632_i.jpg" alt="פחמימות (צילום: Syda Productions, Shutterstock)" title="פחמימות (צילום: Syda Productions, Shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="ff2b201d82138710VgnVCM200000650a10acRCRD" data-item-vcmid="374ae930f27b7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-tip12/body_and_spirit/Article-374ae930f27b781026.htm?sCh=31750a2610f26110&amp;pId=2140708546">מולטיטסקינג זו תכונה מוערכת יתר על המידה</a></strong><small><span>שרון בירקמן</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-tip12/body_and_spirit/Article-374ae930f27b781026.htm?sCh=31750a2610f26110&amp;pId=2140708546"> <img src="https://img.mako.co.il/2023/05/04/shutterstock_179389238_autoOrient_i.jpg" alt="ככה נראה מולטיטסקינג (צילום: Jason Salmon, Shutterstock)" title="ככה נראה מולטיטסקינג (צילום: Jason Salmon, Shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="e2fd201d82138710VgnVCM200000650a10acRCRD" data-item-vcmid="1d21ec6b05bd7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-tip12/body_and_spirit/Article-1d21ec6b05bd781027.htm?sCh=31750a2610f26110&amp;pId=2140708546">מי אתם, הורים שיש להם שיטת חינוך מוסדרת?!?</a></strong><small><span>לילי שרצקי אלמליח</span> | <span>03.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-tip12/body_and_spirit/Article-1d21ec6b05bd781027.htm?sCh=31750a2610f26110&amp;pId=2140708546"> <img src="https://img.mako.co.il/2023/05/01/mivchan_hahorim_01_06_iron_autoOrient_i.jpg" alt="משפחת עירון  (צילום: מתוך &quot;מבחן ההורים הגדול&quot;, קשת 12)" title="משפחת עירון  (צילום: מתוך &quot;מבחן ההורים הגדול&quot;, קשת 12)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="c43d201d82138710VgnVCM200000650a10acRCRD" data-item-vcmid="555362437dad7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-tip12/health/Article-555362437dad781027.htm?sCh=31750a2610f26110&amp;pId=2140708546">שוקינג! אין דבר כזה גזר גמדי</a></strong><small><span>N12</span> | <span>03.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-tip12/health/Article-555362437dad781027.htm?sCh=31750a2610f26110&amp;pId=2140708546"> <img src="https://img.mako.co.il/2015/08/18/gezer_gamadi_dvash_sarit_i.jpg" alt="גזר גמדי בזיגוג דבש (צילום: שרית נובק - מיס פטל, mako אוכל)" title="גזר גמדי בזיגוג דבש (צילום: שרית נובק - מיס פטל, mako אוכל)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="2844474218458710VgnVCM200000650a10acRCRD" data-item-vcmid="10b8119a7e4ab710VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-tip12/body_and_spirit/Article-10b8119a7e4ab71027.htm?sCh=31750a2610f26110&amp;pId=2140708546">8 טיפים לצאת טוב מבוקר שהתחיל ברע</a></strong><small><span>N12</span> | <span>02.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-tip12/body_and_spirit/Article-10b8119a7e4ab71027.htm?sCh=31750a2610f26110&amp;pId=2140708546"> <img src="https://img.mako.co.il/2023/01/04/shutterstock_1780031702_re_autoOrient_i.jpg" alt="אישה מחייכת (צילום:  Mariia Korneeva, shutterstock)" title="אישה מחייכת (צילום:  Mariia Korneeva, shutterstock)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ordering colx2 twocolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-science">מדע וסביבה</a> </strong> <a href="https://www.mako.co.il/news-science">עוד במדע וסביבה</a>
+     </header>
+     <ul class="grid-ordering colx2 " box-title="מדע וסביבה">
+      <li data-type="regularitembigovertext" data-componentname="twocolumns" data-teaser-vcmid="a4182f9502140810VgnVCM200000650a10acRCRD" data-item-vcmid="f9e525d0e7be7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>N12</span> | <span>05.05.23</span></small><strong><a data-type="title" href="/news-science/2023_q2/Article-f9e525d0e7be781026.htm?sCh=31750a2610f26110&amp;pId=1098721663">נחיל דבורים נצמד לכנף המטוס - ההמראה עוכבה במשך שעות</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-science/2023_q2/Article-f9e525d0e7be781026.htm?sCh=31750a2610f26110&amp;pId=1098721663"> <img src="https://img.mako.co.il/2023/05/05/matoss_autoOrient_i.jpg" alt="נחיל דבורים מנה ממטוס להמריא (צילום: רשתות חברתיות לפי סעיף 27א)" title="נחיל דבורים מנה ממטוס להמריא (צילום: רשתות חברתיות לפי סעיף 27א)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" class="play-sign" data-teaser-vcmid="a5e4cdfe11138710VgnVCM200000650a10acRCRD" data-item-vcmid="697dd0bcd08e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-science/2023_q2/Article-697dd0bcd08e781027.htm?sCh=31750a2610f26110&amp;pId=1098721663">שובל אור מסתורי בשמי ישראל | התיעוד וההסבר</a></strong><small><span>N12</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-science/2023_q2/Article-697dd0bcd08e781027.htm?sCh=31750a2610f26110&amp;pId=1098721663"> <img src="https://media.mako.co.il/FrameCapture/FrameCapture.gif?format=TB-Pictures-ExtraFormat3&amp;vcmID=369ed0bcd08e7810VgnVCM100000700a10acRCRD&amp;ts=1683400533&amp;action=gif&amp;a=.gif" alt="תיעוד שובל אור מסתורי בשמי ישראל (צילום: לפי סעיף 27 א')" title="תיעוד שובל אור מסתורי בשמי ישראל (צילום: לפי סעיף 27 א')" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="4db8db90b1138710VgnVCM200000650a10acRCRD" data-item-vcmid="7f7d1e888a2e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-science/2023_q2/Article-7f7d1e888a2e781027.htm?sCh=31750a2610f26110&amp;pId=1098721663">איך חור שחור אוכל כוכב? תיעוד נדיר</a></strong><small><span>שני בירנבוים</span> | <span>05.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-science/2023_q2/Article-7f7d1e888a2e781027.htm?sCh=31750a2610f26110&amp;pId=1098721663"> <img src="https://img.mako.co.il/2022/07/24/blackhole2407_autoOrient_i.jpg" alt="חור שחור שצולם ע&quot;י הטלסקופ ג'יימס ווב (צילום: NASA, ESA, CSA, and STScI)" title="חור שחור שצולם ע&quot;י הטלסקופ ג'יימס ווב (צילום: NASA, ESA, CSA, and STScI)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="9bb2864ce3f04810VgnVCM200000650a10acRCRD" data-item-vcmid="bfa03dae556e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-science/2023_q2/Article-bfa03dae556e781026.htm?sCh=31750a2610f26110&amp;pId=1098721663">"קטסטרופה גלובלית": הגורם שמשמיד חמישית מהיבול העולמי</a></strong><small><span>תומר אלמגור</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-science/2023_q2/Article-bfa03dae556e781026.htm?sCh=31750a2610f26110&amp;pId=1098721663"> <img src="https://img.mako.co.il/2023/05/04/GettyImages_89171208_re_autoOrient_i.jpg" alt="פטריות משמידות חמישית מהיבול העולמי (צילום: DEA / P. PUCCINELLI/De Agostini , getty images)" title="פטריות משמידות חמישית מהיבול העולמי (צילום: DEA / P. PUCCINELLI/De Agostini , getty images)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ad b300X250 cm8" style="grid-area:item3">
+     <div id="CM8ShowAd_MONSTER4_300X250" data-title="MONSTER4_300X250">
+      <script>
+						window.DFP && DFP.showBanner('MONSTER4','300X250');
+					</script>
+     </div>
+    </section>
+    <section class="ordering colx3 threecolumns">
+     <header>
+      <strong> <a href="https://www.tech12.co.il/">tech12</a> </strong> <a href="https://www.tech12.co.il/">עוד ב-tech12</a>
+     </header>
+     <ul class="grid-ordering colx3 " box-title="tech12">
+      <li data-type="regularitembigovertext" data-componentname="threecolumns" data-teaser-vcmid="4276e0b9a5dbc710VgnVCM100000700a10acRCRD" data-item-vcmid="380d05d5f68e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><small><span>רועי קצירי</span> | <span>05.05.23</span></small><strong><a data-type="title" href="/news-money/2023_q2/Article-380d05d5f68e781027.htm?sCh=31750a2610f26110&amp;pId=1037296529">אפל מסכמת רבעון טוב מהצפוי בזכות האייפון</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-money/2023_q2/Article-380d05d5f68e781027.htm?sCh=31750a2610f26110&amp;pId=1037296529"> <img src="https://img.mako.co.il/2023/05/04/GettyImages-1251936682_autoOrient_i.jpg" alt="טים קוק מנכ&quot;ל אפל (צילום: AFP | PUNIT PARANJPE , getty images)" title="טים קוק מנכ&quot;ל אפל (צילום: AFP | PUNIT PARANJPE , getty images)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="7eb30e4761dbc710VgnVCM100000700a10acRCRD" data-item-vcmid="da1518aae6de7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/index-investments/Article-da1518aae6de781027.htm?sCh=31750a2610f26110&amp;pId=1037296529">דיברו על AI: נתניהו נפגש עם דובי פרנסס ויזמי טק נוספים</a></strong><small><span>אמיתי זיו</span> | <span>11:29</span></small></p>
+       <figure>
+        <a data-type="image" href="/index-investments/Article-da1518aae6de781027.htm?sCh=31750a2610f26110&amp;pId=1037296529"> <img src="https://img.mako.co.il/2022/01/02/Dovi_franses_autoOrient_i.jpg" alt="דובי פרנסס (צילום: קרן Group 11)" title="דובי פרנסס (צילום: קרן Group 11)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="e7d10e4761dbc710VgnVCM100000700a10acRCRD" data-item-vcmid="54f13c9a146e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/index-commentary/Article-54f13c9a146e781026.htm?sCh=31750a2610f26110&amp;pId=1037296529">כנראה שבינה מלאכותית יותר חשובה מלטפל במשבר ההייטק</a></strong><small><span>כתבי tech12</span> | <span>16:00</span></small></p>
+       <figure>
+        <a data-type="image" href="/index-commentary/Article-54f13c9a146e781026.htm?sCh=31750a2610f26110&amp;pId=1037296529"> <img src="https://img.mako.co.il/2023/05/01/fgfdsgsdfgsdfgt435_autoOrient_i.jpg" alt="ראש הממשלה נתניהו על רקע מחאת ההייטקיסטים (צילום: ליאור באקאלו, Sean Gallup/Getty Images)" title="ראש הממשלה נתניהו על רקע מחאת ההייטקיסטים (צילום: ליאור באקאלו, Sean Gallup/Getty Images)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="0e250e4761dbc710VgnVCM100000700a10acRCRD" data-item-vcmid="0fc46842ca5e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/index-startups/Article-0fc46842ca5e781027.htm?sCh=31750a2610f26110&amp;pId=1037296529">התקדמת שלב במשחק? הצלת צבים בקוסטה ריקה</a></strong><small><span>אמיתי זיו</span> | <span>06:57</span></small></p>
+       <figure>
+        <a data-type="image" href="/index-startups/Article-0fc46842ca5e781027.htm?sCh=31750a2610f26110&amp;pId=1037296529"> <img src="https://img.mako.co.il/2023/05/04/garaaaa_autoOrient_i.jpg" alt="יוצאים מהגראז' דוטס אקו (צילום: Dots.eco., יחצ)" title="יוצאים מהגראז' דוטס אקו (צילום: Dots.eco., יחצ)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="51f30e4761dbc710VgnVCM100000700a10acRCRD" data-item-vcmid="e7e8d785d0de7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/index-career/Article-e7e8d785d0de781026.htm?sCh=31750a2610f26110&amp;pId=1037296529">עוד קיצוצים בראפיד: רק 42 עובדים נותרו בחברה</a></strong><small><span>הגר רבט</span> | <span>05.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/index-career/Article-e7e8d785d0de781026.htm?sCh=31750a2610f26110&amp;pId=1037296529"> <img src="https://img.mako.co.il/2022/03/23/cf56_re_autoOrient_i.jpg" alt="אידו ג'נו מנכ&quot;ל RapidAPI  (צילום: Damian Marhefka, יחצ)" title="אידו ג'נו מנכ&quot;ל RapidAPI  (צילום: Damian Marhefka, יחצ)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="5a1aa48584dbc710VgnVCM100000700a10acRCRD" data-item-vcmid="dd79d7cf095e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/index-career/Article-dd79d7cf095e781027.htm?sCh=31750a2610f26110&amp;pId=1037296529">למרות המשבר: עלייה קלה בשכר הממוצע בהייטק</a></strong><small><span>רז סמולסקי</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/index-career/Article-dd79d7cf095e781027.htm?sCh=31750a2610f26110&amp;pId=1037296529"> <img src="https://img.mako.co.il/2023/03/19/shutterstock_572804956_re_autoOrient_i.jpg" alt="אילוסטרציה (צילום: Shutterstock)" title="אילוסטרציה (צילום: Shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="00fae0b9a5dbc710VgnVCM100000700a10acRCRD" data-item-vcmid="f8f551d6206e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/index-technology_first/Article-f8f551d6206e781027.htm?sCh=31750a2610f26110&amp;pId=1037296529">הטריוויה של tech12: בחנו את עצמכם</a></strong><small><span>נועה שוויקי</span> | <span>05.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/index-technology_first/Article-f8f551d6206e781027.htm?sCh=31750a2610f26110&amp;pId=1037296529"> <img src="https://img.mako.co.il/2023/05/04/TriviaTech12_Pic2_04052023_autoOrient_i.jpg" alt="טריוויה 05.05.23 (עיבוד: NagyD CC0 Wikimedia Commons)" title="טריוויה 05.05.23 (עיבוד: NagyD CC0 Wikimedia Commons)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ordering colx1 onecolumn">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-digital">דיגיטל</a> </strong> <a href="https://www.mako.co.il/news-digital">עוד בדיגיטל</a>
+     </header>
+     <ul class="grid-ordering colx1 " box-title="דיגיטל">
+      <li data-type="regularitembigovertext" data-componentname="onecolumn" data-teaser-vcmid="b7995a68bc47b610VgnVCM200000650a10acRCRD" data-item-vcmid="bcac6667c56e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>דינה אנטין</span> | <span>04.05.23</span></small><strong><a data-type="title" href="/index-worldwide/Article-bcac6667c56e781026.htm?sCh=31750a2610f26110&amp;pId=1408126451">עובדי גוגל וטסלה הרוויחו פחות, באפל חגגו</a></strong></p>
+       <figure>
+        <a data-type="image" href="/index-worldwide/Article-bcac6667c56e781026.htm?sCh=31750a2610f26110&amp;pId=1408126451"> <img src="https://img.mako.co.il/2023/02/08/fjhasdjkfh9843_autoOrient_i.jpg" alt="סאטיה נאדלה וסונדאר פיצ'אי  (צילום: Fabrice Coffrini and Ron Jenkins, getty images)" title="סאטיה נאדלה וסונדאר פיצ'אי  (צילום: Fabrice Coffrini and Ron Jenkins, getty images)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="fc355a68bc47b610VgnVCM200000650a10acRCRD" data-item-vcmid="e3def936b41e7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-money/2023_q2/Article-e3def936b41e781027.htm?sCh=31750a2610f26110&amp;pId=1408126451">מנכ"ל שיתף חששות על ChatGPT ומנייתו קרסה ב-40%</a></strong><small><span>N12</span> | <span>04.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="9558f0c0f1140810VgnVCM100000700a10acRCRD" data-item-vcmid="9d0432f3cccd7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/news-digital/2023_q2/Article-9d0432f3cccd781026.htm?sCh=31750a2610f26110&amp;pId=1408126451">המשתמש נדהם: "מה אני עשיתי? רק הסתכלתי"</a></strong><small><span>דרור גלוברמן ודני פלד </span> | <span>03.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="6cc968b0c738b610VgnVCM100000700a10acRCRD" data-item-vcmid="33e901a207cd7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/news-digital/2023_q2/Article-33e901a207cd781026.htm?sCh=31750a2610f26110&amp;pId=1408126451">אפוקליפסה עכשיו: הרובוט חובר לצ'אטבוט</a></strong><small><span>N12</span> | <span>02.05.23</span></small></p></li>
+      <li data-type="textadvertisingitem" data-componentname="onecolumn" class="sponsor with-bg" data-teaser-vcmid="902e5a68bc47b610VgnVCM200000650a10acRCRD" data-item-vcmid="f37e10a0ded97810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/index-career/Article-f37e10a0ded9781026.htm?sCh=31750a2610f26110&amp;pId=1408126451">יותר מ-4,000 מפתחים בישראל כבר מחפשים עבודה</a></strong><small>בחסות Nebius</small></p></li>
+     </ul>
+    </section>
+    <section class="ordering colx1 onecolumn">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-lifestyle">בריאות</a> </strong> <a href="https://www.mako.co.il/news-lifestyle">עוד בבריאות</a>
+     </header>
+     <ul class="grid-ordering colx1 " box-title="בריאות">
+      <li data-type="regularitembigovertext" data-componentname="onecolumn" class="play-sign" data-teaser-vcmid="b06ac1ec51ed9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="79a060c04f8e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>גל חן</span> | <span>05.05.23</span></small><strong><a data-type="title" href="/news-lifestyle/2023_q2/Article-79a060c04f8e781026.htm?sCh=31750a2610f26110&amp;pId=1129494135">התקווה לחולי אלצהיימר: הטיפול החדש שעומד בפני אישור</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-lifestyle/2023_q2/Article-79a060c04f8e781026.htm?sCh=31750a2610f26110&amp;pId=1129494135"> <img src="https://img.mako.co.il/2022/05/17/117465365_l_autoOrient_i.jpg" alt="אלצהיימר. אילוסטרציה (צילום: 123RF‏)" title="אלצהיימר. אילוסטרציה (צילום: 123RF‏)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="0496c81acacf1810VgnVCM200000650a10acRCRD" data-item-vcmid="8b38a8ab72be7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-lifestyle/2023_q2/Article-8b38a8ab72be781027.htm?sCh=31750a2610f26110&amp;pId=1129494135">הפתרון לדלקות ריאות קשה אצל קשישים ותינוקות?</a></strong><small><span>שני בירנבוים</span> | <span>05.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" class="play-sign" data-teaser-vcmid="28ba94f03c44f710VgnVCM200000650a10acRCRD" data-item-vcmid="c6b0b24f2b1e7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/news-lifestyle/2023_q2/Article-c6b0b24f2b1e781026.htm?sCh=31750a2610f26110&amp;pId=1129494135">משרד הבריאות נגד הרול-אפס: "לא בריא ולא מומלץ"</a></strong><small><span>אביבית מיסניקוב</span> | <span>03.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" class="play-sign" data-teaser-vcmid="7395d7983cdca710VgnVCM100000700a10acRCRD" data-item-vcmid="9fe103f7d22e7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-lifestyle/2023_q2/Article-9fe103f7d22e781027.htm?sCh=31750a2610f26110&amp;pId=1129494135">אביו של הנער שאושפז לאחר שעישן סיגריה אלקטרונית משחזר</a></strong><small><span>אור רביד</span> | <span>03.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="ff4ec0a2c9432810VgnVCM200000650a10acRCRD" data-item-vcmid="c64c2603881e7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-lifestyle/2023_q2/Article-c64c2603881e781027.htm?sCh=31750a2610f26110&amp;pId=1129494135">מהי מחלת הריאות EVALI וכמה היא מסוכנת?</a></strong><small><span>ענבר טויזר</span> | <span>03.05.23</span></small></p></li>
+     </ul>
+    </section>
+    <section class="ordering colx1 onecolumn">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-law_guide">חוק ומשפט</a> </strong> <a href="https://www.mako.co.il/news-law_guide">din.co.il</a>
+     </header>
+     <ul class="grid-ordering colx1 " box-title="חוק ומשפט">
+      <li data-type="regularitembigovertext" data-componentname="onecolumn" data-teaser-vcmid="a35113c493666710VgnVCM200000650a10acRCRD" data-item-vcmid="19a9bb1f930e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>בשיתוף עו"ד וטוען רבני אליאב ביטון</span> | <span>04.05.23</span></small><strong><a data-type="title" href="/news-law_guide/2023_q2/Article-19a9bb1f930e781026.htm?sCh=31750a2610f26110&amp;pId=443551827">מועד הקרע בסיום הנישואין הפורמאלי?</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-law_guide/2023_q2/Article-19a9bb1f930e781026.htm?sCh=31750a2610f26110&amp;pId=443551827"> <img src="https://img.mako.co.il/2018/07/17/shutterstock_1065316403_i.jpg" alt="ריב בני זוג (אילוסטרציה) (צילום: shutterstock | Freeograph)" title="ריב בני זוג (אילוסטרציה) (צילום: shutterstock | Freeograph)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="1a6de37f801d5710VgnVCM200000650a10acRCRD" data-item-vcmid="62009178536d7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-law_guide/2023_q2/Article-62009178536d781027.htm?sCh=31750a2610f26110&amp;pId=443551827">כיצד מתבצעת חלוקת רכוש בהליך גירושין?</a></strong><small><span>בשיתוף עו"ד קארין ברגינסקי</span> | <span>03.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="d650e37f801d5710VgnVCM200000650a10acRCRD" data-item-vcmid="76189178536d7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-law_guide/2023_q2/Article-76189178536d781027.htm?sCh=31750a2610f26110&amp;pId=443551827">חובות וזכויות דיירים בבית משותף: מדריך משפטי</a></strong><small><span>בשיתוף עו"ד רפי רפאלי </span> | <span>02.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="2fcee37f801d5710VgnVCM200000650a10acRCRD" data-item-vcmid="226bbb1eb21d7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-law_guide/2023_q2/Article-226bbb1eb21d781027.htm?sCh=31750a2610f26110&amp;pId=443551827">ליווי עסקים וזוכים בגביית חובותיהם במהירות ובאפקטיביות</a></strong><small><span>בשיתוף עו"ד עמירם אלקובי</span> | <span>01.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="ebfbe37f801d5710VgnVCM200000650a10acRCRD" data-item-vcmid="64b575a2030d7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-law_guide/2023_q2/Article-64b575a2030d781027.htm?sCh=31750a2610f26110&amp;pId=443551827">חלוקת רכוש בהליכי גירושין</a></strong><small><span>בשיתוף עו"ד שלומי ואנונו</span> | <span>30.04.23</span></small></p></li>
+      <li data-type="genericitem" data-componentname="onecolumn" data-teaser-vcmid="null" data-item-vcmid="030d9ba40a899710VgnVCM200000650a10acRCRD" data-image-type="i">
+       <figure>
+        <img src="https://img.mako.co.il/2021/07/13/din.png" alt="" title="" loading="lazy">
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ordering colx2 twocolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-money/real_estate">עיצוב</a> </strong> <a href="https://www.mako.co.il/news-money/real_estate">עוד בעיצוב</a>
+     </header>
+     <ul class="grid-ordering colx2 " box-title="עיצוב">
+      <li data-type="regularitembigovertext" data-componentname="twocolumns" data-teaser-vcmid="33fd998d6fa71810VgnVCM200000650a10acRCRD" data-item-vcmid="d1cf96b76f4e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><small><span>אביטל סבט</span> | <span>05.05.23</span></small><strong><a data-type="title" href="/news-money/real_estate/Article-d1cf96b76f4e781027.htm?sCh=31750a2610f26110&amp;pId=1689052217">כפר סבא: הדופלקס המתוקתק של משפחת שמילוביץ</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-money/real_estate/Article-d1cf96b76f4e781027.htm?sCh=31750a2610f26110&amp;pId=1689052217"> <img src="https://img.mako.co.il/2023/05/04/movhan_hahorim_shmilovich_040523_autoOrient_i.jpg" alt="משפחת שמילוביץ - ליאת ואורן, הבית (צילום: עופר חן)" title="משפחת שמילוביץ - ליאת ואורן, הבית (צילום: עופר חן)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="55db998d6fa71810VgnVCM200000650a10acRCRD" data-item-vcmid="fadafb89491e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-money/real_estate/Article-fadafb89491e781027.htm?sCh=31750a2610f26110&amp;pId=1689052217">רצפת המקלחון ישנה וכעורה? כך תעשו מהפך</a></strong><small><span>N12</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-money/real_estate/Article-fadafb89491e781027.htm?sCh=31750a2610f26110&amp;pId=1689052217"> <img src="https://img.mako.co.il/2019/06/24/asasasa_i.jpg" alt="אמבטיה מלוכלכת (צילום: Tcziebell / Shutterstock.com)" title="אמבטיה מלוכלכת (צילום: Tcziebell / Shutterstock.com)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="9459998d6fa71810VgnVCM200000650a10acRCRD" data-item-vcmid="a5227b77cd0e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-money/real_estate/Article-a5227b77cd0e781027.htm?sCh=31750a2610f26110&amp;pId=1689052217">וואו: לא תאמינו מי עיצב את הקראוון ההיסטרי</a></strong><small><span>N12</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-money/real_estate/Article-a5227b77cd0e781027.htm?sCh=31750a2610f26110&amp;pId=1689052217"> <img src="https://img.mako.co.il/2023/05/03/AI_CARAVAN1_autoOrient_i.jpg" alt="קרוואן עתידני AI (צילום: אינסטגרם ulises.ai@)" title="קרוואן עתידני AI (צילום: אינסטגרם ulises.ai@)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="ccdc998d6fa71810VgnVCM200000650a10acRCRD" data-item-vcmid="85c58c2f3f1d7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-money/real_estate/Article-85c58c2f3f1d781026.htm?sCh=31750a2610f26110&amp;pId=1689052217">אל תזלזלו בה, הפינה שתשדרג את כל המטבח שלכם</a></strong><small><span>לימור קלר</span> | <span>03.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-money/real_estate/Article-85c58c2f3f1d781026.htm?sCh=31750a2610f26110&amp;pId=1689052217"> <img src="https://img.mako.co.il/2023/03/19/living_190323_PinaCoffee_6_autoOrient_i.jpg" alt="פינת קפה עיצוב ירדן גוטמן  (צילום: אבי קבלו)" title="פינת קפה עיצוב ירדן גוטמן  (צילום: אבי קבלו)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ad b300X250 cm8" style="grid-area:item3">
+     <div id="CM8ShowAd_MONSTER5_300X250" data-title="MONSTER5_300X250">
+      <script>
+						window.DFP && DFP.showBanner('MONSTER5','300X250');
+					</script>
+     </div>
+    </section>
+    <section class="ordering colx3 threecolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/food">אוכל</a> </strong> <a href="https://www.mako.co.il/food">עוד באוכל</a>
+     </header>
+     <ul class="grid-ordering colx3 " box-title="אוכל">
+      <li data-type="regularitembigovertext" data-componentname="threecolumns" data-teaser-vcmid="5a70037a371c8410VgnVCM2000002a0c10acRCRD" data-item-vcmid="f9774064ca1e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>ריטה גולדשטיין</span> | <span>04.05.23</span></small><strong><a data-type="title" href="/food-weekend/restaurant-reviews/Article-f9774064ca1e781026.htm?sCh=31750a2610f26110&amp;pId=2067622155">המסעדה שאכזבה בעבר הצליחה להפתיע אותנו לטובה</a></strong></p>
+       <figure>
+        <a data-type="image" href="/food-weekend/restaurant-reviews/Article-f9774064ca1e781026.htm?sCh=31750a2610f26110&amp;pId=2067622155"> <img src="https://img.mako.co.il/2023/05/03/PEREH_PANCAKE_autoOrient_i.jpg" alt="ה-פנקייק של פרא. צריך לבקש אותו בתחילת הארוחה (צילום: דן אורבך, יחסי ציבור)" title="ה-פנקייק של פרא. צריך לבקש אותו בתחילת הארוחה (צילום: דן אורבך, יחסי ציבור)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="a7272628828c1810VgnVCM200000650a10acRCRD" data-item-vcmid="f35ac4fb216e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/food-weekend/keren_baking_for_sabbath/Recipe-f35ac4fb216e781027.htm?sCh=31750a2610f26110&amp;pId=2067622155">למה לקנות אם אפשר להכין? מתכון לעוגת קינדר</a></strong><small><span>קרן אגם</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/food-weekend/keren_baking_for_sabbath/Recipe-f35ac4fb216e781027.htm?sCh=31750a2610f26110&amp;pId=2067622155"> <img src="https://img.mako.co.il/2023/05/04/kinder_delice_cake_kerenagam_autoOrient_i.jpg" alt="עוגת קינדר דליס ביתית (צילום: נופר צור, mako אוכל)" title="עוגת קינדר דליס ביתית (צילום: נופר צור, mako אוכל)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="33329d1e88c4d410VgnVCM2000002a0c10acRCRD" data-item-vcmid="eba72237a56e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/food-restaurants/restaurant-news/Article-eba72237a56e781027.htm?sCh=31750a2610f26110&amp;pId=2067622155">מעכשיו הבורגר של יובל בן נריה פחות קשה להשגה</a></strong><small><span>N12</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/food-restaurants/restaurant-news/Article-eba72237a56e781027.htm?sCh=31750a2610f26110&amp;pId=2067622155"> <img src="https://img.mako.co.il/2023/05/04/FoodNews04052023_8_autoOrient_i.jpg" alt="קוג'י בורגר (צילום: גל קולוג)" title="קוג'י בורגר (צילום: גל קולוג)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="697175028ee99410VgnVCM2000002a0c10acRCRD" data-item-vcmid="ee8f0a152d2e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/food-restaurants/restaurant-news/Article-ee8f0a152d2e781026.htm?sCh=31750a2610f26110&amp;pId=2067622155">אש: מסעדת השף היפנית בנווה צדק בצעד חדש</a></strong><small><span>מערכת אוכל טוב</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/food-restaurants/restaurant-news/Article-ee8f0a152d2e781026.htm?sCh=31750a2610f26110&amp;pId=2067622155"> <img src="https://img.mako.co.il/2023/05/03/mis5_autoOrient_i.jpg" alt="מסעדת TYO תהפוך לגסטרו-פאב יפני בימי שלישי (צילום: אסף קרלה)" title="מסעדת TYO תהפוך לגסטרו-פאב יפני בימי שלישי (צילום: אסף קרלה)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="09c8c24abd744510VgnVCM2000002a0c10acRCRD" data-item-vcmid="93ace107d35e7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-lifestyle/2023_q2/Article-93ace107d35e781027.htm?sCh=31750a2610f26110&amp;pId=2067622155">גלידת קוטג': הכנו את המתכון המדובר של הרגע</a></strong><small><span>מערכת אוכל טוב</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-lifestyle/2023_q2/Article-93ace107d35e781027.htm?sCh=31750a2610f26110&amp;pId=2067622155"> <img src="https://img.mako.co.il/2023/05/04/koteg_icecrem__autoOrient_i.jpg" alt="גלידת קוטג'. קוטג', תותים ומייל - 3 מרכיבים וזהו (צילום: צילום פרטי, mako אוכל)" title="גלידת קוטג'. קוטג', תותים ומייל - 3 מרכיבים וזהו (צילום: צילום פרטי, mako אוכל)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="fdf3ee7bc1705710VgnVCM200000650a10acRCRD" data-item-vcmid="46b68ce1c72e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/food-cooking_magazine/adikosh_sweet_recipes/Recipe-46b68ce1c72e781026.htm?sCh=31750a2610f26110&amp;pId=2067622155">הכי קלה והכי טעימה: מתכון לעוגת גבינה באסקית</a></strong><small><span>עדי קלינגהופר</span> | <span>04.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/food-cooking_magazine/adikosh_sweet_recipes/Recipe-46b68ce1c72e781026.htm?sCh=31750a2610f26110&amp;pId=2067622155"> <img src="https://img.mako.co.il/2023/05/03/ADIKOSH_BurntBasqueCheesecake__autoOrient_i.jpg" alt="עוגת גבינה באסקית (צילום: עדי קלינגהופר, mako אוכל)" title="עוגת גבינה באסקית (צילום: עדי קלינגהופר, mako אוכל)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="3bf06d287899a710VgnVCM200000650a10acRCRD" data-item-vcmid="72d16fa2802e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/food-recipes/recipes_column-special/Recipe-72d16fa2802e781026.htm?sCh=31750a2610f26110&amp;pId=2067622155">מתכון לרולאפס ביתיים מ-2 מרכיבים בלבד</a></strong><small><span>אוהד קויתי</span> | <span>03.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/food-recipes/recipes_column-special/Recipe-72d16fa2802e781026.htm?sCh=31750a2610f26110&amp;pId=2067622155"> <img src="https://img.mako.co.il/2023/05/03/ROLLUP_MAKING__re_autoOrient_i.jpg" alt="מתכון לרולאפס. ככה מכינים רולאפס ללא תוספת סוכר (צילום: אוהד קויתי, mako אוכל)" title="מתכון לרולאפס. ככה מכינים רולאפס ללא תוספת סוכר (צילום: אוהד קויתי, mako אוכל)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ordering colx1 onecolumn">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-med12">MED12</a> </strong> <a href="https://www.mako.co.il/news-med12">עוד ב-MED12</a>
+     </header>
+     <ul class="grid-ordering colx1 " box-title="MED12">
+      <li data-type="regularitembigovertext" data-componentname="onecolumn" data-teaser-vcmid="a38faa425eb72810VgnVCM200000650a10acRCRD" data-item-vcmid="90ff8e0758d17810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><small><span>גיא רונן</span> | <span>30.03.23</span></small><strong><a data-type="title" href="/health-special/xtra_atopic_dermatitis/Article-90ff8e0758d1781027.htm?sCh=31750a2610f26110&amp;pId=789258448">מקלחת רותחת? מזון בעייתי? מיתוסים באטופיק דרמטיטיס</a></strong></p>
+       <figure>
+        <a data-type="image" href="/health-special/xtra_atopic_dermatitis/Article-90ff8e0758d1781027.htm?sCh=31750a2610f26110&amp;pId=789258448"> <img src="https://img.mako.co.il/2023/04/03/cacatusalextihonovs_re_autoOrient_i.jpg" alt="קקטוס  (צילום: Alex Tihonovs, shutterstock)" title="קקטוס  (צילום: Alex Tihonovs, shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="textadvertisingitem" data-componentname="onecolumn" class="sponsor with-bg" data-teaser-vcmid="0f6daa425eb72810VgnVCM200000650a10acRCRD" data-item-vcmid="ad5e7410bbd17810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/health-special/xtra_atopic_dermatitis/Article-ad5e7410bbd1781027.htm?sCh=31750a2610f26110&amp;pId=789258448">הטיפולים שמחזירים את השליטה באטופיק דרמטיטיס</a></strong><small>בחסות abbvie</small></p></li>
+      <li data-type="textadvertisingitem" data-componentname="onecolumn" class="play-sign sponsor with-bg" data-teaser-vcmid="f3508190945a2810VgnVCM200000650a10acRCRD" data-item-vcmid="3d41b5bb06d27810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/news-med12/talking_about_mutations/Article-3d41b5bb06d2781026.htm?sCh=31750a2610f26110&amp;pId=789258448">מילה של מומחה: הבשורות החדשות בסרטן הריאה</a></strong><small>בחסות יאנסן</small></p></li>
+      <li data-type="textadvertisingitem" data-componentname="onecolumn" class="play-sign sponsor with-bg" data-teaser-vcmid="d08108f1ad9c2810VgnVCM100000700a10acRCRD" data-item-vcmid="dcd0225df8227810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/health-special/xtra_atopic_dermatitis/Article-dcd0225df822781026.htm?sCh=31750a2610f26110&amp;pId=789258448">"לא יכולתי לגעת בילדים שלי בידיים חשופות"</a></strong><small>בחסות abbvie</small></p></li>
+     </ul>
+    </section>
+    <section class="ordering colx1 onecolumn">
+     <header>
+      <strong> <a href="https://www.mako.co.il/travel">נסיעות</a> </strong> <a href="https://www.mako.co.il/travel">עוד בנסיעות</a>
+     </header>
+     <ul class="grid-ordering colx1 " box-title="נסיעות">
+      <li data-type="regularitembigovertext" data-componentname="onecolumn" data-teaser-vcmid="4f3eb8f5ce804310VgnVCM2000002a0c10acRCRD" data-item-vcmid="06909200704c7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><small><span>N12</span> | <span>04.05.23</span></small><strong><a data-type="title" href="/travel-world/guides-africa/Article-06909200704c781027.htm?sCh=31750a2610f26110&amp;pId=789204388">לטייל בחלום: גן העדן שהכי קל לנחות בו מהארץ</a></strong></p>
+       <figure>
+        <a data-type="image" href="/travel-world/guides-africa/Article-06909200704c781027.htm?sCh=31750a2610f26110&amp;pId=789204388"> <img src="https://img.mako.co.il/2023/05/01/shutterstock_2249890677_autoOrient_i.jpg" alt="Anse Source d’Argent, החוף המפורסם בלה דיג, איי סיישל (צילום: fokke baarssen, shutterstock)" title="Anse Source d’Argent, החוף המפורסם בלה דיג, איי סיישל (צילום: fokke baarssen, shutterstock)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="14fa45cb6e670410VgnVCM2000002a0c10acRCRD" data-item-vcmid="f8589200704c7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-science/2023_q2/Article-f8589200704c781027.htm?sCh=31750a2610f26110&amp;pId=789204388">מתחת לרדאר: גילינו את המקום המושלם שלא הכרתם</a></strong><small><span>אילן ארנון</span> | <span>12:12</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="33f6a45e2ff6d710VgnVCM100000700a10acRCRD" data-item-vcmid="634505c3bf3c7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/news-money/consumer/Article-634505c3bf3c781027.htm?sCh=31750a2610f26110&amp;pId=789204388">הכי יפה בארץ: זה הטיול המושלם בישראל</a></strong><small><span>מירב טלמור-קשי</span> | <span>05.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="64de45cb6e670410VgnVCM2000002a0c10acRCRD" data-item-vcmid="b78b9200704c7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/travel-israel/family_trip/Article-b78b9200704c781027.htm?sCh=31750a2610f26110&amp;pId=789204388">לפני שישתנה: זה הזמן להגיע למקום היפה הזה</a></strong><small><span>איתי בורבא</span> | <span>05.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" data-teaser-vcmid="540445cb6e670410VgnVCM2000002a0c10acRCRD" data-item-vcmid="e50da913d91e7810VgnVCM100000700a10acRCRD">
+       <p><strong><a data-type="title" href="/travel-world/magazine/Article-e50da913d91e781027.htm?sCh=31750a2610f26110&amp;pId=789204388">"אוי אלוהים זה מחריד! זאת ממש לא חופשה"</a></strong><small><span>N12</span> | <span>04.05.23</span></small></p></li>
+     </ul>
+    </section>
+    <section class="ordering colx1 onecolumn">
+     <header>
+      <strong> <a href="https://www.mako.co.il/good-evening-with-guy-pines">ערב טוב</a> </strong> <a href="https://www.mako.co.il/good-evening-with-guy-pines">עוד בגיא פינס</a>
+     </header>
+     <ul class="grid-ordering colx1 " box-title="ערב טוב">
+      <li data-type="regularitembigovertext" data-componentname="onecolumn" class="play-sign" data-teaser-vcmid="3c95213f4865e510VgnVCM2000002a0c10acRCRD" data-item-vcmid="e0869ab4d33e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>N12</span> | <span>03.05.23</span></small><strong><a data-type="title" href="/good-evening-with-guy-pines-all-the-articles?subChannelId=2f2a28c68a2d7810VgnVCM100000700a10acRCRD&amp;vcmid=e0869ab4d33e7810VgnVCM200000650a10acRCRD&amp;sCh=31750a2610f26110&amp;pId=1872247935">האומנים הופיעו בפיג'מה וגם האורחים צפו מהמזרן</a></strong></p>
+       <figure>
+        <a data-type="image" href="/good-evening-with-guy-pines-all-the-articles?subChannelId=2f2a28c68a2d7810VgnVCM100000700a10acRCRD&amp;vcmid=e0869ab4d33e7810VgnVCM200000650a10acRCRD&amp;sCh=31750a2610f26110&amp;pId=1872247935"> <img src="https://img.mako.co.il/2023/05/04/guypines6_61_030523_01_miri_autoOrient_i.jpg" alt="רן דנקר, מירי מסיקה ועברי לידר בהופעה מהמיטה (צילום: מתוך &quot;ערב טוב עם גיא פינס&quot;, קשת 12)" title="רן דנקר, מירי מסיקה ועברי לידר בהופעה מהמיטה (צילום: מתוך &quot;ערב טוב עם גיא פינס&quot;, קשת 12)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" class="play-sign" data-teaser-vcmid="2c4fd85b7f2c3710VgnVCM100000700a10acRCRD" data-item-vcmid="aad0dda6d43e7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/good-evening-with-guy-pines-all-the-articles?subChannelId=2f2a28c68a2d7810VgnVCM100000700a10acRCRD&amp;vcmid=aad0dda6d43e7810VgnVCM200000650a10acRCRD&amp;sCh=31750a2610f26110&amp;pId=1872247935">באישון לילה: ביתה של לאה שנירר נפרץ</a></strong><small><span>N12</span> | <span>03.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" class="play-sign" data-teaser-vcmid="0d8804bf1965e510VgnVCM2000002a0c10acRCRD" data-item-vcmid="b153dda6d43e7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/good-evening-with-guy-pines-all-the-articles?subChannelId=2f2a28c68a2d7810VgnVCM100000700a10acRCRD&amp;vcmid=b153dda6d43e7810VgnVCM200000650a10acRCRD&amp;sCh=31750a2610f26110&amp;pId=1872247935">נועה קירל מגלה מה שיר האירוויזיון האהוב עליה</a></strong><small><span>N12</span> | <span>03.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" class="play-sign" data-teaser-vcmid="3f57213f4865e510VgnVCM2000002a0c10acRCRD" data-item-vcmid="9ad95041c53e7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/good-evening-with-guy-pines-all-the-articles?subChannelId=2f2a28c68a2d7810VgnVCM100000700a10acRCRD&amp;vcmid=9ad95041c53e7810VgnVCM200000650a10acRCRD&amp;sCh=31750a2610f26110&amp;pId=1872247935">מעצבת ישראלית יצרה גרסאות חדשות לנסיכות</a></strong><small><span>N12</span> | <span>03.05.23</span></small></p></li>
+      <li data-type="textitemregular" data-componentname="onecolumn" class="play-sign" data-teaser-vcmid="4686213f4865e510VgnVCM2000002a0c10acRCRD" data-item-vcmid="9f665041c53e7810VgnVCM200000650a10acRCRD">
+       <p><strong><a data-type="title" href="/good-evening-with-guy-pines-all-the-articles?subChannelId=2f2a28c68a2d7810VgnVCM100000700a10acRCRD&amp;vcmid=9f665041c53e7810VgnVCM200000650a10acRCRD&amp;sCh=31750a2610f26110&amp;pId=1872247935">קוראים לה ריו: הישראלית שנקראה על שם הלהיט</a></strong><small><span>N12</span> | <span>04.05.23</span></small></p></li>
+     </ul>
+    </section>
+    <section class="ordering colx3 threecolumns">
+     <header>
+      <strong> אוטו</strong>
+     </header>
+     <ul class="grid-ordering colx3 " box-title="אוטו">
+      <li data-type="regularitembigovertext" data-componentname="threecolumns" data-teaser-vcmid="0be82940c87c3510VgnVCM2000002a0c10acRCRD" data-item-vcmid="-55923218" data-image-type="i">
+       <p><small></small><strong><a data-type="title" href="https://www.auto.co.il/article/roadcartest/136159-Road-Tests-citroen-c4x?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324">ג'יפון או משפחתית? זה מה שחשבנו עליו, או עליה</a></strong></p>
+       <figure>
+        <a data-type="image" href="https://www.auto.co.il/article/roadcartest/136159-Road-Tests-citroen-c4x?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324"> <img src="https://img.mako.co.il/2023/05/04/CX4_re_autoOrient_i.jpg" alt="סיטרואן C4X במבחן דרכים. כל מה שרציתם לדעת (צילום: אוטו)" title="סיטרואן C4X במבחן דרכים. כל מה שרציתם לדעת (צילום: אוטו)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="98f9eddbee670410VgnVCM2000002a0c10acRCRD" data-item-vcmid="-2121148904" data-image-type="i">
+       <p><strong><a data-type="title" href="https://www.auto.co.il/article/136158-local-news?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324">הכי חשמל לשטח - ובמחיר גבוה במיוחד</a></strong><small></small></p>
+       <figure>
+        <a data-type="image" href="https://www.auto.co.il/article/136158-local-news?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324"> <img src="https://img.mako.co.il/2023/05/04/merc_re_autoOrient_i.jpg" alt="מרצדס EQS לשטח. ממיליון שקל והלאה (צילום: אוטו)" title="מרצדס EQS לשטח. ממיליון שקל והלאה (צילום: אוטו)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="72f9606d34ac8410VgnVCM2000002a0c10acRCRD" data-item-vcmid="213589778" data-image-type="i">
+       <p><strong><a data-type="title" href="https://www.auto.co.il/Article/136157-World-News?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324">דור חדש למתוקה הבריטית-גרמנית</a></strong><small></small></p>
+       <figure>
+        <a data-type="image" href="https://www.auto.co.il/Article/136157-World-News?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324"> <img src="https://img.mako.co.il/2023/05/04/mini_re_autoOrient_i.jpg" alt="מיני קופר החדשה תהיה חשמלית לגמרי (צילום: אוטו)" title="מיני קופר החדשה תהיה חשמלית לגמרי (צילום: אוטו)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="7b3eeddbee670410VgnVCM2000002a0c10acRCRD" data-item-vcmid="697991427" data-image-type="i">
+       <p><strong><a data-type="title" href="https://www.auto.co.il/article/136156-industry?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324">מעתה כולם יכולים לנהוג. אבל כולם!</a></strong><small></small></p>
+       <figure>
+        <a data-type="image" href="https://www.auto.co.il/article/136156-industry?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324"> <img src="https://img.mako.co.il/2023/05/04/jh_autoOrient_i.jpg" alt="מעתה כולם יכולים לנהוג. אבל כולם (צילום: אוטו)" title="מעתה כולם יכולים לנהוג. אבל כולם (צילום: אוטו)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="0e3e0c87e3a2b710VgnVCM100000700a10acRCRD" data-item-vcmid="-143280166" data-image-type="i">
+       <p><strong><a data-type="title" href="https://www.auto.co.il/article/136160-world-news?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324">היברידי או חשמלי? פיג'ו 2008 מתעדכנת</a></strong><small></small></p>
+       <figure>
+        <a data-type="image" href="https://www.auto.co.il/article/136160-world-news?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324"> <img src="https://img.mako.co.il/2023/05/04/pej_re_autoOrient_i.jpg" alt="רכב הפנאי של פיג'ו סוף סוף זוכה למתיחת פנים (צילום: אוטו)" title="רכב הפנאי של פיג'ו סוף סוף זוכה למתיחת פנים (צילום: אוטו)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="72c7abd25ef82410VgnVCM2000002a0c10acRCRD" data-item-vcmid="648530896" data-image-type="i">
+       <p><strong><a data-type="title" href="https://www.auto.co.il/article/136148-world-news?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324">חשבתם שמרצדס זה יקר? תחשבו שוב</a></strong><small></small></p>
+       <figure>
+        <a data-type="image" href="https://www.auto.co.il/article/136148-world-news?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324"> <img src="https://img.mako.co.il/2023/05/02/mercedesyakar_autoOrient_i.jpg" alt="חשבתם שמרצדס זה יקר? הצחקתם את בראבוס (צילום: יצרן, אוטו)" title="חשבתם שמרצדס זה יקר? הצחקתם את בראבוס (צילום: יצרן, אוטו)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="threecolumns" data-teaser-vcmid="aebf0c87e3a2b710VgnVCM100000700a10acRCRD" data-item-vcmid="792940591" data-image-type="i">
+       <p><strong><a data-type="title" href="https://www.auto.co.il/article/136149-world-news?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324">פורד מאחדת שני שמות אייקוניים לטובת מפלצת</a></strong><small></small></p>
+       <figure>
+        <a data-type="image" href="https://www.auto.co.il/article/136149-world-news?utm_source=Mako&amp;utm_medium=Auto-copmponent&amp;utm_campaign=Ongoing&amp;makoOpenChromeTabs=1&amp;sCh=31750a2610f26110&amp;pId=857461324"> <img src="https://img.mako.co.il/2023/05/02/fordicon_autoOrient_i.jpg" alt="פורד מאחדת שני שמות אייקוניים לטובת מפלצת (צילום: יצרן, אוטו)" title="פורד מאחדת שני שמות אייקוניים לטובת מפלצת (צילום: יצרן, אוטו)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+   </section>
+   <section class="generic-ordering obituaries theme-obituaries" inview>
+    <header>
+     <strong> <a href="https://www.adolam.co.il/?utm_source=N12&amp;utm_medium=Head&amp;utm_campaign=Adolam" target="_blank">מודעות אבל</a> </strong> <a href="https://www.adolam.co.il/?utm_source=N12&amp;utm_medium=Head&amp;utm_campaign=Adolam" target="_blank"><img class="logo" src="https://rcs.mako.co.il/images/mobile/news12/obituaries-desktop.svg"></a> <a href="https://www.adolam.co.il/?utm_source=N12&amp;utm_medium=Head&amp;utm_campaign=Adolam" target="_blank">לכל המודעות</a>
+    </header>
+    <ul class="all-slides"></ul>
+   </section>
+   <section id="part3" section-main>
+    <section class="ordering colx2 twocolumns">
+     <header>
+      <strong> <a href="https://www.mako.co.il/news-ha_tachtit">התחתית</a> </strong> <a href="https://www.mako.co.il/news-ha_tachtit">עוד בתחתית</a>
+     </header>
+     <ul class="grid-ordering colx2 " box-title="התחתית">
+      <li data-type="regularitembigovertext" data-componentname="twocolumns" data-teaser-vcmid="532759e570652710VgnVCM200000650a10acRCRD" data-item-vcmid="a23f4930155e7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><small><span>אסף רוזנצוייג</span> | <span>05.05.23</span></small><strong><a data-type="title" href="/news-ha_tachtit/2023_q2/Article-a23f4930155e781026.htm?sCh=31750a2610f26110&amp;pId=789208588">סופה של המאפיה המסוכנת? מבצע דרמטי באירופה</a></strong></p>
+       <figure>
+        <a data-type="image" href="/news-ha_tachtit/2023_q2/Article-a23f4930155e781026.htm?sCh=31750a2610f26110&amp;pId=789208588"> <img src="https://img.mako.co.il/2023/05/04/GERMANYRAID_autoOrient_i.jpg" alt="מבצע מעצרים נרחב נגד המאפיה באירופה (צילום: AP)" title="מבצע מעצרים נרחב נגד המאפיה באירופה (צילום: AP)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="59029c55b0652710VgnVCM200000650a10acRCRD" data-item-vcmid="c5946c5afbbd7810VgnVCM100000700a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-ha_tachtit/2023_q2/Article-c5946c5afbbd781027.htm?sCh=31750a2610f26110&amp;pId=789208588">5 שעות לאחר החתונה - סמנת'ה נהרגה בתאונת דרכים</a></strong><small><span>N12</span> | <span>02.05.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-ha_tachtit/2023_q2/Article-c5946c5afbbd781027.htm?sCh=31750a2610f26110&amp;pId=789208588"> <img src="https://img.mako.co.il/2023/05/02/SAM_autoOrient_i.jpg" alt="שעות לפני האסון - סמנתה במהלך חתונתה (צילום: CNN)" title="שעות לפני האסון - סמנתה במהלך חתונתה (צילום: CNN)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="7b556e18e0652710VgnVCM200000650a10acRCRD" data-item-vcmid="e28174e69abc7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-ha_tachtit/2023_q2/Article-e28174e69abc781026.htm?sCh=31750a2610f26110&amp;pId=789208588">תיעוד: בן 13 השתלט על האוטובוס לאחר שהנהגת התעלפה</a></strong><small><span>N12</span> | <span>29.04.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-ha_tachtit/2023_q2/Article-e28174e69abc781026.htm?sCh=31750a2610f26110&amp;pId=789208588"> <img src="https://img.mako.co.il/2023/04/24/in_bus_re_autoOrient.mxf_1_re_autoOrient_i.jpg" alt="נהג אוטובוס בלם בפתאומיות כדי &quot;ללמד את הילדים לקח&quot; (צילום: cnn)" title="נהג אוטובוס בלם בפתאומיות כדי &quot;ללמד את הילדים לקח&quot; (צילום: cnn)" loading="lazy"> </a>
+       </figure></li>
+      <li data-type="regularitemsmall" data-componentname="twocolumns" data-teaser-vcmid="e6de6e18e0652710VgnVCM200000650a10acRCRD" data-item-vcmid="fad207f7012c7810VgnVCM200000650a10acRCRD" data-image-type="i">
+       <p><strong><a data-type="title" href="/news-ha_tachtit/2023_q2/Article-fad207f7012c781026.htm?sCh=31750a2610f26110&amp;pId=789208588">תעלומה דרמטית בקניה: מה גרם למותם של לפחות 95 בני אדם</a></strong><small><span>N12</span> | <span>28.04.23</span></small></p>
+       <figure>
+        <a data-type="image" href="/news-ha_tachtit/2023_q2/Article-fad207f7012c781026.htm?sCh=31750a2610f26110&amp;pId=789208588"> <img src="https://img.mako.co.il/2023/04/27/KENIAA_autoOrient_i.jpg" alt="אתר הקבר ההמוני שנמצא בקניה (צילום: AP)" title="אתר הקבר ההמוני שנמצא בקניה (צילום: AP)" loading="lazy"> </a>
+       </figure></li>
+     </ul>
+    </section>
+    <section class="ad b300X250 cm8" style="grid-area:item3">
+     <div id="CM8ShowAd_MONSTER6_300X250" data-title="MONSTER6_300X250">
+      <script>
+						window.DFP && DFP.showBanner('MONSTER6','300X250');
+					</script>
+     </div>
+    </section>
+   </section>
+   <section class="mako-slider-wrapper program-init" section-main>
+    <a href="https://www.mako.co.il/news" target="_blank">
+     <div id="news-programs-slider-header">
+      <div class="title">
+       תוכניות
+      </div>
+      <div class="title-bar-wrapper">
+       <div class="title-bar"></div>
+       <div class="title-bar"></div>
+      </div>
+     </div></a>
+    <ul slider="news-programs-slider" class="">
+     <li><a href="/news-channel12/channel_12_newscast?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/06/main.png" alt="המהדורה המרכזית" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          המהדורה המרכזית
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/economy_newcast?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/17/kerene.png" alt="תוכנית חיסכון" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          תוכנית חיסכון
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/six-newscast?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/09/SixWithhh.png" alt="שש עם" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          שש עם
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/rafi_reshef?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/06/Rafis.png" alt="חמש עם" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          חמש עם
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/first_edition?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/06/First.png" alt="מהדורה ראשונה" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          מהדורה ראשונה
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/three?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/10/06/malben3.jpg" alt="שלוש" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          שלוש
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/friday_newscast?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/06/Danis.png" alt="אולפן שישי" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          אולפן שישי
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/weekend_newscast?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/06/Dana.png" alt="חדשות סוף השבוע" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          חדשות סוף השבוע
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/shishi_five?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/10/06/malben5.png" alt="שישי בחמש" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          שישי בחמש
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/meet_the_press?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2022/09/08/pgosh1.png" alt="פגוש את העיתונות" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          פגוש את העיתונות
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/world_order?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/06/seders.png" alt="סדר עולמי" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          סדר עולמי
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/young_edition?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/09/youngs.png" alt="המהדורה הצעירה" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          המהדורה הצעירה
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/arabic_news?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/06/Nasar.png" alt="השבוע בערבית" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          השבוע בערבית
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/full_edition&amp;Partner=NewslobbyPrograms?sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/02/06/Full.png" alt="המהדורה המלאה" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          המהדורה המלאה
+         </div>
+        </figcaption>
+       </figure></a></li>
+     <li><a href="/news-channel12/newsflash?Partner=NewslobbyPrograms&amp;sCh=31750a2610f26110&amp;pId=173113804">
+       <figure>
+        <img src="https://img.mako.co.il/2020/01/15/mivzakim.png" alt="מבזקים" loading="lazy">
+        <figcaption>
+         <div class="figcaption-title">
+          מבזקים
+         </div>
+        </figcaption>
+       </figure></a></li>
+    </ul>
+   </section>
+   <section class="ordering dont-miss-ordering ">
+    <header>
+     <strong>אל תפספסו</strong>
+    </header>
+    <ul box-title="אל תפספסו">
+     <li data-teaser-vcmid="2933545a4edd9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="f875a749363c7810VgnVCM100000700a10acRCRD" data-image-type="g">
+      <figure>
+       <a class="item-1" href="/news-n12_magazine/2023_q2/Article-f875a749363c781027.htm?sCh=31750a2610f26110&amp;pId=350865906" target="_blank"> <img src="https://img.mako.co.il/2023/04/27/2352523_autoOrient_g.jpg" alt="טייסת העטלף (צילום: החדשות 12)" title="טייסת העטלף (צילום: החדשות 12)" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">"זו משימת חיים לחזור להיות מבצעיים"</h3><span class="item-title">הטייסת הכי מיוחדת בצה"ל מתאוששת מאסון ההתרסקות</span>
+        </figcaption></a>
+      </figure></li>
+     <li data-teaser-vcmid="8ee7545a4edd9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="64b30064a4ea7810VgnVCM200000650a10acRCRD" data-image-type="i">
+      <figure>
+       <a class="item-2" href="/news-n12_magazine/2023_q2/Article-64b30064a4ea781026.htm?sCh=31750a2610f26110&amp;pId=350865906" target="_blank"> <img src="https://img.mako.co.il/2023/04/27/4634637_autoOrient_i.jpg" alt="ישראלים בחו&quot;ל (צילום: 123rf)" title="ישראלים בחו&quot;ל (צילום: 123rf)" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">"חשבתי שבקריביים אף אחד לא יבין עברית"</h3><span class="item-title">עשו בושות בחו"ל: "עד היום אני נזכרת בפרצוף שלה ורועדת"</span>
+        </figcaption></a>
+      </figure></li>
+     <li data-teaser-vcmid="0165545a4edd9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="f4b7d34576da7810VgnVCM200000650a10acRCRD" data-image-type="i">
+      <figure>
+       <a class="item-3" href="/news-n12_magazine/2023_q2/Article-f4b7d34576da781026.htm?sCh=31750a2610f26110&amp;pId=350865906" target="_blank"> <img src="https://img.mako.co.il/2023/04/25/FF_OR_autoOrient_i.jpg" alt="שולה אברג'יל, מפקדת כלא נווה תרצה (צילום: דוברות שב״ס)" title="שולה אברג'יל, מפקדת כלא נווה תרצה (צילום: דוברות שב״ס)" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">"רוב הנשים שבאות עברו התעללות"</h3><span class="item-title">האסירות המפורסמות והתינוקות בכלא: מפקדת נווה תרצה נזכרת</span>
+        </figcaption></a>
+      </figure></li>
+     <li data-teaser-vcmid="f4fe545a4edd9610VgnVCM2000002a0c10acRCRD" data-item-vcmid="ce9884a69d557810VgnVCM100000700a10acRCRD" data-image-type="g">
+      <figure>
+       <a class="item-4" href="/news-n12_magazine/2023_q2/Article-ce9884a69d55781027.htm?sCh=31750a2610f26110&amp;pId=350865906" target="_blank"> <img src="https://img.mako.co.il/2023/04/17/FF_DVORI_autoOrient_g_re.png" alt="יחידת שלדג (צילום: דובר צה&quot;ל)" title="יחידת שלדג (צילום: דובר צה&quot;ל)" loading="lazy">
+        <figcaption>
+         <h3 class="item-channel">הצצה לפעילות של שלדג בשטח אויב</h3><span class="item-title">לירות או לא לירות: ההחלטה הגורלית שהצילה מבצע מורכב</span>
+        </figcaption></a>
+      </figure></li>
+    </ul>
+   </section>
+   <div class="OUTBRAIN" data-src="https://www.n12.co.il/" data-widget-id="HPC_3"></div>
+  </main>
+  <footer>
+   <div class="wrapper">
+    <div class="icons">
+     <a class="news12_logo" href="/news?partner=NewsfooterLinks"><img src="https://rcs.mako.co.il/images/svg/news/logo-n-12-footer.svg" alt="N12 חדשות"></a> <a class="twitter" href="https://twitter.com/N12News" target="_blank"></a> <a class="instagram" href="https://www.instagram.com/n12news/" target="_blank"></a> <a class="facebook" href="https://www.facebook.com/N12News/" target="_blank"></a>
+    </div>
+    <ul class="flex-container" style="clear:both;">
+     <li><span>חדשות</span>
+      <ul class="all_helpfullinks">
+       <li><a href="https://www.mako.co.il/news-military?partner=NewsfooterLinks">ביטחוני</a></li>
+       <li><a href="/news-politics?partner=NewsfooterLinks">פוליטי</a></li>
+       <li><a href="/news-law?partner=NewsfooterLinks">פלילי</a></li>
+       <li><a href="https://www.mako.co.il/news-israel?partner=NewsfooterLinks">פנים</a></li>
+       <li><a href="/news-world?partner=NewsfooterLinks">בעולם</a></li>
+       <li><a href="/news-education?partner=NewsfooterLinks">חינוך</a></li>
+       <li><a href="/news-columns?partner=NewsfooterLinks">פרשנות</a></li>
+       <li><a href="/news-money?partner=NewsfooterLinks">כלכלה</a></li>
+       <li><a href="/news-sport?partner=NewsfooterLinks">ספורט</a></li>
+       <li><a href="/news-entertainment?partner=NewsfooterLinks">תרבות</a></li>
+       <li><a href="/news-lifestyle?partner=NewsfooterLinks">בריאות</a></li>
+       <li><a href="/news-digital?partner=NewsfooterLinks">דיגיטל</a></li>
+       <li><a href="https://www.mako.co.il/news-podcast_n12/one_a_day?partner=NewsfooterLinks">אחד ביום</a></li>
+       <li><a href="https://www.mako.co.il/news-tip12?partner=NewsfooterLinks">TIP12</a></li>
+       <li><a href="https://www.mako.co.il/news-science?partner=NewsfooterLinks">מדע וסביבה</a></li>
+       <li><a href="https://www.mako.co.il/news-money/consumer?partner=NewsfooterLinks">צרכנות</a></li>
+       <li><a href="https://www.mako.co.il/news-money/real_estate?partner=NewsfooterLinks">נדל"ן</a></li>
+       <li><a href="https://www.mako.co.il/news-weather?partner=NewsfooterLinks">תחזית מזג האוויר</a></li>
+       <li><a href="https://makospecial.co.il/Women_violence?makoOpenChromeTabs=1&amp;partner=NewsfooterLinks" target="_blank">אלימות נגד נשים</a></li>
+       <li><a href="https://specialprojects.mako.co.il/Road_Accidents?makoOpenChromeTabs=1&amp;partner=NewsfooterLinks" target="_blank">תאונות דרכים בישראל</a></li>
+      </ul></li>
+     <li><span>תוכניות חדשות 12</span>
+      <ul class="all_helpfullinks">
+       <li><a href="/news-channel12/world_order?partner=NewsfooterLinks">סדר עולמי</a></li>
+       <li><a href="/news-channel12/economy_newcast?partner=NewsfooterLinks">תוכנית חיסכון</a></li>
+       <li><a href="/news-channel12/six-newscast?partner=NewsfooterLinks">שש עם</a></li>
+       <li><a href="/news-channel12/friday_newscast?partner=NewsfooterLinks">אולפן שישי</a></li>
+       <li><a href="/news-channel12/meet_the_press?partner=NewsfooterLinks">פגוש את העיתונות</a></li>
+       <li><a href="/news-channel12/channel_12_newscast?partner=NewsfooterLinks">המהדורה המרכזית</a></li>
+       <li><a href="/news-channel12/rafi_reshef?partner=NewsfooterLinks">חמש עם רפי רשף</a></li>
+       <li><a href="/news-channel12/first_edition?partner=NewsfooterLinks">מהדורה ראשונה</a></li>
+       <li><a href="/news-channel12/weekend_newscast?partner=NewsfooterLinks">חדשות סוף השבוע</a></li>
+       <li><a href="/news-channel12/three?partner=NewsfooterLinks">שלוש</a></li>
+       <li><a href="/news-channel12/shishi_five?partner=NewsfooterLinks">שישי בחמש</a></li>
+      </ul></li>
+     <li><span>הגדרות</span>
+      <ul class="all_helpfullinks settings">
+       <li><a href="https://www.mako.co.il/help-terms-of-use/Article-d37908dd1674c11006.htm?partner=NewsfooterLinks" target="_blank">תנאי שימוש</a></li>
+       <li><a href="https://www.mako.co.il/help-terms-of-use/Article-d37908dd1674c11006.htm?partner=NewsfooterLinks" target="_blank">מדיניות פרטיות</a></li>
+       <li><a href="https://cweb.co.il/n12contact/?partner=NewsfooterLinks" target="_blank">צור קשר</a></li>
+       <li><a href="mailto:mail@ch2news.co.il?partner=NewsfooterLinks" target="_blank">המייל האדום</a></li>
+       <li><a href="/news-israel/2020_q1/Article-2cc76c5fee85071026.htm?partner=NewsfooterLinks" target="_blank">אודות</a></li>
+       <li><a href="https://www.mako-publishers.com/n12?partner=NewsfooterLinks" target="_blank">פרסמו אצלנו</a></li>
+       <li><a href="https://www.mako.co.il/help-5bb6bf4ccf39c110/Article-b7ff18a9de86471026.htm?partner=NewsfooterLinks">הסדרי נגישות</a></li>
+      </ul></li>
+     <li class="last">
+      <div class="footer_logos">
+       <a class="acum_logo" href="https://acum.org.il/?partner=NewsFooterLinks" target="_blank"><img src="https://rcs.mako.co.il/images/news/acumlogo-svg-2x.png" style="width:30px;height:33px"></a> <a class="mako_logo" href="https://www.mako.co.il/?partner=NewsFooterLinks"><img src="https://rcs.mako.co.il/images/news/mako-logo.png"></a>
+      </div></li>
+    </ul>
+   </div>
+  </footer>
+  <script src="https://rcs.mako.co.il/js/polyfill.js"></script>
+  <script src="https://rcs.mako.co.il/js/news/hp/jsBundle.js"></script>
+  <script async src="//widgets.outbrain.com/outbrain.js"></script>
+ </body>
+</html>

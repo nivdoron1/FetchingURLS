@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+ <head>
+  <title>N12 Contact</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  <link rel="stylesheet" type="text/css" href="gilrabbi.css">
+ </head>
+ <body>
+  <script>
+  function validateForm() {
+  var x = document.forms["form1"]["name"].value;
+  if (x == "") {
+    alert("יש להזין שם");
+    return false;
+  }
+
+  var x = document.forms["form1"]["email"].value;
+  if (x == "") {
+    alert("יש להזין כתובת אימייל");
+    return false;
+  }
+  var x = document.forms["form1"]["message"].value;
+  if (x == "") {
+    alert("יש להזין הודעה");
+    return false;
+  }
+}
+  </script>
+  <div class="box">
+   <div class="insideform">
+    <div class="imagetop">
+     <img src="n12.png">
+    </div>
+    <div class="formi">
+     <div class="titlen">
+      נתקלתם בתקלות בגלישה? יש לכם הצעות לשיפור? כתבו לנו
+     </div>
+     <form name="form1" onsubmit="return validateForm()" action="mail.php" method="POST">
+      <p>על מנת לדווח על בעיה או אי שביעות רצון בנוגע לתכנים אלו אנא פנו אלינו לכתובת Apps@ch2news.tv או לטלפון 02-5339900</p>
+      <p>במידה ותרצו לשלוח תלונה כתובה, הפרטים הם: חברת החדשות הישראלית ISRAEL TELEVISION NEWS COMPANY LTD קריית התקשורת, נווה אילן, 1, מושב נווה אילן 9085000</p>
+      <p>ניתן להשאיר את הפרטים הבאים ונחזור אליכם בהקדם:</p>
+      <p>שם מלא</p><input type="text" name="name">
+      <p>כתובת האימייל שלך</p><input type="text" name="email">
+      <p>ההודעה</p><textarea name="message" rows="6" cols="25"></textarea>
+      <br>
+      <div class="sendbut">
+       <input class="submitgil" type="submit" value="שליחה">
+      </div>
+     </form>
+     <div class="closebutfloat">
+      <div class="xbut">
+       <a style="text-decoration:none; display: inline; color:black !important; font-size:1.1em;vertical-align: sub; font-family: 'yonitbold';" href="javascript: NativeBridge.close()">X</a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
