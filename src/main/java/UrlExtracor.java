@@ -15,10 +15,24 @@ public class UrlExtracor {
     private final Document html;
     private final int MaximumAmount;
 
+    /**
+     * Constructor for the UrlExtracor class.
+     *
+     * @param html          The HTML content to extract URLs from.
+     * @param maximumAmount The maximum amount of URLs to return.
+     */
+
     public UrlExtracor(Document html, int maximumAmount) {
         this.html = html;
         this.MaximumAmount = maximumAmount;
     }
+
+    /**
+     * Splits the given URL into a list of valid URLs.
+     *
+     * @param url The URL to split.
+     * @return A list of valid URLs.
+     */
 
     private List<String> URL_Splitter(String url)
     {
@@ -31,6 +45,12 @@ public class UrlExtracor {
         }
         return list;
     }
+    /**
+     * Gets a list of HtmlBuilder objects from the extracted URLs.
+     *
+     * @return A list of HtmlBuilder objects.
+     * @throws IOException If an error occurs while fetching the HTML content of the URLs.
+     */
     public List<HtmlBuilder> getUrlList() throws IOException {
         Elements url_lists = html.select("a[href]");
         List<String> urls = new ArrayList<>();

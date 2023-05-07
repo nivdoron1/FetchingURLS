@@ -12,27 +12,45 @@ public class HtmlBuilder {
     private final String url;
     private final Document html;
 
-    // constructor
+    /**
+     * Constructor for the HtmlBuilder class.
+     *
+     * @param url The URL to fetch the HTML content from.
+     * @throws IOException If an error occurs while fetching the HTML content.
+     */
     public HtmlBuilder(String url) throws IOException {
         this.url=url;
         this.html = fetchHtml();
     }
-
+    /**
+     * Gets the URL for the HtmlBuilder instance.
+     *
+     * @return The URL as a string.
+     */
     public String getUrl() {
         return url;
     }
-
+    /**
+     * Gets the fetched HTML content for the HtmlBuilder instance.
+     *
+     * @return The fetched HTML content as a Document object.
+     */
     public Document getHtml() {
         return html;
     }
 
-    //read the html file
+
     private Document fetchHtml() throws IOException {
         Document document = null;
         document = Jsoup.connect(getUrl()).get();
         return document;
     }
-    //create a new file in the depth directory
+    /**
+     * Creates a new HTML file in the depth directory.
+     *
+     * @param depth The depth level for the directory.
+     * @throws IOException If an error occurs while creating the file.
+     */
     public void CreateFile(int depth)throws IOException {
         File dir = new File(String.valueOf(depth));
         if(!dir.exists()){
@@ -44,6 +62,12 @@ public class HtmlBuilder {
         writer.write(html.html());
         writer.close();
     }
+    /**
+     * Converts the given file name into a valid file name by replacing invalid characters.
+     *
+     * @param fileName The original file name.
+     * @return The converted file name as a string.
+     */
     public static String convertFileName(String fileName) {
         if (fileName == null || fileName.isEmpty()) {
             return fileName;
