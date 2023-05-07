@@ -39,12 +39,18 @@ public class HtmlBuilder {
         return html;
     }
 
-
+    /**
+     * Creates a new Document of the fetched Html file .
+     *
+     * @return the document of the following url.
+     * @throws IOException If an error occurs while creating the file.
+     */
     private Document fetchHtml() throws IOException {
         Document document = null;
         document = Jsoup.connect(getUrl()).get();
         return document;
     }
+
     /**
      * Creates a new HTML file in the depth directory.
      *
@@ -66,6 +72,7 @@ public class HtmlBuilder {
         }
 
     }
+
     /**
      * Converts the given file name into a valid file name by replacing invalid characters.
      *

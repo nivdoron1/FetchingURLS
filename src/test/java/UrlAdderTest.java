@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 class UrlAdderTest {
     @Test
     void run() {
-        Source source = new Source("https://example.com", 5, 2, true);
+        Source source = new Source("https://www.ynet.co.il/", 5, 2, true);
         try {
             UrlAdder urlAdder = new UrlAdder(source);
             assertDoesNotThrow(() -> urlAdder.run());
