@@ -14,6 +14,9 @@ public class UrlExtracor {
 
     private final Document html;
     private final int MaximumAmount;
+    private static final String regex = "^(https?|ftp):\\/\\/[\\-a-zA-Z0-9@:%._\\+~#=]{1,256}" +
+            "\\.[a-zA-Z0-9()]{1,6}\\/[-a-zA-Z0-9@:%_\\+.~#?&\\/=]*" +
+            "(?<!\\.(jpeg|jpg|gif|png|bmp|tiff|webp|pdf|txt|doc|docx|xls|xlsx|ppt|pptx|zip|tar|gz))$";
 
     /**
      * Constructor for the UrlExtracor class.
@@ -34,7 +37,7 @@ public class UrlExtracor {
      * @return A list of valid URLs.
      */
 
-    private List<String> URL_Splitter(String url)
+    protected List<String> URLSplitter(String url)
     {
         String decodedText = URLDecoder.decode(url, StandardCharsets.UTF_8);
         Pattern urlPattern = Pattern.compile("https?://\\S+");
@@ -54,12 +57,9 @@ public class UrlExtracor {
     public List<HtmlBuilder> getUrlList() throws IOException {
         Elements url_lists = html.select("a[href]");
         List<String> urls = new ArrayList<>();
-        String regex = "^(https?|ftp):\\/\\/[\\-a-zA-Z0-9@:%._\\+~#=]{1,256}" +
-                "\\.[a-zA-Z0-9()]{1,6}\\/[-a-zA-Z0-9@:%_\\+.~#?&\\/=]*" +
-                "(?<!\\.(jpeg|jpg|gif|png|bmp|tiff|webp|pdf|txt|doc|docx|xls|xlsx|ppt|pptx|zip|tar|gz))$";
         for (Element e : url_lists) {
             String url = e.absUrl("href");
-            List<String> splitter = URL_Splitter(url);
+            List<String> splitter = URLSplitter(url);
             for(String u : splitter)
             {
                 if (u.matches(regex)) {
