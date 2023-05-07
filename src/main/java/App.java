@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class ExecuteHtml {
+public class App {
     public static void main(String[] args) throws IOException {
         /**
          * Prompts the user for input and initializes the URL crawling process.

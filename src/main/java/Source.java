@@ -1,23 +1,23 @@
 
 public class Source {
-    private final String Url;
-    private final int MaxAmount;
-    private final int DepthFactor;
-    private final boolean CrossLevelUniqness;
+    private final String url;
+    private final int maxAmount;
+    private final int depthFactor;
+    private final boolean crossLevelUniqness;
 
     /**
      * Constructor for the Source class.
      *
-     * @param Url                The URL to use as a source.
-     * @param MaxAmount          The maximum number of URLs to execute at each level.
-     * @param DepthFactor        The depth factor for the URL crawling.
-     * @param CrossLevelUniqness The flag to determine if cross-level uniqueness should be enforced.
+     * @param url                The URL to use as a source.
+     * @param maxAmount          The maximum number of URLs to execute at each level.
+     * @param depthFactor        The depth factor for the URL crawling.
+     * @param crossLevelUniqness The flag to determine if cross-level uniqueness should be enforced.
      */
-    public Source(String Url,int MaxAmount,int DepthFactor,boolean CrossLevelUniqness) {
-        this.Url=Url;
-        this.MaxAmount=MaxAmount;
-        this.DepthFactor=DepthFactor;
-        this.CrossLevelUniqness=CrossLevelUniqness;
+    public Source(String url,int maxAmount,int depthFactor,boolean crossLevelUniqness) {
+        this.url =url;
+        this.maxAmount =maxAmount;
+        this.depthFactor=depthFactor;
+        this.crossLevelUniqness=crossLevelUniqness;
     }
 
     /**
@@ -26,7 +26,7 @@ public class Source {
      * @return The depth factor as an integer.
      */
     public int getDepthFactor() {
-        return DepthFactor;
+        return depthFactor;
     }
     /**
      * Checks if cross-level uniqueness is enabled for the source.
@@ -34,7 +34,7 @@ public class Source {
      * @return True if cross-level uniqueness is enabled, false otherwise.
      */
     public boolean isCrossLevelUniqness() {
-        return CrossLevelUniqness;
+        return crossLevelUniqness;
     }
     /**
      * Gets the maximum amount of URLs to execute at each level for the source.
@@ -42,7 +42,7 @@ public class Source {
      * @return The maximum amount as an integer.
      */
     public int getMaxAmount() {
-        return MaxAmount;
+        return maxAmount;
     }
 
     /**
@@ -51,7 +51,7 @@ public class Source {
      * @return The URL as a string.
      */
     public String getUrl() {
-        return Url;
+        return url;
     }
 
 }

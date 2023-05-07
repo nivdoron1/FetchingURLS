@@ -51,16 +51,20 @@ public class HtmlBuilder {
      * @param depth The depth level for the directory.
      * @throws IOException If an error occurs while creating the file.
      */
-    public void CreateFile(int depth)throws IOException {
+    public void createFile(int depth)throws IOException {
         File dir = new File(String.valueOf(depth));
         if(!dir.exists()){
             dir.mkdirs();
         }
         String fileName = convertFileName(url);
         File file = new File(dir,fileName+".html");
-        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-        writer.write(html.html());
-        writer.close();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            writer.write(html.html());
+        }
+        catch (IOException e) {
+            System.err.println("Error creating file: " + e.getMessage());
+        }
+
     }
     /**
      * Converts the given file name into a valid file name by replacing invalid characters.

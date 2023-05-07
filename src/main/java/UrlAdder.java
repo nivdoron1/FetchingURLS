@@ -3,10 +3,10 @@ import java.util.*;
 
 public class UrlAdder {
     private final Source source;
-    private static final Set<String> urls =new HashSet<>();
+    private static final Set<String> existingUrls =new HashSet<>();
     private final int depth;
-    private final int MaximumAmont;
-    private List<HtmlBuilder> UrlNames = new ArrayList<>();
+    private final int maximumAmount;
+    private List<HtmlBuilder> urlsToAdd = new ArrayList<>();
 
     /**
      * Constructor for the UrlAdder class.
@@ -17,9 +17,12 @@ public class UrlAdder {
     public UrlAdder(Source source) throws IOException {
         this.source=source;
         this.depth = this.getSource().getDepthFactor();
-        this.MaximumAmont = this.getSource().getMaxAmount();
-        this.UrlNames.add(new HtmlBuilder(source.getUrl()));
-
+        this.maximumAmount = this.getSource().getMaxAmount();
+        try{
+            this.urlsToAdd.add(new HtmlBuilder(source.getUrl()));
+        } catch (IOException e) {
+        System.err.println("Error initializing UrlAdder: " + e.getMessage());
+    }
     }
     /**
      * Gets the Source object for the UrlAdder.
@@ -37,10 +40,10 @@ public class UrlAdder {
      * @return True if the URL was added successfully, false otherwise.
      */
 
-    private boolean AddURL(String url){
-        int size=urls.size();
-        urls.add(url);
-        return urls.size() != size;
+    private boolean addUrl(String url){
+        int size= existingUrls.size();
+        existingUrls.add(url);
+        return existingUrls.size() != size;
     }
 
     /**
@@ -50,7 +53,7 @@ public class UrlAdder {
      * @return True if the URL can be executed, false otherwise.
      */
     private boolean canExecuteFile(String url){
-        return !this.source.isCrossLevelUniqness() || AddURL(url);
+        return !this.source.isCrossLevelUniqness() || addUrl(url);
     }
 
     /**
@@ -60,8 +63,8 @@ public class UrlAdder {
      * @throws IOException If an error occurs while creating the URLs.
      */
     private void createUrls(HtmlBuilder builder) throws IOException {
-        UrlExtracor extractor = new UrlExtracor(builder.getHtml(), this.MaximumAmont);
-        UrlNames.addAll(extractor.getUrlList());
+        UrlExtractor extractor = new UrlExtractor(builder.getHtml(), this.maximumAmount);
+        urlsToAdd.addAll(extractor.getUrlList());
     }
     /**
      * Creates a file from the current HtmlBuilder object and adds its URLs to the UrlNames list.
@@ -70,10 +73,10 @@ public class UrlAdder {
      * @throws IOException If an error occurs while creating the file.
      */
     private void createFile(int depth) throws IOException {
-        HtmlBuilder builder = UrlNames.remove(0);
+        HtmlBuilder builder = urlsToAdd.remove(0);
         createUrls(builder); // add the urls to the list
         if (canExecuteFile(builder.getUrl())) {
-            builder.CreateFile(depth);
+            builder.createFile(depth);
         }
     }
     /**
@@ -83,12 +86,16 @@ public class UrlAdder {
      */
 
     public void run() throws IOException {
-        createFile(0);
-        for (int i = 1; i <= depth; i++) {
-            int m = (int)Math.pow(MaximumAmont, i);
-            for (int j = 0; j<m && j< UrlNames.size(); j++) {
-                createFile(i);
+        try{
+            createFile(0);
+            for (int i = 1; i <= depth; i++) {
+                int maximumUrls = (int)Math.pow(maximumAmount, i);
+                for (int j = 0; j<maximumUrls && j< urlsToAdd.size(); j++) {
+                    createFile(i);
+                }
             }
+        }catch (IOException e){
+            System.err.println("Error running URL crawling process: " + e.getMessage());
         }
     }
 }

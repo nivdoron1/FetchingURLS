@@ -7,14 +7,14 @@ A simple web crawler application that retrieves and saves HTML pages from a give
 ### Classes
 
 1. `Source` - Represents the source URL and parameters for the web crawling process.
-2. `UrlExtracor` - Extracts URLs from an HTML document and returns a list of `HtmlBuilder` objects.
+2. `UrlExtractor` - Extracts URLs from an HTML document and returns a list of `HtmlBuilder` objects.
 3. `HtmlBuilder` - Fetches and saves the HTML content of a URL and provides utility methods for working with URLs.
 4. `UrlAdder` - Manages the web crawling process, including depth traversal and URL filtering based on the `Source` object.
-5. `ExecuteHtml` - The main class that prompts the user for input and initializes the web crawling process.
+5. `App` - The main class that prompts the user for input and initializes the web crawling process.
 
 ### Usage
 
-1. Compile and run the `ExecuteHtml` class.
+1. Compile and run the `App` class.
 2. Enter the following information when prompted:
     - The URL of the website to crawl.
     - The maximum number of URLs to execute at each level.
