@@ -45,7 +45,7 @@ public class HtmlBuilder {
      * @return the document of the following url.
      * @throws IOException If an error occurs while creating the file.
      */
-    private Document fetchHtml() throws IOException {
+    public Document fetchHtml() throws IOException {
         Document document = null;
         document = Jsoup.connect(getUrl()).get();
         return document;
@@ -57,7 +57,7 @@ public class HtmlBuilder {
      * @param depth The depth level for the directory.
      * @throws IOException If an error occurs while creating the file.
      */
-    public void createFile(int depth)throws IOException {
+    public void createFile(int depth) {
         File dir = new File(String.valueOf(depth));
         if(!dir.exists()){
             dir.mkdirs();
@@ -65,7 +65,7 @@ public class HtmlBuilder {
         String fileName = convertFileName(url);
         File file = new File(dir,fileName+".html");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-            writer.write(html.html());
+            writer.write(fetchHtml().html());
         }
         catch (IOException e) {
             System.err.println("Error creating file: " + e.getMessage());

@@ -44,7 +44,10 @@ public class UrlExtractor {
         Matcher urlMatcher = urlPattern.matcher(decodedText);
         List<String> list = new LinkedList<>();
         while (urlMatcher.find()) {
-            list.add(urlMatcher.group());
+            String newUrl = urlMatcher.group().replaceAll("\\s","");
+            if (newUrl.matches(regex)) {
+                list.add(newUrl);
+            }
         }
         return list;
     }
@@ -52,24 +55,17 @@ public class UrlExtractor {
      * Gets a list of HtmlBuilder objects from the extracted URLs.
      *
      * @return A list of HtmlBuilder objects.
-     * @throws IOException If an error occurs while fetching the HTML content of the URLs.
+     * @throws Exception If an error occurs while fetching the HTML content of the URLs.
      */
     public List<HtmlBuilder> getUrlList() {
         Elements urlLists = html.select("a[href]");
-        List<String> urls = new ArrayList<>();
+        List<String> urls = new LinkedList<>();
         for (Element e : urlLists) {
             String url = e.absUrl("href");
-            List<String> splitter = URLSplitter(url);
-            for(String u : splitter)
-            {
-                if (u.matches(regex)) {
-                    urls.add(u);
-                }
-            }
+            urls.addAll(URLSplitter(url));
         }
         Set<String> urlsSet = new HashSet<>(urls);
-        urlsSet.remove(null);
-        List<HtmlBuilder> urlBuilders = new ArrayList<>();
+        List<HtmlBuilder> urlBuilders = new LinkedList<>();
         Iterator<String> it = urlsSet.iterator();
         for (int i = 0; i < this.maximumAmount && it.hasNext(); i++) {
             String url = it.next();

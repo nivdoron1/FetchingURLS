@@ -52,17 +52,16 @@ public class UrlAdder {
      * @param url The URL to check.
      * @return True if the URL can be executed, false otherwise.
      */
-    private boolean canExecuteFile(String url){
-        return !this.source.isCrossLevelUniqness() || addUrl(url);
+    boolean canExecuteFile(String url){
+        return !this.source.isCrossLevelUniqueness() || addUrl(url);
     }
 
     /**
      * Adds URLs to the UrlNames list by extracting them from the HtmlBuilder object.
      *
      * @param builder The HtmlBuilder object.
-     * @throws IOException If an error occurs while creating the URLs.
      */
-    private void createUrls(HtmlBuilder builder) throws IOException {
+    private void createUrls(HtmlBuilder builder){
         UrlExtractor extractor = new UrlExtractor(builder.getHtml(), this.maximumAmount);
         urlsToAdd.addAll(extractor.getUrlList());
     }

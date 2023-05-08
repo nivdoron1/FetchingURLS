@@ -3,7 +3,7 @@ public class Source {
     private final String url;
     private final int maxAmount;
     private final int depthFactor;
-    private final boolean crossLevelUniqness;
+    private final boolean crossLevelUniqueness;
 
     /**
      * Constructor for the Source class.
@@ -11,13 +11,13 @@ public class Source {
      * @param url                The URL to use as a source.
      * @param maxAmount          The maximum number of URLs to execute at each level.
      * @param depthFactor        The depth factor for the URL crawling.
-     * @param crossLevelUniqness The flag to determine if cross-level uniqueness should be enforced.
+     * @param crossLevelUniqueness The flag to determine if cross-level uniqueness should be enforced.
      */
-    public Source(String url,int maxAmount,int depthFactor,boolean crossLevelUniqness) {
+    public Source(String url,int maxAmount,int depthFactor,boolean crossLevelUniqueness) {
         this.url =url;
         this.maxAmount =maxAmount;
         this.depthFactor=depthFactor;
-        this.crossLevelUniqness=crossLevelUniqness;
+        this.crossLevelUniqueness =crossLevelUniqueness;
     }
 
     /**
@@ -33,8 +33,8 @@ public class Source {
      *
      * @return True if cross-level uniqueness is enabled, false otherwise.
      */
-    public boolean isCrossLevelUniqness() {
-        return crossLevelUniqness;
+    public boolean isCrossLevelUniqueness() {
+        return crossLevelUniqueness;
     }
     /**
      * Gets the maximum amount of URLs to execute at each level for the source.

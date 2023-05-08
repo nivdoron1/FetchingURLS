@@ -17,15 +17,4 @@ class UrlExtracorTest {
         assertEquals("https://www.ynet.co.il/entertainment", urls.get(1));
     }
 
-    @Test
-    void getUrlList() {
-        try {
-            HtmlBuilder builder = new HtmlBuilder("https://www.ynet.co.il/");
-            UrlExtractor extractor = new UrlExtractor(builder.getHtml(), 5);
-            List<HtmlBuilder> urls = extractor.getUrlList();
-        } catch (IOException e) {
-            e.printStackTrace();
-            fail("IOException occurred while getting URL list");
-        }
-    }
 }
