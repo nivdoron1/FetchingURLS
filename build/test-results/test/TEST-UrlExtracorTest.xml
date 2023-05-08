@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UrlExtracorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-08T06:10:51" hostname="DESKTOP-I7S3S69" time="0.021">
+  <properties/>
+  <testcase name="urlSplitter()" classname="UrlExtracorTest" time="0.021"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
