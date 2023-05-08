@@ -12,13 +12,8 @@ class UrlAdderTest {
     @Test
     void run() {
         Source source = new Source("https://www.ynet.co.il/", 5, 2, true);
-        try {
             UrlAdder urlAdder = new UrlAdder(source);
             assertDoesNotThrow(urlAdder::run);
-        } catch (IOException e) {
-            e.printStackTrace();
-            fail("IOException occurred while running UrlAdder");
-        }
     }
     private UrlAdder urlAdderCrossLevelUniquenessTrue;
     private UrlAdder urlAdderCrossLevelUniquenessFalse;

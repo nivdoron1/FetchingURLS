@@ -1,14 +1,6 @@
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.io.TempDir;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
-import static org.junit.jupiter.api.Assertions.*;
 
 
 class HtmlBuilderTest {
@@ -49,11 +41,6 @@ class HtmlBuilderTest {
 
     @Test
     void fetchHtml() {
-        try {
-            HtmlBuilder builder = new HtmlBuilder("https://example.com");
-        } catch (IOException e) {
-            e.printStackTrace();
-            fail("IOException occurred while fetching HTML");
-        }
+        HtmlBuilder builder = new HtmlBuilder("https://example.com");
     }
 }

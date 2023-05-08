@@ -6,23 +6,18 @@ public class UrlAdder {
     private static final Set<String> existingUrls =new HashSet<>();
     private final int depth;
     private final int maximumAmount;
-    private List<HtmlBuilder> urlsToAdd = new ArrayList<>();
+    private List<HtmlBuilder> urlsToAdd = new LinkedList<>();
 
     /**
      * Constructor for the UrlAdder class.
      *
      * @param source The source object containing the URL and crawling parameters.
-     * @throws IOException If an error occurs while initializing the UrlAdder.
      */
-    public UrlAdder(Source source) throws IOException {
+    public UrlAdder(Source source) {
         this.source=source;
         this.depth = this.getSource().getDepthFactor();
         this.maximumAmount = this.getSource().getMaxAmount();
-        try{
-            this.urlsToAdd.add(new HtmlBuilder(source.getUrl()));
-        } catch (IOException e) {
-        System.err.println("Error initializing UrlAdder: " + e.getMessage());
-    }
+        this.urlsToAdd.add(new HtmlBuilder(source.getUrl()));
     }
     /**
      * Gets the Source object for the UrlAdder.
@@ -61,8 +56,8 @@ public class UrlAdder {
      *
      * @param builder The HtmlBuilder object.
      */
-    private void createUrls(HtmlBuilder builder){
-        UrlExtractor extractor = new UrlExtractor(builder.getHtml(), this.maximumAmount);
+    private void createUrls(HtmlBuilder builder) throws IOException {
+        UrlExtractor extractor = new UrlExtractor(builder.fetchHtml(), this.maximumAmount);
         urlsToAdd.addAll(extractor.getUrlList());
     }
     /**
@@ -73,7 +68,7 @@ public class UrlAdder {
      */
     private void createFile(int depth) throws IOException {
         HtmlBuilder builder = urlsToAdd.remove(0);
-        createUrls(builder); // add the urls to the list
+        createUrls(builder);
         if (canExecuteFile(builder.getUrl())) {
             builder.createFile(depth);
         }

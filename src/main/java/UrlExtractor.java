@@ -2,7 +2,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -55,7 +54,6 @@ public class UrlExtractor {
      * Gets a list of HtmlBuilder objects from the extracted URLs.
      *
      * @return A list of HtmlBuilder objects.
-     * @throws Exception If an error occurs while fetching the HTML content of the URLs.
      */
     public List<HtmlBuilder> getUrlList() {
         Elements urlLists = html.select("a[href]");
@@ -69,11 +67,7 @@ public class UrlExtractor {
         Iterator<String> it = urlsSet.iterator();
         for (int i = 0; i < this.maximumAmount && it.hasNext(); i++) {
             String url = it.next();
-            try{
-                urlBuilders.add(new HtmlBuilder(url));
-            }catch (IOException e) {
-                System.err.println("Error fetching HTML content: " + e.getMessage());
-            }
+            urlBuilders.add(new HtmlBuilder(url));
         }
         return urlBuilders;
     }

@@ -10,17 +10,14 @@ import java.util.regex.Pattern;
 
 public class HtmlBuilder {
     private final String url;
-    private final Document html;
 
     /**
      * Constructor for the HtmlBuilder class.
      *
      * @param url The URL to fetch the HTML content from.
-     * @throws IOException If an error occurs while fetching the HTML content.
      */
-    public HtmlBuilder(String url) throws IOException {
+    public HtmlBuilder(String url) {
         this.url=url;
-        this.html = fetchHtml();
     }
     /**
      * Gets the URL for the HtmlBuilder instance.
@@ -31,20 +28,11 @@ public class HtmlBuilder {
         return url;
     }
     /**
-     * Gets the fetched HTML content for the HtmlBuilder instance.
-     *
-     * @return The fetched HTML content as a Document object.
-     */
-    public Document getHtml() {
-        return html;
-    }
-
-    /**
      * Creates a new Document of the fetched Html file .
      *
      * @return the document of the following url.
      * @throws IOException If an error occurs while creating the file.
-     */
+     **/
     public Document fetchHtml() throws IOException {
         Document document = null;
         document = Jsoup.connect(getUrl()).get();
@@ -56,7 +44,7 @@ public class HtmlBuilder {
      *
      * @param depth The depth level for the directory.
      * @throws IOException If an error occurs while creating the file.
-     */
+     **/
     public void createFile(int depth) {
         File dir = new File(String.valueOf(depth));
         if(!dir.exists()){
@@ -78,7 +66,7 @@ public class HtmlBuilder {
      *
      * @param fileName The original file name.
      * @return The converted file name as a string.
-     */
+     **/
     public static String convertFileName(String fileName) {
         if (fileName == null || fileName.isEmpty()) {
             return fileName;
